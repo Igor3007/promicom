@@ -9,81 +9,101 @@ const requireDir = require("require-dir"),
                 "./src/views/index.pug",
                 "./src/views/pages/*.pug"
             ],
-            dist: "./promicom/",
+            dist: "./dist/",
             watch: [
                 "./src/blocks/**/*.pug",
-                "./src/views/**/*.pug"
+                "./src/data/**/*.pug",
+                "./src/views/**/*.pug",
+                "./src/blocks/**/*.js",
             ]
         },
         styles: {
             src: [
                 "./src/styles/*.{scss,sass}",
             ],
-            dist: "./promicom/static/styles/",
+            dist: "./dist/static/styles/",
             watch: [
                 "./src/blocks/**/*.{scss,sass}",
                 "./src/styles/**/*.{scss,sass}"
             ]
         },
         scripts: {
-            src: [
-                "./src/js/*js",
-                "./src/js/import/*js",
-            ],
-            dist: "./promicom/static/js/",
+            src: "./src/js/",
+            dist: "./dist/static/js/",
             watch: [
-                "./src/js/*.js",
+                "./src/blocks/**/*.js",
+                "./src/js/**/*.js"
+            ]
+        },
+        vendor: {
+            watch: [
+                "./src/blocks/**/*.js",
+                "./src/js/**/*.js"
+            ]
+        },
+        common: {
+            watch: [
                 "./src/js/**/*.js"
             ]
         },
         images: {
             src: [
                 "./src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}",
-                "!./src/img/responsive/**/*.{jpg,jpeg,png,gif,tiff}",
                 "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
             ],
-            dist: "./promicom/static/img/",
+            dist: "./dist/static/img/",
             watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg}"
         },
-        resize: {
+        webp: {
             src: [
-                "./promicom/img/**/*-responsive.{jpg,jpeg,png,webp}",
-                "!./src/img/favicon/*.{jpg,jpeg,png}"
+                "./src/img/**/*.{jpg,jpeg,png,tiff}",
+                "!./src/img/favicon/*.{jpg,jpeg,png,gif}"
             ],
-            dist: "./promicom/static/img/",
-            watch: "./promicom/img/**/*-responsive.{jpg,jpeg,png,webp}"
+            dist: "./dist/static/img/",
+            watch: [
+                "./src/img/**/*.{jpg,jpeg,png,tiff}",
+                "!./src/img/favicon.{jpg,jpeg,png,gif}"
+            ]
         },
         sprites: {
             src: "./src/img/svg/*.svg",
-            dist: "./promicom/static/img/sprites/",
+            dist: "./dist/static/img/sprites/",
             watch: "./src/img/svg/*.svg"
         },
         fonts: {
             src: "./src/fonts/**/*.{woff,woff2}",
-            dist: "./promicom/static/fonts/",
+            dist: "./dist/static/fonts/",
             watch: "./src/fonts/**/*.{woff,woff2}"
         },
         favicons: {
             src: "./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}",
-            dist: "./promicom/static/img/favicons/",
+            dist: "./dist/static/img/favicons/",
+        },
+        libs: {
+            src: "./src/js/*.{js,json}",
+            dist: "./dist/static/js/",
+            watch: [
+                "./src/blocks/**/*.{js,json}",
+                "./src/js/**/*.js"
+            ]
         },
         gzip: {
             src: "./src/.htaccess",
-            dist: "./promicom/"
+            dist: "./dist/"
         }
     };
 
 requireDir("./gulp-tasks/");
 
-export { paths };
+export {
+    paths
+};
 
-export const development = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons"]),
-    gulp.parallel("resize"),
+export const development = gulp.series("clean", "smart-grid", "styles",
+    gulp.parallel(["views", "vendor", "common", "images", "webp", "libs", "sprites", "fonts", "favicons"]),
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip"]),
-    gulp.parallel("resize"));
+    gulp.series(["styles", "views", "vendor", "common", "images", "webp", "sprites", "libs", "fonts", "favicons", "gzip"]));
 
 export default development;

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Разработка сайтов на Laravel под ключ</title>
+    <meta name="theme-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="static/img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="static/img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="static/img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="static/img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="static/img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="static/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="static/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="static/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="static/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="static/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="static/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="static/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="static/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="static/img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="static/img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preload" href="static/fonts/subset-Mulish-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/subset-Mulish-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/subset-Mulish-Black.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="static/styles/main.css">
+    <link rel="stylesheet" href="static/styles/laravel.css">
+  </head>
+  <body class="page page_noanimation">
+    <header class="header">
+      <div class="container">
+        <div class="header-logo"><a class="header-logo__link" href="/">
+            <picture><img src="static/img/common/logo-full.svg" width="214" height="24"></picture></a></div>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__item"><a class="header-nav__link" href="#">Проекты</a></li>
+            <li class="header-nav__item has-submenu"><a class="header-nav__link" href="#">Услуги</a>
+              <div class="header-nav__submenu submenu">
+                <ul class="submenu-list">
+                  <li class="submenu-item"><a class="submenu-item__link" href="#">Разработка сайтов</a>
+                    <ul>
+                      <li><a href="#">Интернет-магазин</a></li>
+                      <li><a href="#">Корпоративный сайт</a></li>
+                      <li><a href="#">Лендинг</a></li>
+                      <li><a href="#">Сервисы и порталы</a></li>
+                      <li><a href="#">Сложные проекты</a></li>
+                    </ul>
+                  </li>
+                  <li class="submenu-item"><a class="submenu-item__link" href="#">Контекстная реклама</a></li>
+                  <li class="submenu-item"><a class="submenu-item__link" href="#">Поддержка сайтов</a></li>
+                  <li class="submenu-item"><a class="submenu-item__link" href="#">Поднятие скорости загрузки</a></li>
+                  <li class="submenu-item"><a class="submenu-item__link" href="#">Сайт за 5 дней</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#">О Промиком</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header-phones"><a class="header-phones__link" href="tel:+79267313545">
+            <svg width="24" height="24">
+              <use xlink:href="static/img/sprites/sprite.svg#ic_phone"></use>
+            </svg><span>+7 (926) 731-35-45</span></a></div>
+        <div class="header-lang"><a class="header-lang__link" href="#">ENG</a></div>
+        <div class="header-burger">
+          <div class="header-burger__icon open">
+            <svg width="24" height="24">
+              <use xlink:href="static/img/sprites/sprite.svg#ic_menu"></use>
+            </svg>
+          </div>
+          <div class="header-burger__icon close">
+            <svg width="24" height="24">
+              <use xlink:href="static/img/sprites/sprite.svg#ic_menu-close"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="mobile-menu">
+      <div class="container">
+        <nav class="mobile-menu__nav">
+          <ul class="mobile-menu__nav-list">
+            <li class="mobile-menu__nav-item has-submenu"><a class="mobile-menu__nav-link" href="#">Разработка сайтов</a>
+              <div class="mobile-menu__nav-toggle"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6L11 1" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              </div>
+              <ul class="mobile-menu__nav-submenu">
+                <li><a class="mobile-menu__nav-link" href="#">Интернет-магазин</a></li>
+                <li><a class="mobile-menu__nav-link" href="#">Корпоративный сайт</a></li>
+                <li><a class="mobile-menu__nav-link" href="#">Лендинг</a></li>
+                <li><a class="mobile-menu__nav-link" href="#">Сервисы и порталы</a></li>
+                <li><a class="mobile-menu__nav-link" href="#">Сложные проекты</a></li>
+              </ul>
+            </li>
+            <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Контекстная реклама</a></li>
+            <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Поддержка сайтов</a></li>
+            <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Поднятие скорости загрузки</a></li>
+            <li class="mobile-menu__nav-item"><a class="mobile-menu__nav-link" href="#">Сайт за 5 дней</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__phones">
+          <div class="mobile-menu__phone">
+            <div class="caption">Офис в Москве</div><a class="link" href="#">+7 (926) 731-35-45</a>
+          </div>
+          <div class="mobile-menu__phone">
+            <div class="caption">Офис в Беларуси</div><a class="link" href="#">+375 (29) 311-66-11</a>
+          </div>
+        </div>
+        <div class="mobile-menu__mails">
+          <div class="mobile-menu__mail">
+            <div class="caption">Эл. почта:</div><a class="link" href="#">info@promicom.ru</a>
+          </div>
+        </div>
+        <div class="mobile-menu__socials"><a class="mobile-menu__social" href="#"><img class="lazyload" loading="lazy" data-src="static/img/svg/telegram.svg" width="32" height="32"></a><a class="mobile-menu__social" href="#"><img class="lazyload" loading="lazy" data-src="static/img/svg/whatsapp.svg" width="32" height="32"></a><a class="mobile-menu__social" href="#"><img class="lazyload" loading="lazy" data-src="static/img/svg/skype.svg" width="32" height="32"></a></div><a class="mobile-menu__lang" href="#">ENG</a>
+      </div>
+    </div>
+    <main class="main">
+      <section class="service-banner service-banner--fullwidth">
+        <div class="container">
+          <div class="service-banner__text">
+            <div class="breadcrumb service-banner__breadcrumbs wow experience">
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Главная</a></li>
+                <li class="breadcrumb__item"><a class="breadcrumb__link" href="/">Разработка</a></li>
+                <li class="breadcrumb__item"><a class="breadcrumb__link breadcrumb__link_active" href="/">Laravel</a></li>
+              </ul>
+            </div>
+            <h1 class="service-banner__title section-h1 wow experience">Разработка сайтов<br> на Laravel под ключ</h1>
+            <div class="service-banner__caption section-caption wow experience">Promicom — разработка и поддержка интернет-проектов под ключ любого уровня сложности на безопасном php-фреймворке в Москве</div><a class="service-banner__btn btn btn-primary wow experience" href="#callback">Оставить заявку</a>
+          </div>
+          <div class="service-banner__image">
+            <picture>
+              <source srcset="static/img/laravel/banner.webp" type="image/webp"><img class="wow fadeIn" src="static/img/laravel/banner.png" width="640" height="440">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="service-advantages service-advantages--white">
+        <div class="container">
+          <div class="service-advantages__title section-h2 wow experience">Преимущества работы с Laravel</div>
+          <div class="service-advantages__caption section-caption wow experience">
+            <p>На фреймворке разрабатываются проекты различной сложности. Разработка проекта на Laravel позволяет создать гибкую и функциональную систему, которая будет отвечать задачам бизнеса.</p>
+            <p>Обладает он и другими преимуществами:</p>
+          </div>
+          <div class="service-advantages__items">
+            <div class="service-advantages__item service-advantages__item--center wow experienceRight">
+              <div class="service-advantages__item-icon"><img class="lazyload" loading="lazy" data-src="/static/img/yii/01.svg" width="48" height="48"></div>
+              <div class="service-advantages__item-text">
+                <div class="service-advantages__item-title">Код постоянно развивается и обновляется, открывая все более широкие возможности при создании сайтов на Laravel</div>
+              </div>
+            </div>
+            <div class="service-advantages__item service-advantages__item--center wow experienceRight">
+              <div class="service-advantages__item-icon"><img class="lazyload" loading="lazy" data-src="/static/img/yii/02.svg" width="48" height="48"></div>
+              <div class="service-advantages__item-text">
+                <div class="service-advantages__item-title">Обучение работе с фреймворком сильно упрощается благодаря большому количеству русскоязычной литературы и видеоурокам</div>
+              </div>
+            </div>
+            <div class="service-advantages__item service-advantages__item--center wow experienceRight">
+              <div class="service-advantages__item-icon"><img class="lazyload" loading="lazy" data-src="/static/img/yii/03.svg" width="48" height="48"></div>
+              <div class="service-advantages__item-text">
+                <div class="service-advantages__item-title">Каркас достаточно прост для изучения и работы с ним.</div>
+              </div>
+            </div>
+            <div class="service-advantages__item service-advantages__item--center wow experienceRight">
+              <div class="service-advantages__item-icon"><img class="lazyload" loading="lazy" data-src="/static/img/yii/04.svg" width="48" height="48"></div>
+              <div class="service-advantages__item-text">
+                <div class="service-advantages__item-title">Это один из самых быстрых фреймворков, поэтому он подходит для разработки крупных проектов с большой нагрузкой</div>
+              </div>
+            </div>
+            <div class="service-advantages__item service-advantages__item--center wow experienceRight">
+              <div class="service-advantages__item-icon"><img class="lazyload" loading="lazy" data-src="/static/img/yii/05.svg" width="48" height="48"></div>
+              <div class="service-advantages__item-text">
+                <div class="service-advantages__item-title">Система работает устойчиво и безопасно</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-offer">
+        <div class="container">
+          <div class="service-offer__title section-h2 wow experience">Что мы предлагаем?</div>
+          <div class="service-offer__box wow experience">
+            <div class="service-offer__box-text">
+              <ul class="service-offer__box-list">
+                <li>Доработаем текущие проекты, протестируем и проанализируем их работу, выделим недочеты и откорректируем их</li>
+                <li>Разработаем с нуля проект любой сложности – от небольшого интернет-сервиса до системы автоматизации и многокомпонентного портала</li>
+                <li>Спланируем архитектуру сайта и подготовим техническое задание</li>
+                <li>Проверим детали проекта, выявим ошибки в коде и устраним их</li>
+                <li>Проанализируем особенности поведения пользователей на сайте и проработаем интерфейс проекта под них</li>
+                <li>Увеличим скорость работы проекта и оптимизируем запросы к данным в базах</li>
+              </ul>
+            </div>
+            <div class="service-offer__box-image">
+              <picture>
+                <source srcset="static/img/laravel/ex-1.webp" type="image/webp"><img class="lazyload" loading="lazy" data-src="static/img/laravel/ex-1.jpg" width="670" height="424">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-projects">
+        <div class="container">
+          <div class="service-projects__title section-h2 wow experience">Уже сделали</div>
+          <div class="service-projects__caption section-caption wow experience">Мы ставим пользовательский опыт превыше всего — и тестируем десятки гипотез перед тем, как предложить клиенту первую концепцию. Идея становится интерактивным прототипом, а затем готовым продуктом.</div>
+          <div class="service-projects__items splide wow experienceLeft">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide service-projects__item wow"><a class="image" href="#">
+                    <div class="image-wrp">
+                      <picture>
+                        <source srcset="static/img/home/project-1.webp" type="image/webp"><img class="lazyload" loading="lazy" data-src="static/img/home/project-1.jpg" width="296" height="296">
+                      </picture>
+                    </div></a><a class="name section-h4" href="#">1new</a>
+                  <div class="desc">Интернет-магазин компании 1NEW®, реализующей товары по уходу за автомобилем и прочие товары для строительства и ремонта во все регионы России и страны ЕАЭС</div>
+                </li>
+                <li class="splide__slide service-projects__item"><a class="image" href="#">
+                    <div class="image-wrp">
+                      <picture>
+                        <source srcset="static/img/home/project-4.webp" type="image/webp"><img class="lazyload" loading="lazy" data-src="static/img/home/project-4.jpg" width="296" height="296">
+                      </picture>
+                    </div></a><a class="name section-h4" href="#">СЭЗ «Могилев»</a>
+                  <div class="desc">Масштабный проект для Администрации СЭЗ «Могилев», занимающейся привлечением инвестиций для создания новых производств</div>
+                </li>
+                <li class="splide__slide service-projects__item with-btn"><a class="image" href="#">
+                    <div class="image-wrp">
+                      <picture>
+                        <source srcset="static/img/home/project-3.webp" type="image/webp"><img class="lazyload" loading="lazy" data-src="static/img/home/project-3.jpg" width="296" height="296">
+                      </picture>
+                    </div></a><a class="name section-h4" href="#">ООО «Бремино групп»</a>
+                  <div class="desc">Интернет-магазин для производителя автомобильных чехлов и автоаксессуаров</div><a class="btn btn-primary" href="#"><span>Все проекты</span>
+                    <svg width="24" height="24">
+                      <use xlink:href="static/img/sprites/sprite.svg#icon_arrow_right"></use>
+                    </svg></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-reviews splide">
+        <div class="container">
+          <div class="service-reviews__content">
+            <div class="service-reviews__heading">
+              <div class="service-reviews__title section-h2 wow experience">Отзывы</div>
+              <div class="service-reviews__caption section-caption wow experience">Что говорят о работе с нами</div>
+            </div>
+            <div class="splide__arrows service-reviews__arrows">
+              <button class="splide__arrow service-reviews__arrow splide__arrow--prev"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 18L9 12L15 6" stroke="#1F5AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+              </button>
+              <button class="splide__arrow service-reviews__arrow splide__arrow--next"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 18L15 12L9 6" stroke="#1F5AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+              </button>
+            </div>
+            <div class="splide__track wow experience">
+              <ul class="splide__list">
+                <li class="splide__slide service-reviews__item"><a class="service-reviews__item-link" href="static/img/support/cert-1.jpg" data-fslightbox="cert">
+                    <picture>
+                      <source srcset="static/img/support/cert-1.webp" type="image/webp"><img class="lazyload" loading="lazy" data-src="static/img/support/cert-1.jpg" width="288" height="408">
+                    </picture></a></li>
+                <li class="splide__slide service-reviews__item"><a class="service-reviews__item-link" href="static/img/support/cert-2.jpg" data-fslightbox="cert">
+                    <picture>
+                      <source srcset="static/img/support/cert-2.webp" type="image/webp"><img class="lazyload" loading="lazy" data-src="static/img/support/cert-2.jpg" width="288" height="408">
+                    </picture></a></li>
+                <li class="splide__slide service-reviews__item"><a class="service-reviews__item-link" href="static/img/support/cert-3.jpg" data-fslightbox="cert">
+                    <picture>
+                      <source srcset="static/img/support/cert-3.webp" type="image/webp"><img class="lazyload" loading="lazy" data-src="static/img/support/cert-3.jpg" width="288" height="408">
+                    </picture></a></li>
+                <li class="splide__slide service-reviews__item"><a class="service-reviews__item-link" href="static/img/support/cert-4.jpg" data-fslightbox="cert">
+                    <picture>
+                      <source srcset="static/img/support/cert-4.webp" type="image/webp"><img class="lazyload" loading="lazy" data-src="static/img/support/cert-4.jpg" width="288" height="408">
+                    </picture></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-about">
+        <div class="container">
+          <div class="service-about__title section-h2 wow experience">О нас</div>
+          <div class="service-about__text edit-content wow experience">
+            <p>Создаем на Ларавел проекты любой сложности. Данный framework отвечает потребностям интернет-магазинов, веб-сервисов, сервисов электронной коммерции и многокомпонентных порталов. Благодаря быстродействию, подключению к сторонним CMS, возможности создавать сложные комбинированные панели администратора он подходит для разнонаправленных проектов.</p>
+            <p>При создании сайтов на Laravel мы всесторонне изучаем пожелания заказчика и упаковываем готовый продукт, готовый к запуску. Вам нужна помощь и поддержка после запуска проекта? Мы не бросим вас лицом к лицу с проблемой и всегда придем на помощь, чтобы проект оказался столь же успешным, как и на старте.</p>
+          </div>
+        </div>
+      </section>
+      <section class="mainpage-form">
+        <div class="container">
+          <div class="mainpage-form__title section-h2 wow experience">Расскажите о Вашем проекте</div>
+          <div class="mainpage-form__caption section-caption wow experience">Поработаем вместе!</div>
+          <form class="mainpage-form__fields form">
+            <div class="form__group services wow experience">
+              <div class="form__caption">Выберите нужные услуги:</div>
+              <div class="form__field form__field--fullwidth">
+                <div class="radios">
+                  <label class="radio">
+                    <input type="radio" name="service"><span class="radio__text">Разработка сайта</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="service"><span class="radio__text">Поддержка сайта</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="service"><span class="radio__text">Контекстная реклама</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="service"><span class="radio__text">Поднятие скорости загрузки</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="service"><span class="radio__text">Сайт за 5 дней</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form__group contacts wow experience">
+              <div class="form__caption">Ваши контакты:</div>
+              <div class="form__field">
+                <div class="input input-text">
+                  <input type="text" placeholder="Имя" required>
+                </div>
+              </div>
+              <div class="form__field hidden">
+                <div class="input input-email">
+                  <input type="email" placeholder="Эл. почта">
+                </div>
+              </div>
+              <div class="form__field">
+                <div class="input input-tel">
+                  <input type="tel" placeholder="Телефон" required>
+                </div>
+              </div>
+            </div>
+            <div class="form__group message wow experience">
+              <div class="form__caption">Коротко о проекте</div>
+              <div class="form__field form__field--fullwidth">
+                <div class="textarea">
+                  <textarea placeholder="Напишите пару слов на свое усмотрение"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="form__group submit wow experience">
+              <div class="form__submit">
+                <button class="btn btn-primary">Отправить</button>
+              </div>
+              <div class="form__agreement">Нажимая на кнопку, вы соглашаетесь на <a href="#">обработку персональных данных</a></div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <div class="popup" id="callback">
+        <div class="popup__wrapper">
+          <div class="popup__close"><a href="#close">
+              <svg width="24" height="24">
+                <use xlink:href="static/img/sprites/sprite.svg#ic_close"></use>
+              </svg></a></div>
+          <div class="popup__content">
+            <div class="popup__title">Оставить заявку</div>
+            <form class="form" action="">
+              <div class="form__field">
+                <div class="input input_text">
+                  <input type="text" placeholder="Ваше имя" required="required"/>
+                </div>
+              </div>
+              <div class="form__field">
+                <div class="input input_tel">
+                  <input type="tel" placeholder="Ваш телефон" required="required"/>
+                </div>
+              </div>
+              <div class="form__submit">
+                <button class="btn btn-primary" type="submit">Отправить</button>
+              </div>
+              <div class="form__agreement">Нажимая на кнопку, вы соглашаетесь на <a href="#">обработку персональных данных</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-top__col nav">
+            <nav class="footer-top__nav">
+              <ul class="footer-top__nav-list">
+                <li class="footer-top__nav-item has-submenu"><a class="footer-top__nav-link" href="#">Разработка сайтов</a>
+                  <div class="footer-top__nav-toggle"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6L11 1" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  </div>
+                  <ul class="footer-top__nav-submenu">
+                    <li><a class="footer-top__nav-link" href="#">Интернет-магазин</a></li>
+                    <li><a class="footer-top__nav-link" href="#">Корпоративный сайт</a></li>
+                    <li><a class="footer-top__nav-link" href="#">Лендинг</a></li>
+                    <li><a class="footer-top__nav-link" href="#">Сервисы и порталы</a></li>
+                    <li><a class="footer-top__nav-link" href="#">Сложные проекты</a></li>
+                  </ul>
+                </li>
+                <li class="footer-top__nav-item"><a class="footer-top__nav-link" href="#">Контекстная реклама</a></li>
+                <li class="footer-top__nav-item"><a class="footer-top__nav-link" href="#">Поддержка сайтов</a></li>
+                <li class="footer-top__nav-item"><a class="footer-top__nav-link" href="#">Поднятие скорости загрузки</a></li>
+                <li class="footer-top__nav-item"><a class="footer-top__nav-link" href="#">Сайт за 5 дней</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-top__col info">
+            <div class="footer-top__phones">
+              <div class="footer-top__phone">
+                <div class="caption">Офис в Москве</div><a class="link" href="#">+7 (926) 731-35-45</a>
+              </div>
+              <div class="footer-top__phone">
+                <div class="caption">Офис в Беларуси</div><a class="link" href="#">+375 (29) 311-66-11</a>
+              </div>
+            </div>
+            <div class="footer-top__mails">
+              <div class="footer-top__mail">
+                <div class="caption">Эл. почта:</div><a class="link" href="#">info@promicom.ru</a>
+              </div>
+            </div>
+            <div class="footer-top__socials"><a class="footer-top__social" href="#"><img class="lazyload" loading="lazy" data-src="static/img/svg/telegram.svg" width="32" height="32"></a><a class="footer-top__social" href="#"><img class="lazyload" loading="lazy" data-src="static/img/svg/whatsapp.svg" width="32" height="32"></a><a class="footer-top__social" href="#"><img class="lazyload" loading="lazy" data-src="static/img/svg/skype.svg" width="32" height="32"></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom__scroll scroll-top">
+            <svg width="24" height="24">
+              <use xlink:href="static/img/sprites/sprite.svg#icon_go_top"></use>
+            </svg>
+          </div>
+          <div class="footer-bottom__copy">© Promicom, 2022.<br>Все права защищены</div>
+        </div>
+      </div>
+    </footer>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/service.js"></script>
+  </body>
+</html>

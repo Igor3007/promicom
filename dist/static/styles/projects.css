@@ -1,0 +1,346 @@
+/* colors */
+
+/* dimensions */
+
+/* media breakpoints */
+
+.projects-block {
+  padding: 24px 0 64px;
+}
+
+.projects-block__title {
+  margin-bottom: 16px;
+}
+
+.projects-block__caption {
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.projects-block__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -12px -12px 0;
+}
+
+.projects-block__more {
+  margin: 12px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-block__more .btn {
+  width: 100%;
+}
+
+.projects-block__item {
+  width: calc(100% - 24px);
+  margin: 12px;
+  position: relative;
+  padding: 24px 24px 160px;
+  min-height: 400px;
+  flex-grow: 1;
+}
+
+.projects-block__item:hover::after {
+  border-color: var(--color-accent);
+}
+
+.projects-block__item:hover .projects-block__item-image::after {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.projects-block__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid transparent;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+}
+
+.projects-block__item-link,
+.projects-block__item-name,
+.projects-block__item-desc {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-block__item-link {
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+.projects-block__item-link,
+.projects-block__item-desc {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+}
+
+.projects-block__item-name {
+  color: #FFFFFF;
+  margin-bottom: 8px;
+  transition: all 0.25s ease;
+}
+
+.projects-block__item-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+.projects-block__item-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mainpage-form {
+  padding: 32px 0;
+  background: var(--color-accent-dark);
+}
+
+.mainpage-form__title {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.mainpage-form__caption {
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.mainpage-form .form__caption {
+  color: #fff;
+  font-size: 20px;
+  line-height: 160%;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.mainpage-form .form__group {
+  margin-bottom: 12px;
+}
+
+.mainpage-form .form__group.services {
+  display: none;
+}
+
+.mainpage-form .form__group.submit {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainpage-form .form__group.submit .form__submit {
+  flex-basis: 235px;
+  max-width: 328px;
+  flex-grow: 1;
+  margin: 0 auto 24px;
+}
+
+.mainpage-form .form__field.hidden {
+  display: none;
+}
+
+.mainpage-form .form__field .radios {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -6px -6px 0;
+}
+
+.mainpage-form .form__field .radio {
+  margin: 6px;
+}
+
+.mainpage-form .form__field .radio input:checked ~ .radio__text {
+  color: #fff;
+}
+
+.mainpage-form .form__field .radio input:checked ~ .radio__text::after {
+  border-color: var(--color-accent);
+  background: var(--color-accent-dark-hover);
+}
+
+.mainpage-form .form__field .radio .radio__text {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  position: relative;
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.mainpage-form .form__field .radio .radio__text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--color-text-secondary);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.mainpage-form .form__field input:not([type=checkbox]):not([type=radio]),
+.mainpage-form .form__field textarea {
+  background-color: var(--color-accent-dark);
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+
+.mainpage-form .form__field input:not([type=checkbox]):not([type=radio])::placeholder,
+.mainpage-form .form__field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mainpage-form .form__field input:not([type=checkbox]):not([type=radio]):focus,
+.mainpage-form .form__field textarea:focus {
+  background-color: var(--color-accent-dark-hover);
+}
+
+.mainpage-form .form__agreement {
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 641px) {
+  .projects-block {
+    padding: 24px 0 48px;
+  }
+
+  .projects-block__caption {
+    margin-bottom: 52px;
+  }
+
+  .projects-block__item {
+    width: calc(50% - 24px);
+  }
+
+  .projects-block__item.fullwidth {
+    width: calc(100% - 24px);
+  }
+
+  .projects-block__item.halfwidth {
+    width: calc(100% - 24px);
+  }
+
+  .projects-block__more .btn {
+    width: calc(50% - 12px);
+  }
+
+  .mainpage-form .form__group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .mainpage-form .form__caption {
+    width: calc(100% - 24px);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .mainpage-form .form__field {
+    width: calc(50% - 24px);
+    margin: 12px;
+  }
+
+  .mainpage-form .form__field--fullwidth {
+    width: calc(100% - 24px);
+  }
+
+  .mainpage-form .form__group.submit {
+    flex-wrap: nowrap;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .mainpage-form .form__group.submit .form__submit {
+    max-width: 235px;
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+
+  .mainpage-form .form__agreement {
+    text-align: left;
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mainpage-form .form__field {
+    width: calc(100% / 3 - 24px);
+  }
+
+  .mainpage-form .form__field.hidden {
+    display: block;
+  }
+
+  .mainpage-form .form__field--fullwidth {
+    width: calc(100% - 24px);
+  }
+
+  .mainpage-form .form__group {
+    margin-bottom: 28px;
+  }
+}
+
+@media screen and (min-width: 1153px) {
+  .projects-block {
+    padding: 48px 0 76px;
+  }
+
+  .projects-block__caption {
+    margin-bottom: 88px;
+  }
+
+  .projects-block__item {
+    width: calc(100% / 3 - 24px);
+    min-height: 480px;
+  }
+
+  .projects-block__item.fullwidth {
+    width: calc(100% - 24px);
+  }
+
+  .projects-block__item.halfwidth {
+    width: calc((100% - 100%/3) - 24px);
+  }
+
+  .projects-block__more .btn {
+    width: calc(100% / 3 - 12px);
+  }
+
+  .mainpage-form {
+    padding: 80px 0;
+  }
+
+  .mainpage-form .form__group.services {
+    display: flex;
+  }
+}
+/*# sourceMappingURL=maps/projects.css.map */
