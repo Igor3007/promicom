@@ -1,0 +1,34 @@
+section.service-projects
+  .container
+    .service-projects__title.section-h2.wow.experience Уже сделали
+    .service-projects__caption.section-caption.wow.experience Мы ставим пользовательский опыт превыше всего — и тестируем десятки гипотез перед тем, как предложить клиенту первую концепцию. Идея становится интерактивным прототипом, а затем готовым продуктом.
+    .service-projects__items.splide.wow.experienceLeft
+      .splide__track
+        ul.splide__list
+          li.splide__slide.service-projects__item.wow
+            a(href="#").image
+              .image-wrp
+                picture
+                  source(srcset="static/img/home/project-1.webp" type="image/webp")
+                  img.lazyload(loading="lazy" data-src="static/img/home/project-1.jpg" width=296 height=296)
+            a(href="#").name.section-h4 1new
+            .desc Интернет-магазин компании 1NEW®, реализующей товары по уходу за автомобилем и прочие товары для строительства и ремонта во все регионы России и страны ЕАЭС
+          li.splide__slide.service-projects__item
+            a(href="#").image
+              .image-wrp
+                picture
+                  source(srcset="static/img/home/project-4.webp" type="image/webp")
+                  img.lazyload(loading="lazy" data-src="static/img/home/project-4.jpg" width=296 height=296)
+            a(href="#").name.section-h4 СЭЗ «Могилев»
+            .desc Масштабный проект для Администрации СЭЗ «Могилев», занимающейся привлечением инвестиций для создания новых производств
+          li.splide__slide.service-projects__item.with-btn
+            a(href="#").image
+              .image-wrp
+                picture
+                  source(srcset="static/img/home/project-3.webp" type="image/webp")
+                  img.lazyload(loading="lazy" data-src="static/img/home/project-3.jpg" width=296 height=296)
+            a(href="#").name.section-h4 ООО «Бремино групп»
+            .desc Интернет-магазин для производителя автомобильных чехлов и автоаксессуаров
+            a(href="#").btn.btn-primary
+              span Все проекты
+              +icons('#icon_arrow_right', 24)

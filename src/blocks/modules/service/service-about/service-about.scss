@@ -1,0 +1,19 @@
+.service-about{
+  padding: 32px 0 40px;
+
+  .container{
+    max-width: 908px;
+  }
+
+  @media screen and (min-width: 1025px) {
+
+    padding: 64px 0;
+    
+  }
+
+  @media screen and (min-width: 1025px) {
+    padding: 100px 0;
+    
+  }
+
+}

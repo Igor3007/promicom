@@ -1,0 +1,46 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+@import "vendor/splide-core";
+
+@import "../blocks/modules/service/service-banner/service-banner";
+
+@import "../blocks/modules/service/service-steps/service-steps";
+
+@import "../blocks/modules/service/service-develop/service-develop";
+
+@import "../blocks/modules/service/service-done/service-done";
+
+@import "../blocks/modules/service/service-cert/service-cert";
+
+@import "../blocks/modules/service/service-about/service-about";
+
+@import "../blocks/modules/home/home-form/home-form";
+
+section.service-develop{
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 1224px;
+    height: 1px;
+    background: var(--color-border);
+    margin: 0 auto;
+  }
+}
+
+section.service-projects{
+  @include section-padding-top;
+}
+
+section.service-cert{
+  @include section-padding;
+}
+
+section.service-about{
+  @include section-padding-bottom;
+}

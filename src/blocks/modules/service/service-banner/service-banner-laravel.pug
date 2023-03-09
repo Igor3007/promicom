@@ -1,0 +1,25 @@
+section.service-banner.service-banner--fullwidth
+  .container
+      .service-banner__text
+        +breadcrumb([
+          {
+            link: "/",
+            text: "Главная",
+          },
+          {
+            link: "/",
+            text: "Разработка",
+          },
+          {
+            link: "/",
+            text: "Laravel",
+            isActive: true,
+          }
+        ], 'service-banner__breadcrumbs wow experience')
+        h1.service-banner__title.section-h1.wow.experience Разработка сайтов<br> на Laravel под ключ
+        .service-banner__caption.section-caption.wow.experience Promicom — разработка и поддержка интернет-проектов под ключ любого уровня сложности на безопасном php-фреймворке в Москве
+        a(href="#callback").service-banner__btn.btn.btn-primary.wow.experience Оставить заявку
+      .service-banner__image
+        picture
+          source(srcset="static/img/laravel/banner.webp" type="image/webp")
+          img.wow.fadeIn(src="static/img/laravel/banner.png" width="640" height="440")

@@ -1,0 +1,34 @@
+extends ../layouts/default
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+
+block variables
+    - const title = "Лицензии «1С-Битрикc:Управление сайтом»"
+
+block styles
+    link(rel="stylesheet" href="static/styles/license.css")
+
+block content
+
+    include ../../blocks/modules/service/service-banner/service-banner-license
+
+    include ../../blocks/modules/service/service-licenses/service-licenses
+
+    include ../../blocks/modules/service/service-sale/service-sale
+
+    include ../../blocks/modules/service/service-done/service-done-with-desc
+
+    include ../../blocks/modules/service/service-about/service-about-license
+
+    include ../../blocks/modules/home/home-form/home-form
+
+    +callbackPopup()
+
+block scripts
+    script(src="static/js/main.js")
+    script(src="static/js/service.js")

@@ -1,0 +1,34 @@
+extends ../layouts/default
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+
+block variables
+    - const title = "Интернет-магазин «под ключ» на 1С-Битрикс за 10 дней"
+
+block styles
+    link(rel="stylesheet" href="static/styles/shop.css")
+
+block content
+
+    include ../../blocks/modules/service/service-banner/service-banner-shop
+
+    include ../../blocks/modules/service/service-advantages/service-advantages-shop
+
+    include ../../blocks/modules/service/service-templates/service-templates
+
+    include ../../blocks/modules/service/service-contains/service-contains
+
+    include ../../blocks/modules/service/service-cert/service-cert
+
+    include ../../blocks/modules/home/home-form/home-form
+
+    +callbackPopup()
+
+block scripts
+    script(src="static/js/main.js")
+    script(src="static/js/service.js")

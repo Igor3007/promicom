@@ -1,0 +1,59 @@
+section.service-tech
+  .container
+    .service-tech__title.section-h2.wow.experience Технологии
+    .service-tech__caption.section-caption.wow.experience Наша команда успешно работает с данными системами управления (CMS) и фреймворками, как для поддержки сайтов, так и для их комплексного администрирования.
+    .service-tech__block
+      .service-tech__block-heading.section-h4.wow.experience CMS – системы управления
+      .service-tech__block-items.wow.experienceLeft
+        -
+          var list = [
+            {
+              img: "/static/img/services/wp",
+              name: "WordPress"
+            },
+            {
+              img: "/static/img/services/bt",
+              name: "1С-Битрикс"
+            },
+            {
+              img: "/static/img/services/oc",
+              name: "OpenCart"
+            }
+          ]
+
+          var list1 = [
+            {
+              img: "/static/img/services/lv",
+              name: "Laravel"
+            },
+            {
+              img: "/static/img/services/vue",
+              name: "Vue.js"
+            },
+            {
+              img: "/static/img/services/yi",
+              name: "Yii Framework"
+            },
+            {
+              img: "/static/img/services/rt",
+              name: "React"
+            }
+          ]
+          
+        each item in list
+          .service-tech__block-item
+            .image
+              picture
+                source(srcset=item.img+".webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src=item.img+".png" width=50 height=50)
+            .caption=item.name
+    .service-tech__block
+      .service-tech__block-heading.section-h4.wow.experience Фреймворки
+      .service-tech__block-items.wow.experienceLeft
+        each item in list1
+          .service-tech__block-item
+            .image
+              picture
+                source(srcset=item.img+".webp" type="image/webp")
+                img.lazyload(loading="lazy" data-src=item.img+".png" width=50 height=50)
+            .caption=item.name

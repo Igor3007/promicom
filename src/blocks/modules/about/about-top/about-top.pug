@@ -1,0 +1,16 @@
+section.about-agency
+    .container
+        h1.about-agency__title.section-h1.wow.experience Агентство <span class="accent">«Promicom»</span>
+        .about-agency__caption.section-caption.wow.experience Осуществляем полный цикл разработки веб-проектов и сервисов, а также их комплексное продвижение в интернете.
+        .video-block.wow.experience
+            .video-block__preview
+                picture
+                    source(srcset="static/img/home/video.webp")
+                    img.lazyload(loading="lazy" data-src="static/img/home/video.jpg" width=328 height=458)
+            .video-block__play: +icons('#play', 20)
+            .video-block__player(data-src="static/img/video/about.mp4")
+                video(controls="controls")
+        blockquote.quote-block.wow.fadeIn
+            p(align="center")
+                strong Лучшая награда – счастливые клиенты.<br>Лучший подарок – видеть взлет сделанного руками компании проекта.<br> Для этого мы и существуем!
+

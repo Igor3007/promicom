@@ -1,0 +1,29 @@
+section.service-banner.service-banner--fullwidth
+  .container
+      .service-banner__text
+        +breadcrumb([
+          {
+            link: "/",
+            text: "Главная",
+          },
+          {
+            link: "/",
+            text: "Разработка",
+          },
+          {
+            link: "/",
+            text: "1С-Битрикс",
+          },
+          {
+            link: "/",
+            text: "Лицензии управление сайтом",
+            isActive: true,
+          }
+        ], 'service-banner__breadcrumbs wow experience')
+        h1.service-banner__title.section-h1.wow.experience Лицензии «1С-Битрикc: Управление сайтом»
+        .service-banner__caption.section-caption.wow.experience Увеличьте число заявок и звонков со своего сайта
+        a(href="#callback").service-banner__btn.btn.btn-primary.wow.experience Оставить заявку
+      .service-banner__image.service-banner__image--near-content
+        picture
+          source(srcset="static/img/license/banner-trimmy.webp" type="image/webp")
+          img.wow.fadeIn(src="static/img/license/banner-trimmy.png" width="640" height="440")

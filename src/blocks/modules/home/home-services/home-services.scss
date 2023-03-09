@@ -1,0 +1,179 @@
+.mainpage-services{
+  padding: 0;
+  background: var(--color-item-bg);
+
+  &__title{
+    margin-bottom: 8px;
+  }
+
+  &__caption{
+    font-weight: 700;
+  }
+
+  &__heading{
+    margin-bottom: 24px;
+    display: none;
+  }
+
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    padding: 6px 0 16px;
+  }
+
+  &__item{
+    background: var(--color-item-bg);
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    position: relative;
+    width: 100%;
+
+
+    &:not(:last-child){
+      margin-bottom: 0px;
+    }
+
+    .name{
+      color: var(--color-accent);
+      padding-right: 30px;
+      margin-bottom: 0;
+    }
+
+    .desc{
+      padding-top: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 150%;
+      display: none;
+    }
+
+    .icon{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) translateX(-30px);
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      opacity: 0;
+      transition: all 0.5s ease;
+
+      svg{
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+    &:hover{
+      background: var(--color-accent);
+
+      .name,.desc{
+        color: #fff;
+      }
+
+      .icon{
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+      }
+
+    }
+
+  }
+
+  @media screen and (min-width: 481px) {
+
+    &__items{
+      margin: 0;
+    }
+
+    &__item{
+      padding-right: 50px;
+
+      &:hover{
+        .icon{
+          transform: translateY(-50%) translateX(0px);
+        }
+      }
+
+      .name{
+        padding-right: 0;
+      }
+
+      .desc{
+        display: block;
+      }
+
+      .icon{
+        top: 50%;
+        transform: translateY(-50%) translateX(-30px);
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 641px){
+    padding: 24px 0 40px;
+    background: #fff;
+
+    &__heading{
+      display: block;
+    }
+
+    &__item{
+      padding: 16px 20px;
+
+      &:not(:last-child){
+        margin-bottom: 12px;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 831px) {
+
+    .container{
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__heading{
+      max-width: 392px;
+      width: 392px / 1224px * 100%;
+      flex-grow: 1;
+      padding-right: 24px;
+      margin-right: auto;
+      position: sticky;
+      top: 81px;
+      margin-bottom: 0;
+    }
+
+    &__items{
+      width: 808px / 1224px * 100%;
+    }
+
+    &__item{
+      background: #fff;
+      .icon{
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 1025px){
+    padding: 80px 0 50px;
+  }
+
+  @media screen and (min-width: 1153px) {
+
+    &__heading{
+      top: 98px;
+    }
+
+  }
+
+}

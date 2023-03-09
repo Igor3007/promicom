@@ -1,0 +1,21 @@
+section.service-banner
+  .container
+      .service-banner__text.service-banner__text--fullwidth
+        +breadcrumb([
+          {
+            link: "/",
+            text: "Главная",
+          },
+          {
+            link: "/",
+            text: "Разработка",
+            isActive: true,
+          }
+        ], 'service-banner__breadcrumbs wow experience')
+        h1.service-banner__title.section-h1.wow.experience От простых решений, до уникальных веб-проектов!
+        .service-banner__caption.section-caption.wow.experience Оставьте свою заявку, и мы точно предложим оптимальное решение!
+        a(href="#callback").service-banner__btn.btn.btn-primary.wow.experience Оставить заявку
+      .service-banner__image
+        picture
+          source(srcset="static/img/service/banner.webp" type="image/webp")
+          img.wow.experienceLeft(src="static/img/service/banner.png" width="452" height="492")

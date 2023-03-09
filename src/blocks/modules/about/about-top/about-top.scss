@@ -1,0 +1,32 @@
+.about-agency{
+  &__title{
+    margin-bottom: 16px;
+  }
+
+  &__caption{
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  .video-block{
+    border-bottom: 4px solid var(--color-accent);
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 641px) {
+    padding: 24px 0 48px;
+
+    &__caption{
+      margin-bottom: 48px;
+    }
+
+
+  }
+
+  @media screen and (min-width: 1153px) {
+    padding: 48px 0 76px;
+
+  }
+
+
+}

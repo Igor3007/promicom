@@ -1,0 +1,46 @@
+extends ../layouts/default
+include ../helpers/mixins
+include ../../blocks/components/breadcrumbs/breadcrumbs.pug
+include ../../blocks/components/form/form.pug
+include ../../blocks/components/checkbox/checkbox.pug
+include ../../blocks/components/headers/headers.pug
+include ../../blocks/components/table/table.pug
+include ../../blocks/components/popup/popup.pug
+
+block variables
+    - const title = "О промиком"
+
+block styles
+    link(rel="stylesheet" href="static/styles/about.css")
+
+block content
+
+    .page-breadcrumbs
+        .container
+            +breadcrumb([
+                {
+                    link: "/",
+                    text: "Главная",
+                },
+                {
+                    link: "/",
+                    text: "О промиком",
+                    isActive: true,
+                }
+            ], 'wow experience')
+
+    include ../../blocks/modules/about/about-top/about-top
+
+    include ../../blocks/modules/about/about-advantages/about-advantages
+
+    include ../../blocks/modules/about/about-clients/about-clients
+
+    include ../../blocks/modules/about/about-team/about-team
+
+    include ../../blocks/modules/home/home-form/home-form
+
+    +callbackPopup()
+
+block scripts
+    script(src="static/js/main.js")
+    script(src="static/js/about.js")

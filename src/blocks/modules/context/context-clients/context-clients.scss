@@ -1,0 +1,230 @@
+.clients-block{
+
+  &__caption{
+    font-weight: 700;
+    margin-bottom: 48px;
+  }
+
+  &__arrows{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: -64px;
+    position: relative;
+    z-index: 1;
+    width: 152px;
+    margin-left: auto;
+  }
+
+  &__arrow{
+    width: 64px;
+    height: 64px;
+    appearance: none;
+    border: none;
+    background: var(--color-item-bg);
+    margin-left: 12px;
+    transition: all 0.25s ease;
+    cursor: not-allowed;
+    &:not(:disabled){
+      cursor: pointer;
+      &:hover{
+        background: var(--color-accent);
+
+        svg path{
+          stroke: #fff;
+        }
+
+      }
+    }
+  }
+
+  &__slide{
+
+    &-name{
+      height: 64px;
+      background: var(--color-item-bg);
+      padding: 16px 20px;
+      width: calc(100% - 152px);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      line-height: 150%;
+      font-weight: 900;
+      color: var(--color-accent);
+      transition: all 0.25s ease;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:hover{
+        color: #fff;
+        background: var(--color-accent);
+      }
+
+    }
+
+    &-content{
+      padding: 32px;
+      background: var(--color-item-bg);
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-list{
+      display: flex;
+      flex-wrap: wrap;
+      margin: -6px -6px 18px;
+      width: calc(100% + 12px);
+
+      li{
+        width: calc(100% - 12px);
+        margin: 6px;
+
+        @include w1025{
+          width: calc(50% - 12px);
+        }
+
+        span{
+          color: var(--color-text-secondary);
+          margin-right: 8px;
+        }
+
+      }
+
+    }
+
+    &-boxes{
+      width: calc(100% + 12px);
+      margin: -6px -6px 6px;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include w1025{
+        width: 240px;
+        margin: 0 12px 0 0;
+      }
+
+    }
+
+    &-box{
+      width: calc(100% - 12px);
+      margin: 6px;
+      background: #FFFFFF;
+      padding: 20px;
+      flex-grow: 1;
+
+      .chevron-right{
+        display: inline-block;
+        width: 24px;
+        height: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../img/svg/chevron-right.svg");
+      }
+
+      .color-accent{
+        color: var(--color-accent);
+      }
+
+      &__caption{
+        margin-bottom: 8px;
+      }
+
+      &__numbers{
+        font-size: 24px;
+        line-height: 150%;
+        font-weight: 900;
+        margin-bottom: 8px;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      &__desc{
+        color: var(--color-text-secondary);
+      }
+
+      @include w481{
+        width: calc(100% / 2 - 12px);
+      }
+
+      @include w831{
+        width: calc(100% / 3 - 12px);
+      }
+
+      @include w1025{
+        width: 100%;
+        margin: 0 0 12px;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+      }
+
+    }
+
+    &-graph{
+      background: #FFFFFF;
+      padding: 20px;
+      width: 100%;
+
+
+      &__caption,
+      &__users{
+        text-align: center;
+        color: var(--color-text-secondary);
+      }
+
+      &__months{
+        padding: 12px 0;
+      }
+
+      &__name,
+      &__number{
+        font-weight: 700;
+        text-align: center;
+      }
+
+      &__number{
+        color: var(--color-accent);
+      }
+
+      &__bar{
+        margin: 12px auto;
+        height: 248px;
+        border-radius: 4px;
+        overflow: hidden;
+        width: 8px;
+        background: var(--color-item-bg);
+        display: flex;
+        align-items: flex-end;
+
+        &--value{
+          border-radius: 4px;
+          background: var(--color-accent);
+          width: 100%;
+        }
+
+      }
+
+      @include w1025{
+        width: calc(100% - 252px);
+      }
+
+    }
+
+
+  }
+
+  @include w481{}
+  @include w641{}
+  @include w831{
+    padding: 64px 0 32px;
+  }
+  @include w1025{}
+  @include w1153{
+    padding: 100px 0 50px;
+  }
+
+}

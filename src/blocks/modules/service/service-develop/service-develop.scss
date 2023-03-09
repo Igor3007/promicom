@@ -1,0 +1,176 @@
+.service-develop{
+  overflow: hidden;
+
+  &__heading{
+    margin-bottom: 24px;
+
+    &-title{
+      margin-bottom: 12px;
+    }
+  
+    &-caption{
+      font-weight: 700;
+    }
+
+  }
+
+  
+  &__description{
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 24px;
+
+    span{
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+  }
+
+  &__items{
+    width: 95%;
+
+    .splide__track{
+      overflow: visible;
+    }
+
+  }
+
+  &__item{
+    padding: 32px 24px;
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+
+    &:hover{
+      background: var(--color-accent-dark);
+
+      .service-develop__item-name{
+        color: #fff;
+      }
+
+      .service-develop__item-buttons{
+        .btn{
+          background: var(--color-accent);
+          color: #fff;
+          border-color: transparent;
+
+          svg{
+            transition: all 0.5s ease;
+          }
+
+          svg *[stroke]{
+            stroke: #fff;
+          }         
+
+        }
+      }
+
+    }
+
+    &-name{
+      margin-bottom: 12px;
+    }
+
+    &-price{
+      color: var(--color-accent);
+      font-size: 18px;
+      line-height: 150%;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    &-description{
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--color-text-secondary);
+      margin-bottom: 24px;
+
+      p:last-child{
+        margin-bottom: 0;
+      }
+
+    }
+
+    &-price + &-buttons{
+      padding-top: 20px;
+    }
+
+    &-buttons{
+      margin-top: auto;
+      .btn{
+        font-size: 14px;
+        line-height: 171%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 12px;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 831px){
+    padding: 40px 0;
+
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__heading{
+      max-width: 392px;
+      width: 392px / 1224px * 100%;
+      flex-grow: 1;
+      padding-right: 24px;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+
+    &__description{
+      width: 600px / 1224px * 100%;
+      margin-bottom: 0;
+    }
+
+    &__items{
+      margin-top: 80px;
+      width: 100%;
+    }
+
+  }
+
+  @media screen and (min-width: 1025px) {
+    overflow: visible;
+    padding: 80px 0 100px;
+
+    &__items{
+
+      .splide__track{
+        overflow: hidden;
+      }
+      
+
+      .splide__list{
+        display: flex !important;
+        flex-wrap: wrap;
+      }
+
+    }
+
+    &__item{
+      width: calc(100% / 3);      
+    }
+
+    
+  }
+
+  @media screen and (min-width: 1153px){
+
+    .service-develop__description,
+    .service-develop__item-price{
+      font-size: 20px;
+    }
+  }
+
+}

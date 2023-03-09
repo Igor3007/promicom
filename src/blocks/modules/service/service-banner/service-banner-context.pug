@@ -1,0 +1,31 @@
+section.service-banner.service-banner--fullwidth
+  .container
+      .service-banner__text
+        +breadcrumb([
+          {
+            link: "/",
+            text: "Главная",
+          },
+          {
+            link: "/",
+            text: "Контекстная реклама",
+            isActive: true,
+          }
+        ], 'service-banner__breadcrumbs wow experience')
+        h1.service-banner__title.section-h1.wow.experience Контекстная реклама<br> в Yandex и Google
+        .service-banner__caption.section-caption.wow.experience Увеличьте число заявок и звонков со своего сайта
+        .service-banner__items
+          .service-banner__item.wow.experience
+            .service-banner__item-icon: img(src="static/img/service/context-1.svg" width=48 height=48)
+            .service-banner__item-text Ваш сайт на 1-ом месте в поисковых системах
+          .service-banner__item.wow.experience
+            .service-banner__item-icon: img(src="static/img/service/context-2.svg" width=48 height=48)
+            .service-banner__item-text Первые заявки через 5 часов после запуска
+          .service-banner__item.wow.experience
+            .service-banner__item-icon: img(src="static/img/service/context-3.svg" width=48 height=48)
+            .service-banner__item-text Привлечение только потенциальных клиентов!
+        a(href="#callback").service-banner__btn.btn.btn-primary.wow.experience Оставить заявку
+      .service-banner__image.service-banner__image--fullwidth
+        picture
+          source(srcset="static/img/service/banner-context.webp" type="image/webp")
+          img.wow.fadeIn(src="static/img/service/banner-context.png" width="452" height="492")

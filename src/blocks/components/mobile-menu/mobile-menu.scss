@@ -1,0 +1,200 @@
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 72px;
+    right: 0;
+    bottom: 0;
+    transform: translateY(calc(-100% - 72px));
+    width: 100%;
+    background: var(--color-nav-bg);
+    transition: transform 0.5s ease;
+    overflow-y: scroll;
+    z-index: 4;
+    padding-bottom: 32px;
+
+    @media screen and (min-width: 481px) {
+        max-width: 360px;
+        transform: translateX(100%);
+
+        &.is-active {
+            transform: translateX(0);
+        }
+
+    }
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &.is-active {
+        transform: translateX(0);
+    }
+
+    &__nav {
+        margin: 0 -16px;
+        width: calc(100% + 32px);
+
+        @media screen and (min-width: 481px) {
+                margin: 0 -25px;
+                width: calc(100% + 50px);
+
+        }
+
+        &-list{
+            & > .mobile-menu__nav-item{
+                border-bottom: 1px solid var(--color-nav-border);
+
+                & > .mobile-menu__nav-link{
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 32px / 20px * 100%;
+                    padding: 16px;
+                    display: block;
+                    width: calc(100% - 72px);
+                    flex-grow: 1;
+                    transition: all 0.5s ease;
+                }
+
+            }
+        }
+
+        &-item{
+            display: flex;
+            flex-wrap: wrap;
+
+            &:hover{
+                & > .mobile-menu__nav-link{
+                    color: var(--color-accent);
+                }
+            }
+
+            &.is-active{
+
+                & > .mobile-menu__nav-link{
+                    color: var(--color-accent);
+                }
+
+                & > .mobile-menu__nav-toggle{
+                    svg{
+                        transform: scale(-1);
+                    }
+
+                    svg *[stroke]{
+                        stroke: var(--color-accent);
+                    }
+
+                }
+
+                & > .mobile-menu__nav-submenu{
+                    display: block;
+                }
+            }
+
+        }
+
+        &-toggle{
+            width: 56px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid var(--color-nav-border);
+            cursor: pointer;
+
+            svg{
+                transition: all 0.5s ease;
+            }
+
+        }
+
+        &-submenu{
+            display: none;
+            padding: 8px 16px;
+            width: 100%;
+            border-top: 1px solid var(--color-nav-border);
+
+            .mobile-menu__nav-link{
+                display: block;
+                padding: 8px 0;
+                font-size: 16px;
+                line-height: 24px / 16px * 100%;
+                transition: all 0.5s ease;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+
+            }
+
+        }
+    }
+
+    &__phones{
+        padding-top: 16px;
+        width: 100%;
+    }
+
+    &__phone{
+        padding: 16px 0;
+        .caption{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 32px / 20px * 100%;
+            margin-bottom: 4px;
+        }
+        .link{
+            color: var(--color-accent);
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 32px / 20px * 100%;
+        }
+    }
+
+    &__mails{
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 24px;
+    }
+
+    &__mail{
+        padding: 16px 0;
+        .caption{
+            font-size: 14px;
+            line-height: 24px / 14px * 100%;
+            margin-bottom: 4px;
+            color: var(--color-text-secondary);
+        }
+        .link{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px / 16px * 100%;
+        }
+    }
+
+    &__socials{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-right: auto;
+    }
+
+    &__lang{
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 171%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 12px 16px;
+        border: 2px solid var(--color-border);
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 1152px) {
+    .mobile-menu {
+        display: block;
+    }
+}

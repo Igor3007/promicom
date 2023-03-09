@@ -1,0 +1,61 @@
+section.about-advantages
+    .container
+        .about-advantages__title.section-h2.wow.experience Преимущества
+        .about-advantages__items
+            -
+                var list = [
+                    {
+                        icon: "01",
+                        title: "Индивидуальный подход",
+                        text: "Ставим пользовательский опыт превыше всего – и тестируем десятки гипотез перед тем, как предложить клиенту первую концепцию. Идея становится интерактивным прототипом, а затем готовым продуктом.",
+                        isWhite: false,
+                        withBtn: false,
+                    },
+                    {
+                        icon: "02",
+                        title: "Открытость",
+                        text: "Стремимся к тому, чтобы сделать процесс формирования цены прозрачным и понятным клиенту. Вы платите исключительно за потраченное нашими сотрудниками время, согласно план-графику работ.",
+                        isWhite: false,
+                        withBtn: false,
+                    },
+                    {
+                        icon: "03",
+                        title: "Результат",
+                        text: "Разрабатываем сайты, изначально нацеленные на решение маркетинговых и коммерческих задач – после разработки они готовы к старту рекламной компании и поискового продвижения. Наши клиенты не тратят, а инвестируют.",
+                        isWhite: false,
+                        withBtn: false,
+                    },
+                    {
+                        icon: "04",
+                        title: "Ваш проект",
+                        text: "Осуществляем полный цикл разработки и продвижения. Оставляйте заявку и убедитесь сами!",
+                        isWhite: true,
+                        withBtn: true,
+                    }
+                ]
+
+
+            each item in list
+                .about-advantages__item.wow.experienceRight
+                    .about-advantages__item-icon(class=""+(item.isWhite ? 'icon-white' : '')+"")
+                        img.lazyload(loading="lazy" data-src="/static/img/about/"+item.icon+".svg" width=48 height=48)
+                    .about-advantages__item-text
+                        .about-advantages__item-title=item.title
+                        .about-advantages__item-caption=item.text
+                        if item.withBtn
+                            .about-advantages__item-button
+                                a(href="#callback").btn.btn-primary Оставить заявку
+        .about-advantages__award
+            .section-h3.wow.experienceRight 1 место в Рейтинге Рунета
+            .awards
+                .awards-item
+                    <a href="https://ratingruneta.ru/context/belarus">
+                    <img src="https://api.cabinet.cmsmagazine.ru/images/badges/b49c21e3241ca30fdcd45758f44abe07/1663144382ZacQR542oazXyxiZe1.png" alt="Беларусь: рейтинг агентств контекстной рекламы"/></a>
+                .awards-item
+                    <a href="https://ratingruneta.ru/web-support/belarus">
+                    <img src="https://api.cabinet.cmsmagazine.ru/images/badges/b49c21e3241ca30fdcd45758f44abe07/16631444316K7KTdAcJXqq4ZAtoo.png" alt="Рейтинг агентств по поддержке и развитию сайтов Беларуси"/>
+                    </a>
+                .awards-item
+                    <a href="https://ratingruneta.ru/e-commerce/middle/belarus">
+                    <img src="https://api.cabinet.cmsmagazine.ru/images/badges/b49c21e3241ca30fdcd45758f44abe07/1663144472TtuEwxoih8ebxL7DDG.png" alt="Беларусь: рейтинг разработчиков интернет-магазинов в среднем сегменте"/>
+                    </a>

@@ -1,0 +1,172 @@
+section.service-licenses
+    .container
+        .service-licenses__title.section-h2.wow.experience Лицензии управление сайтом
+        .service-licenses__caption.section-caption.wow.experience Для получения обновлений продукта через год потребуется продление лицензии. Указанные на сайте цены приведены как справочная информация и не являются публичной офертой. <span>Окончательная цена товара и стоимости покупки указывается в счете на оплату.</span>
+        .service-licenses__tabs.service-tabs
+            .service-licenses__tabs-toggles.service-tabs__toggles.wow.experience
+                .service-licenses__tabs-toggle.service-tabs__toggle.is-active(data-tab="license") Лицензии
+                .service-licenses__tabs-toggle.service-tabs__toggle(data-tab="renew") Продления
+                .service-licenses__tabs-toggle.service-tabs__toggle(data-tab="transition") Переходы
+            .service-licenses__tabs-panes.service-tabs__panes.wow.experience
+                -
+                    var list = {
+                        licenses: [
+                            {
+                                image: "static/img/license/l-1",
+                                title: "1С-Битрикс: Старт",
+                                price: "5 400 ₽",
+                                desc: "Управляйте контентом вашего сайта профессионально: создавайте страницы и разделы, публикуйте новости, статьи, каталоги, распределите права доступа к сайту.",
+                                features: ["В редакцию включено: 13 модулей"]
+                            },
+                            {
+                                image: "static/img/license/l-2",
+                                title: "1С-Битрикс: Стандарт",
+                                price: "15 900 ₽",
+                                desc: "Создавайте интерактивные сайты: общайтесь с посетителями в форумах и блогах, проводите опросы, организуйте сообщества, фотогалереи, отправляйте рассылки подписчикам.",
+                                features: ["В редакцию включено: 21 модуль"]
+                            },
+                            {
+                                image: "static/img/license/l-3",
+                                title: "1С-Битрикс: Малый бизнес",
+                                price: "35 900 ₽",
+                                desc: "Базовый интернет-магазин. Откройте свой интернет-магазин с минимальными затратами. Разместите любое количество товаров в каталоге, управляйте скидками и доставкой. Интегрируйте магазин с «1С» и «Яндекс.Маркет».",
+                                features: ["В редакцию включено: 31 модуль"]
+                            },
+                            {
+                                image: "static/img/license/l-4",
+                                title: "1С-Битрикс: Бизнес",
+                                price: "72 900 ₽",
+                                desc: "Расширенный интернет-магазин. Больше, чем интернет-магазин. Расширяйте возможности вашего сайта: управляйте продажами товаров, услуг, электронного контента, автоматизируйте обработку заказов, интегрируйте магазин с «1С», поддерживайте партнерские сети, оценивайте затраты на рекламу, создавайте сообщества.",
+                                features: ["В редакцию включено: 49 модулей"]
+                            },
+                        ],
+                        renew: [
+                            {
+                                image: "static/img/license/l-5",
+                                title: "1С-Битрикс: Старт продление",
+                                price: "1 350 ₽",
+                            },
+                            {
+                                image: "static/img/license/l-6",
+                                title: "1С-Битрикс: Стандарт продление",
+                                price: "3 975 ₽",
+                            },
+                            {
+                                image: "static/img/license/l-7",
+                                title: "1С-Битрикс: Малый бизнес продление",
+                                price: "8 975 ₽",
+                            },
+                            {
+                                image: "static/img/license/l-8",
+                                title: "1С-Битрикс: Эксперт продление",
+                                price: "13 225 ₽",
+                            },
+                            {
+                                image: "static/img/license/l-9",
+                                title: "1С-Битрикс: Бизнес продление",
+                                price: "18 225 ₽",
+                            },
+                        ],
+                        transition: [
+                            {
+                                image: "static/img/license/l-10",
+                                title: "1С-Битрикс: Стандарт",
+                                price: "10 500 ₽",
+                                features: ["Переход с редакции Старт"]
+                            },
+                            {
+                                image: "static/img/license/l-11",
+                                title: "1С-Битрикс: Малый бизнес",
+                                price: "30 500 ₽",
+                                features: ["Переход с редакции Старт"]
+                            },
+                            {
+                                image: "static/img/license/l-12",
+                                title: "1С-Битрикс: Бизнес",
+                                price: "67 500 ₽",
+                                features: ["Переход с редакции Старт"]
+                            },
+                            {
+                                image: "static/img/license/l-13",
+                                title: "1С-Битрикс: Малый бизнес",
+                                price: "20 000 ₽",
+                                features: ["Переход с редакции Стандарт"]
+                            },
+                            {
+                                image: "static/img/license/l-14",
+                                title: "1С-Битрикс: Бизнес",
+                                price: "57 000 ₽",
+                                features: ["Переход с редакции Стандарт"]
+                            },
+                            {
+                                image: "static/img/license/l-15",
+                                title: "1С-Битрикс: Бизнес",
+                                price: "37 000 ₽",
+                                features: ["Переход с редакции Малый бизнес"]
+                            },
+                            {
+                                image: "static/img/license/l-16",
+                                title: "1С-Битрикс: Бизнес",
+                                price: "20 000 ₽",
+                                features: ["Переход с редакции Эксперт"]
+                            },
+                        ]
+                    }
+
+                .service-licenses__tabs-pane.service-tabs__pane.is-active(data-tab="license")
+                    .service-licenses__items
+                        each item in list.licenses
+                            .service-licenses__item
+                                .service-licenses__item-image
+                                    picture
+                                        source(srcset=item.image+".webp" type="image/webp")
+                                        img.lazyload(loading="lazy" data-src=item.image + ".png" width="69" height="84")
+                                .service-licenses__item-head
+                                    .service-licenses__item-name.section-h4=item.title
+                                    .service-licenses__item-price=item.price
+                                if item.desc
+                                    .service-licenses__item-desc=item.desc
+                                if item.features
+                                    ul.service-licenses__item-features
+                                        each i in item.features
+                                            li=i
+                                .service-licenses__item-actions
+                                    a(href="#").btn.btn-secondary Купить
+                .service-licenses__tabs-pane.service-tabs__pane(data-tab="renew")
+                    .service-licenses__items
+                        each item in list.renew
+                            .service-licenses__item
+                                .service-licenses__item-image
+                                    picture
+                                        source(srcset=item.image + ".webp" type="image/webp")
+                                        img.lazyload(loading="lazy" data-src=item.image + ".png" width="69" height="84")
+                                .service-licenses__item-head
+                                    .service-licenses__item-name.section-h4=item.title
+                                    .service-licenses__item-price=item.price
+                                if item.desc
+                                    .service-licenses__item-desc=item.desc
+                                if item.features
+                                    ul.service-licenses__item-features
+                                        each i in item.features
+                                            li=i
+                                .service-licenses__item-actions
+                                    a(href="#").btn.btn-secondary Купить
+                .service-licenses__tabs-pane.service-tabs__pane(data-tab="transition")
+                    .service-licenses__items
+                        each item in list.transition
+                            .service-licenses__item
+                                .service-licenses__item-image
+                                    picture
+                                        source(srcset=item.image + ".webp" type="image/webp")
+                                        img.lazyload(loading="lazy" data-src=item.image + ".png" width="69" height="84")
+                                .service-licenses__item-head
+                                    .service-licenses__item-name.section-h4=item.title
+                                    .service-licenses__item-price=item.price
+                                if item.desc
+                                    .service-licenses__item-desc=item.desc
+                                if item.features
+                                    ul.service-licenses__item-features
+                                        each i in item.features
+                                            li=i
+                                .service-licenses__item-actions
+                                    a(href="#").btn.btn-secondary Купить

@@ -1,0 +1,29 @@
+:root{
+  --color-primary: #fff;
+  --color-item-bg: #F0F2F7;
+  --color-nav-bg: #EBEEF5;
+  --color-nav-border: #D3D9EB;
+  --color-accent: #1F5AFF;
+  --color-accent-hover: #5280FF;
+  --color-accent-dark: #07163E;
+  --color-accent-dark-hover: #0B215C;
+  --color-accent-dark-hover-1: #0E2870;
+  --color-text-primary: #000;
+  --color-text-secondary: #6E81B8;
+  --color-border: #D3D9EB;
+}
+
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/components/components";
+@import "../blocks/modules/modules";
+
+@import "../blocks/components/edit-content/edit-content.scss";
+
+.wow { visibility: hidden; }
+
+@import "vendor/animate.scss";

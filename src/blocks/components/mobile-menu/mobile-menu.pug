@@ -1,0 +1,44 @@
+.mobile-menu
+    .container
+        nav.mobile-menu__nav
+            ul.mobile-menu__nav-list
+                li.mobile-menu__nav-item.has-submenu
+                    a(href="#").mobile-menu__nav-link Разработка сайтов
+                    .mobile-menu__nav-toggle
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 6L11 1" stroke="#777777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    ul.mobile-menu__nav-submenu
+                        li: a(href="#").mobile-menu__nav-link Интернет-магазин
+                        li: a(href="#").mobile-menu__nav-link Корпоративный сайт
+                        li: a(href="#").mobile-menu__nav-link Лендинг
+                        li: a(href="#").mobile-menu__nav-link Сервисы и порталы
+                        li: a(href="#").mobile-menu__nav-link Сложные проекты
+                li.mobile-menu__nav-item
+                    a(href="#").mobile-menu__nav-link Контекстная реклама
+                li.mobile-menu__nav-item
+                    a(href="#").mobile-menu__nav-link Поддержка сайтов
+                li.mobile-menu__nav-item
+                    a(href="#").mobile-menu__nav-link Поднятие скорости загрузки
+                li.mobile-menu__nav-item
+                    a(href="#").mobile-menu__nav-link Сайт за 5 дней
+        .mobile-menu__phones
+            .mobile-menu__phone
+                .caption Офис в Москве
+                a(href="#").link +7 (926) 731-35-45
+            .mobile-menu__phone
+                .caption Офис в Беларуси
+                a(href="#").link +375 (29) 311-66-11
+        .mobile-menu__mails
+            .mobile-menu__mail
+                .caption Эл. почта:
+                a(href="#").link info@promicom.ru
+        .mobile-menu__socials
+            a(href="#").mobile-menu__social
+                img.lazyload(loading="lazy" data-src="static/img/svg/telegram.svg" width=32 height=32)
+            a(href="#").mobile-menu__social
+                img.lazyload(loading="lazy" data-src="static/img/svg/whatsapp.svg" width=32 height=32)
+            a(href="#").mobile-menu__social
+                img.lazyload(loading="lazy" data-src="static/img/svg/skype.svg" width=32 height=32)
+        a(href="#").mobile-menu__lang ENG
+

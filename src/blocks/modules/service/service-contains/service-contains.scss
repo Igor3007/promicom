@@ -1,0 +1,43 @@
+.service-contains{
+  @include section-padding;
+
+  &__title{
+    margin-bottom: 32px;
+
+    @include w831{
+      margin-bottom: 40px;
+    }
+
+  }
+
+  &__list{
+
+    @include w831{
+      columns: 2;
+      column-gap: 24px;
+    }
+
+    li{
+      font-size: 16px;
+      line-height: 150%;
+      font-weight: 700;
+      padding: 8px 0 8px 32px;
+      min-height: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    li::before{
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/svg/icon_check_24.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+}

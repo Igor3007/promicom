@@ -1,0 +1,46 @@
+section.mainpage-form
+    .container
+        .mainpage-form__title.section-h2.wow.experience Расскажите о Вашем проекте
+        .mainpage-form__caption.section-caption.wow.experience Поработаем вместе!
+        form.mainpage-form__fields.form
+            .form__group.services.wow.experience
+                .form__caption Выберите нужные услуги:
+                .form__field.form__field--fullwidth
+                    .radios
+                        label.radio
+                            input(type='radio' name="service")
+                            span.radio__text Разработка сайта
+                        label.radio
+                            input(type='radio' name="service")
+                            span.radio__text Поддержка сайта
+                        label.radio
+                            input(type='radio' name="service")
+                            span.radio__text Контекстная реклама
+                        label.radio
+                            input(type='radio' name="service")
+                            span.radio__text Поднятие скорости загрузки
+                        label.radio
+                            input(type='radio' name="service")
+                            span.radio__text Сайт за 5 дней
+            .form__group.contacts.wow.experience
+                .form__caption Ваши контакты:
+                .form__field
+                    .input.input-text
+                        input(type="text" placeholder="Имя" required=true)
+                .form__field.hidden
+                    .input.input-email
+                        input(type="email" placeholder="Эл. почта")
+                .form__field
+                    .input.input-tel
+                        input(type="tel" placeholder="Телефон" required=true)
+            .form__group.message.wow.experience
+                .form__caption Коротко о проекте
+                .form__field.form__field--fullwidth
+                    .textarea
+                        textarea(placeholder="Напишите пару слов на свое усмотрение")
+            .form__group.submit.wow.experience
+                .form__submit
+                    button.btn.btn-primary Отправить
+                .form__agreement Нажимая на кнопку, вы соглашаетесь на <a href="#">обработку персональных данных</a>
+
+

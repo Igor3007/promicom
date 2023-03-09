@@ -1,0 +1,96 @@
+.service-sale{
+  @include section-padding;
+
+  &__content{
+    position: relative;
+    background: var(--color-item-bg);
+    padding: 160px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    @include w831{
+      padding: 16px 184px;
+    }
+
+    @include w1025{
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    @include w1324{
+      padding: 16px 273px 16px 296px;
+    }
+
+  }
+
+  &__left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 189px;
+    width: 100%;
+
+    @include w1324{
+      max-width: 245px;
+    }
+
+  }
+
+  &__right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 189px;
+    width: 100%;
+  }
+
+  &__buy,
+  &__percent{
+    margin: 16px;
+    width: 100%;
+
+  }
+
+  &__buy{
+    position: relative;
+    z-index: 1;
+    line-height: 171%;
+
+    &::after,
+    &::before{
+      position: absolute;
+      content: "";
+      width: calc(100% + 12px);
+      left: -20px;
+      height: 20px;
+      background: #fff;
+      z-index: -1;
+      max-width: 372px;
+    }
+
+    &::before{
+      bottom: 51px;
+    }
+
+    &::after{
+      bottom: 3px;
+    }
+
+    @include w1025{
+      max-width: 357px;
+    }
+  }
+
+  &__percent{
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 700;
+
+    @include w1025{
+      max-width: 230px;
+    }
+  }
+
+}

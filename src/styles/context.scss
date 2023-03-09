@@ -1,0 +1,25 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+@import "vendor/splide-core";
+
+@import "../blocks/modules/service/service-banner/service-banner";
+
+@import "../blocks/modules/context/context-directions/context-directions";
+
+@import "../blocks/modules/context/context-context/context-context";
+
+@import "../blocks/modules/context/context-certificates/context-certificates";
+
+@import "../blocks/modules/context/context-tariffs/context-tariffs";
+
+@import "../blocks/modules/context/context-clients/context-clients";
+
+@import "../blocks/modules/context/context-advantages/context-advantages";
+
+@import "../blocks/modules/context/context-steps/context-steps";
+
+@import "../blocks/modules/context/context-result/context-result";
+
+@import "../blocks/modules/home/home-form/home-form";

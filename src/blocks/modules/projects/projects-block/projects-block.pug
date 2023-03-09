@@ -1,0 +1,81 @@
+section.projects-block
+    .container
+        .projects-block__title.section-h1.wow.experience Готовые проекты
+        .projects-block__caption.section-caption.wow.experience Мы ставим пользовательский опыт превыше всего — и тестируем десятки гипотез перед тем, как предложить клиенту первую концепцию. Идея становится интерактивным прототипом, а затем готовым продуктом.
+        -
+            var projects = [
+                {
+                    link: "tk-astra.ru",
+                    name: "Транспортная компания «АСТРА»",
+                    desc: "Корпоративный сайт + личный кабинет для транспортной компании Астра",
+                    image: "1",
+                    class: "fullwidth",
+                },
+                {
+                    link: "fezmogilev.by",
+                    name: "СЭЗ «Могилев»",
+                    desc: "Масштабный проект для Администрации СЭЗ «Могилев», занимающейся привлечением инвестиций для создания новых производств",
+                    image: "2",
+                },
+                {
+                    link: "bremino-sez.by",
+                    name: "ООО «Бремино групп»",
+                    desc: "",
+                    image: "3",
+                },
+                {
+                    link: "gruzok.by",
+                    name: "Грузок",
+                    desc: "",
+                    image: "4",
+                },
+                {
+                    link: "ulisskom.by",
+                    name: "Улисском",
+                    desc: "",
+                    image: "5",
+                },
+                {
+                    link: "1new.ru",
+                    name: "1new",
+                    desc: "",
+                    image: "6",
+                },
+                {
+                    link: "motorsale.by",
+                    name: "Мотор Дискаунтер",
+                    desc: "",
+                    image: "7",
+                },
+                {
+                    link: "pragasite.fvds.ru",
+                    name: "Praha",
+                    desc: "Одностраничный сайт по продаже недвижимости в Праге",
+                    image: "8",
+                },
+                {
+                    link: "strelaonline.by",
+                    name: "Стрела",
+                    desc: "",
+                    image: "9",
+                },
+                {
+                    link: "prom.ecvols.ru",
+                    name: "Экволс",
+                    desc: "",
+                    image: "10",
+                }
+            ]
+
+        .projects-block__items
+            each item in projects
+                a(href="//" + item.link target="_blank").projects-block__item.wow.experienceRight(class=""+(item.class ? item.class : '')+"")
+                    .projects-block__item-link=item.link
+                    .projects-block__item-name.section-h4=item.name
+                    .projects-block__item-desc=item.desc
+                    .projects-block__item-image
+                        picture
+                            source(srcset="static/img/projects/" + item.image + ".webp" type="image/webp")
+                            img.lazyload(loading="lazy" data-src="static/img/projects/" + item.image + ".png" width="100%" height="100%")
+        .projects-block__more.wow.experience
+            .btn.btn-primary Показать еще

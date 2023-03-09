@@ -1,0 +1,16 @@
+section.about-clients
+    .container
+        .about-clients__title.section-h2.wow.experience Клиенты
+        .about-clients__caption.section-caption.wow.experience Наш офис находится в Беларуси, но это никогда не мешало нам сотрудничать с компаниями из других стран и мировыми брендами. Мы умеем построить работу так, чтобы всем было комфортно. Среди наших клиентов:
+        .about-clients__items.wow.experience.splide
+            .splide__track
+                ul.splide__list
+                    each val in [1, 2, 3, 4, 5, 6, 7, 8,9,10]
+                        li.splide__slide
+                            .about-clients__item
+                                picture
+                                    source(srcset="static/img/about/client-" + val + ".webp" type="image/webp")
+                                    img.lazyload(loading="lazy" data-src="static/img/about/client-" + val + ".png" width=132 height=48)
+                .splide__progress
+                    .splide__progress__bar
+

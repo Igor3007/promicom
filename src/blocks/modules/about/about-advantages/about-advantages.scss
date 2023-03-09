@@ -1,0 +1,169 @@
+.about-advantages{
+  padding: 32px 0 48px;
+  background: var(--color-item-bg);
+
+  &::after,
+  &::before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: var(--color-accent);
+    width: 1572px / 1920px * 100%;
+  }
+
+  &::before{
+    top: 0;
+    left: 0;
+    margin-right: auto;
+  }
+
+  &::after{
+    bottom: 0;
+    right: 0;
+    margin-left: auto;
+  }
+
+  &__title{
+    margin-bottom: 32px;
+  }
+
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px -12px;
+  }
+
+  &__item{
+    width: calc(100% - 24px);
+    margin: 12px;
+
+    &-icon{
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-accent);
+      border-radius: 50%;
+      margin-bottom: 16px;
+
+      &.icon-white{
+        background: #fff;
+      }
+
+      img{
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+      }
+    }
+
+    &-title{
+      font-size: 18px;
+      line-height: 150%;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    &-caption{
+      color: var(--color-text-secondary);
+      font-size: 16px;
+      line-height: 150%;
+    }
+
+    &-button{
+      padding: 24px 0 0;
+    }
+
+  }
+
+  &__award{
+    padding-top: 48px;
+    .section-caption span{
+      font-weight: 600;
+    }
+  }
+
+  .awards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px -12px 0;
+
+    &-item{
+      display: inline-block;
+      margin: 12px;
+      flex-basis: 210px;
+      flex-grow: 0;
+
+      a{
+        display: block;
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+      }
+
+    }
+
+  }
+
+
+  @media screen and (min-width: 577px) {
+
+    &__item{
+      display: flex;
+      align-items: flex-start;
+
+      &-icon{
+        margin-bottom: 0;
+      }
+
+      &-text{
+        width: calc(100% - 80px);
+        padding-left: 24px;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 1025px) {
+    padding: 50px 0 62px;
+
+    &__title{
+      margin-bottom: 64px;
+    }
+
+    &__items{
+      margin: -16px -16px 0;
+    }
+
+    &__item{
+      width: calc(100% / 2 - 32px);
+      margin: 16px;
+    }
+
+  }
+
+  @media screen and (min-width: 1153px) {
+    padding: 80px 0 100px;
+
+    &__items{
+      margin: -32px -32px 0;
+    }
+
+    &__item{
+      width: calc(100% / 2 - 64px);
+      margin: 32px;
+
+      &-title{
+        font-size: 20px;
+      }
+
+    }
+
+  }
+
+}

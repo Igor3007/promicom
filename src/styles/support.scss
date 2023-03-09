@@ -1,0 +1,32 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+@import "vendor/splide-core";
+
+@import "../blocks/modules/service/service-banner/service-banner";
+
+@import "../blocks/modules/service/service-advantages/service-advantages";
+
+@import "../blocks/modules/context/context-tariffs/context-tariffs";
+
+@import "../blocks/modules/context/context-advantages/context-advantages";
+
+@import "../blocks/modules/service/service-tech/service-tech";
+
+@import "../blocks/modules/service/service-examples/service-examples";
+
+@import "../blocks/modules/service/service-cert/service-cert";
+
+@import "../blocks/modules/service/service-about/service-about";
+
+@import "../blocks/modules/home/home-form/home-form";
+
+section.context-advantages{
+  @include section-padding-top
+}
+
+section.service-tech,
+section.service-about{
+  @include section-padding-bottom
+}

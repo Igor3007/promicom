@@ -1,0 +1,48 @@
+.service-tabs{
+
+  &__toggles{
+    display: flex;
+    overflow-x: auto;
+    margin: -6px -6px 28px;
+  }
+
+  &__toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    border: 2px solid var(--color-border);
+    margin: 6px;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    transition: all 0.25s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+
+    &.is-active{
+      color: #000;
+    }
+
+    &.is-active,
+    &:hover{
+      background: var(--color-item-bg);
+      border-color: var(--color-accent);
+    }
+
+  }
+
+  &__pane{
+    display: none;
+
+    &.is-active{
+      display: block;
+    }
+
+  }
+
+}

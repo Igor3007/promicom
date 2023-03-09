@@ -1,0 +1,12 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+@import "vendor/splide-core";
+
+@import "../blocks/modules/about/about-top/about-top";
+@import "../blocks/modules/about/about-advantages/about-advantages";
+@import "../blocks/modules/about/about-clients/about-clients";
+@import "../blocks/modules/about/about-team/about-team";
+
+@import "../blocks/modules/home/home-form/home-form";

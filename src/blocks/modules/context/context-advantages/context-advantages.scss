@@ -1,0 +1,92 @@
+.context-advantages{
+
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -16px -16px 0;
+    counter-reset: items;
+  }
+
+  &__item{
+    margin: 16px;
+    width: calc(100% - 32px);
+    position: relative;
+    padding-left: 52px;
+
+    &::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      counter-increment: items;
+      content: counter(items) " /";
+      color: var(--color-accent);
+      font-size: 20px;
+      line-height: 150%;
+      font-weight: 700;
+    }
+
+    &-title{
+      font-size: 20px;
+      line-height: 150%;
+      font-weight: 700;
+      margin-bottom: 8px;
+      width: 100%;
+    }
+
+    &-caption{
+      color: var(--color-text-secondary);
+    }
+
+    &-btn{
+      padding-top: 24px;
+      width: 100%;
+      max-width: 340px;
+      .btn{
+        width: 100%;
+      }
+    }
+
+    &--with-btn{
+      &::before{
+        content: "";
+        top: 8px;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 10L22 10' stroke='%231F5AFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 2L21.9998 9.99984L14 17.9997' stroke='%231F5AFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+    }
+
+  }
+
+  @include w831{
+    padding: 32px 0 64px;
+
+    &__title{
+      margin-bottom: 32px;
+    }
+
+    &__item{
+      width: calc(100% / 2 - 32px);
+    }
+
+  }
+  @include w1025{
+
+    &__title{
+      margin-bottom: 48px;
+    }
+
+  }
+  @include w1153{
+    padding: 50px 0 100px;
+
+    &__item{
+      width: calc(100% / 3 - 32px);
+    }
+
+  }
+
+}

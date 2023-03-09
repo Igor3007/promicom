@@ -1,0 +1,39 @@
+header.header
+    .container
+        .header-logo
+            a(href="/").header-logo__link
+                picture
+                    img(src="static/img/common/logo-full.svg" width=214 height=24)
+        nav.header-nav
+            ul.header-nav__list
+                li.header-nav__item
+                    a(href="#").header-nav__link Проекты
+                li.header-nav__item.has-submenu
+                    a(href="#").header-nav__link Услуги
+                    .header-nav__submenu.submenu
+                        ul.submenu-list
+                            li.submenu-item
+                                a(href="#").submenu-item__link Разработка сайтов
+                                ul
+                                    li: a(href="#") Интернет-магазин
+                                    li: a(href="#") Корпоративный сайт
+                                    li: a(href="#") Лендинг
+                                    li: a(href="#") Сервисы и порталы
+                                    li: a(href="#") Сложные проекты
+                            li.submenu-item: a(href="#").submenu-item__link Контекстная реклама
+                            li.submenu-item: a(href="#").submenu-item__link Поддержка сайтов
+                            li.submenu-item: a(href="#").submenu-item__link Поднятие скорости загрузки
+                            li.submenu-item: a(href="#").submenu-item__link Сайт за 5 дней
+                li.header-nav__item
+                    a(href="#").header-nav__link О Промиком
+                li.header-nav__item
+                    a(href="#").header-nav__link Контакты
+        .header-phones
+            a.header-phones__link(href="tel:+79267313545")
+                +icons('#ic_phone', 24)
+                span +7 (926) 731-35-45
+        .header-lang
+            a(href="#").header-lang__link ENG
+        .header-burger
+            .header-burger__icon.open: +icons('#ic_menu', 24)
+            .header-burger__icon.close: +icons('#ic_menu-close', 24)

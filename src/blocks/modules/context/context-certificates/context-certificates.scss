@@ -1,0 +1,45 @@
+.context-certificates{
+
+  &__caption{
+    margin-bottom: 48px;
+  }
+
+  &__items{
+    margin: -16px -16px 0;
+  }
+
+  &__item{
+    padding: 16px;
+    overflow: hidden;
+    display: block;
+    img{
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 481px) {
+
+    &__items{
+      columns: 2;
+    }
+
+
+  }
+
+  @media screen and (min-width: 831px) {
+    padding: 50px 0;
+
+    &__items{
+      columns: 3;
+    }
+
+  }
+
+  @media screen and (min-width: 1025px){
+    padding: 100px 0;
+  }
+
+  @media screen and (min-width: 1153px) {
+
+  }
+}

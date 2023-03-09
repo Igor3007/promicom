@@ -1,0 +1,158 @@
+.service-projects{
+  overflow: hidden;
+
+  &__title{
+    margin-bottom: 16px;
+  }
+  &__caption{
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
+
+  &__items{
+    width: 95%;
+
+    .splide__track{
+      overflow: visible;
+    }
+
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+
+    .btn{
+      max-width: 392px;
+      width: 100%;
+      margin: 0 auto;
+      height: 64px;
+    }
+
+    .image{
+      display: block;
+      width: 100%;
+
+      &-wrp{
+        position: relative;
+        padding-top: 100%;
+        transition: all 0.5s ease;
+
+        img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: left;
+        }
+
+      }
+
+    }
+
+    .name{
+      padding-top: 24px;
+      margin-bottom: 0;
+    }
+
+    .name + .desc{
+      padding-top: 16px;
+    }
+
+    .name + .btn{
+      margin-top: 24px;
+    }
+
+
+    .desc{
+      color: var(--color-text-secondary);
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 24px;
+
+      @include w1025{
+        font-size: 18px;
+      }
+
+      @include w1324{
+        font-size: 20px;
+      }
+
+    }
+
+
+  }
+
+  @media screen and (min-width: 481px) {
+
+    &__items{
+      width: 100%;
+    }
+
+    &__item{
+      .image-wrp{
+        padding-top: 50%;
+      }      
+    }
+    
+  }
+
+  @media screen and (min-width: 641px) {
+
+    &__item{
+      .image-wrp{
+        padding-top: 100%;
+      }      
+
+      .name{
+        margin-bottom: 0;
+      }
+
+      &.with-btn{
+
+        .image-wrp{
+          padding-top: calc(100% - 88px);
+        }
+
+        .btn{
+          order: -1;
+          margin-bottom: 24px;
+          &:hover{
+            transform: none;
+          }
+        } 
+      }
+
+    }
+    
+  }
+
+  @media screen and (min-width: 831px) {
+    overflow: visible;
+
+    &__items{
+      .splide__track{
+        overflow: hidden;
+      }
+    }
+    
+  }
+
+  @media screen and (min-width: 1025px) {
+    padding: 50px 0;    
+    
+    
+  }
+
+  @media screen and (min-width: 1153px) {
+    padding: 100px 0 50px;
+
+    &__caption{
+      margin-bottom: 48px;
+    }
+    
+  }
+
+}

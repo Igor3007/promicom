@@ -1,0 +1,93 @@
+section.service-templates
+    .container
+        .service-templates__title.section-h2.wow.experience Примеры готовых интернет-магазинов
+        .service-templates__tabs.service-tabs
+            .service-templates__tabs-toggles.service-tabs__toggles.wow.experience
+                .service-templates__tabs-toggle.service-tabs__toggle.is-active(data-tab="inet") Интернет-магазины
+                .service-templates__tabs-toggle.service-tabs__toggle(data-tab="corp") Корпоративные сайты
+            .service-templates__tabs-panes.service-tabs__panes.wow.experience
+                -
+                    var list = {
+                        inet: [
+                            {
+                                image: "static/img/templates/t-1",
+                                title: "Аспро: Максимум",
+                                price: "59 900 ₽",
+                            },
+                            {
+                                image: "static/img/templates/t-2",
+                                title: "Некстайп: Магнит",
+                                price: "39 900 ₽",
+                            },
+                            {
+                                image: "static/img/templates/t-3",
+                                title: "Аспро: Некст",
+                                price: "47 900 ₽",
+                            },
+                            {
+                                image: "static/img/templates/t-4",
+                                title: "Deluxe",
+                                price: "16 450 ₽",
+                            },
+                            {
+                                image: "static/img/templates/t-5",
+                                title: "Электросила Next",
+                                price: "14 900 ₽",
+                            },
+                            {
+                                image: "static/img/templates/t-6",
+                                title: "Парфюмерия Beauty",
+                                price: "47 610 ₽",
+                            },
+                            {
+                                image: "static/img/templates/t-7",
+                                title: "Некстайп: Альфа",
+                                price: "49 900 ₽",
+                            },
+                        ],
+                        corp: [
+                            {
+                                image: "static/img/templates/t-1",
+                                title: "Аспро: Максимум",
+                                price: "59 900 ₽",
+                            },
+                            {
+                                image: "static/img/templates/t-2",
+                                title: "Некстайп: Магнит",
+                                price: "39 900 ₽",
+                            },
+                            {
+                                image: "static/img/templates/t-3",
+                                title: "Аспро: Некст",
+                                price: "47 900 ₽",
+                            },
+                        ],
+                    }
+
+                .service-templates__tabs-pane.service-tabs__pane.is-active(data-tab="inet")
+                    .service-templates__items
+                        each item in list.inet
+                            .service-templates__item
+                                .service-templates__item-image
+                                    picture
+                                        source(srcset=item.image+".webp" type="image/webp")
+                                        img.lazyload(loading="lazy" data-src=item.image + ".jpg" width=536 height=256)
+                                .service-templates__item-name.section-h5=item.title
+                                .service-templates__item-price.section-h5=item.price
+                                .service-templates__item-actions
+                                    a(href="#").btn.btn-secondary Смотреть демо
+                                    a(href="#").btn.btn-primary Быстрый заказ
+
+                .service-templates__tabs-pane.service-tabs__pane(data-tab="corp")
+                    .service-templates__items
+                        each item in list.corp
+                            .service-templates__item
+                                .service-templates__item-image
+                                    picture
+                                        source(srcset=item.image + ".webp" type="image/webp")
+                                        img.lazyload(loading="lazy" data-src=item.image + ".jpg" width=536 height=256)
+                                .service-templates__item-name.section-h5=item.title
+                                .service-templates__item-price.section-h5=item.price
+                                .service-templates__item-actions
+                                    a(href="#").btn.btn-secondary Смотреть демо
+                                    a(href="#").btn.btn-primary Быстрый заказ

@@ -1,0 +1,30 @@
+section.service-banner.service-banner--fullwidth
+  .container
+      .service-banner__text
+        +breadcrumb([
+          {
+            link: "/",
+            text: "Главная",
+          },
+          {
+            link: "/",
+            text: "Техническая поддержка",
+            isActive: true,
+          }
+        ], 'service-banner__breadcrumbs wow experience')
+        h1.service-banner__title.section-h1.wow.experience Комплексная<br> техническая поддержка<br> сайтов в Москве
+        .service-banner__items
+          .service-banner__item.wow.experience
+            .service-banner__item-icon: img(src="static/img/support/01.svg" width=48 height=48)
+            .service-banner__item-text Оперативный<br> мониторинг
+          .service-banner__item.wow.experience
+            .service-banner__item-icon: img(src="static/img/support/02.svg" width=48 height=48)
+            .service-banner__item-text Техническое<br> сопровождение
+          .service-banner__item.wow.experience
+            .service-banner__item-icon: img(src="static/img/support/03.svg" width=48 height=48)
+            .service-banner__item-text Быстрый запуск<br> рекламной кампании
+        a(href="#callback").service-banner__btn.btn.btn-primary.wow.experience Оставить заявку
+      .service-banner__image
+        picture
+          source(srcset="static/img/support/banner.webp" type="image/webp")
+          img.wow.fadeIn(src="static/img/support/banner.png" width="640" height="440")

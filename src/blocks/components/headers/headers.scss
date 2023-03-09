@@ -1,0 +1,133 @@
+.section-h1,
+h1 {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 44px / 32px * 100%;
+    margin-bottom: 24px;
+    width: 100%;
+
+    @media screen and (min-width: 641px) {
+        font-size: 40px;
+    }
+
+    @media screen and (min-width: 831px) {
+        font-size: 48px;
+    }
+
+    @media screen and (min-width: 1025px) {
+        font-size: 56px;
+    }
+
+    @media screen and (min-width: 1153px) {
+        font-size: 64px;
+    }
+
+}
+
+.section-h2,
+h2 {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 40px / 28px * 100%;
+    margin-bottom: 24px;
+    width: 100%;
+
+    @media screen and (min-width: 641px) {
+        font-size: 32px;
+    }
+
+    @media screen and (min-width: 831px) {
+        font-size: 36px;
+    }
+
+    @media screen and (min-width: 1025px) {
+        font-size: 42px;
+    }
+
+    @media screen and (min-width: 1153px) {
+        font-size: 48px;
+    }
+
+}
+
+.section-h3,
+h3 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px / 24px * 100%;
+    margin-bottom: 24px;
+    width: 100%;
+
+    @media screen and (min-width: 641px) {
+        font-size: 26px;
+    }
+
+    @media screen and (min-width: 831px) {
+        font-size: 28px;
+    }
+
+    @media screen and (min-width: 1025px) {
+        font-size: 30px;
+    }
+
+    @media screen and (min-width: 1153px) {
+        font-size: 32px;
+    }
+
+}
+
+.section-h4,
+h4 {
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 32px / 24px * 100%;
+    margin-bottom: 24px;
+    width: 100%;
+
+    @media screen and (min-width: 831px) {
+        font-size: 24px;
+    }
+
+    @media screen and (min-width: 1025px) {
+        font-size: 26px;
+    }
+
+    @media screen and (min-width: 1153px) {
+        font-size: 28px;
+    }
+
+}
+
+.section-h5,
+h5 {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 32px / 24px * 100%;
+    margin-bottom: 24px;
+    width: 100%;
+
+    @media screen and (min-width: 831px) {
+        font-size: 20px;
+    }
+
+    @media screen and (min-width: 1025px) {
+        font-size: 24px;
+    }
+
+}
+
+.section-caption{
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-text-secondary);
+
+    @media screen and (min-width: 1153px) {
+        font-size: 20px;
+
+    }
+
+}
+
+.accent{
+    color: var(--color-accent);
+}

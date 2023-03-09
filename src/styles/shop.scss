@@ -1,0 +1,23 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+@import "vendor/splide-core";
+
+@import "../blocks/modules/service/services";
+
+@import "../blocks/modules/service/service-banner/service-banner";
+
+@import "../blocks/modules/service/service-advantages/service-advantages";
+
+@import "../blocks/modules/service/service-templates/service-templates";
+
+@import "../blocks/modules/service/service-contains/service-contains";
+
+@import "../blocks/modules/service/service-cert/service-cert";
+
+@import "../blocks/modules/home/home-form/home-form";
+
+section.service-reviews{
+  @include section-padding-bottom;
+}

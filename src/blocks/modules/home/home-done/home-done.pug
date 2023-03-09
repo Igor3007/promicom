@@ -1,0 +1,39 @@
+section.mainpage-projects
+    .container
+        .mainpage-projects__heading
+            .mainpage-projects__title.section-h2.wow.experience Уже сделали
+            .mainpage-projects__caption.section-caption.wow.experience Готовые работы
+            a(href="#").mainpage-projects__heading-btn.btn.btn-primary.wow.experience
+                span Все проекты
+                +icons('#icon_arrow_right', 24)
+        .mainpage-projects__items
+            .mainpage-projects__slider.splide
+                .splide__track
+                    ul.splide__list
+                        li.splide__slide.mainpage-projects__item.wow.experienceLeft
+                            a(href="#").image
+                                .image-wrp
+                                    picture
+                                        source(srcset="static/img/home/project-1.webp" type="image/webp")
+                                        img.lazyload(loading="lazy" data-src="static/img/home/project-1.jpg" width=296 height=296)
+                            a(href="#").name.section-h3 Транспортная компания «АСТРА»
+                            .caption Корпоративный сайт + личный кабинет для транспортной компании Астра.
+                        li.splide__slide.mainpage-projects__item.wow.experienceLeft
+                            a(href="#").image
+                                .image-wrp
+                                    picture
+                                        source(srcset="static/img/home/project-2.webp" type="image/webp")
+                                        img.lazyload(loading="lazy" data-src="static/img/home/project-2.jpg" width=296 height=296)
+                            a(href="#").name.section-h3 СЭЗ «Могилев»
+                            .caption Масштабный проект для Администрации СЭЗ «Могилев», занимающейся привлечением инвестиций для создания новых производств.
+                        li.splide__slide.mainpage-projects__item.wow.experienceLeft
+                            a(href="#").image
+                                .image-wrp
+                                    picture
+                                        source(srcset="static/img/home/project-3.webp" type="image/webp")
+                                        img.lazyload(loading="lazy" data-src="static/img/home/project-3.jpg" width=296 height=296)
+                            a(href="#").name.section-h3 ООО «Бремино групп»
+                            .caption Сайт для логистического оператора, реализующего инвестиционные проекты по созданию объектов логистической инфраструктуры.
+            a(href="#").mainpage-projects__items-btn.btn.btn-primary
+                span Все проекты
+                +icons('#icon_arrow_right', 24)

@@ -1,0 +1,77 @@
+section.about-team
+    .container
+        .about-team__title.section-h2.wow.experience Команда
+        .about-team__items
+            -
+                var groups = [
+                    [
+                        {
+                            image: "1",
+                            name: "Игорь",
+                            work: "Директор"
+                        },
+                        {
+                            image: "2",
+                            name: "Валентина",
+                            work: "Project-manager"
+                        },
+                        {
+                            image: "3",
+                            name: "Сергей",
+                            work: "Back-end developer"
+                        },
+                        {
+                            image: "4",
+                            name: "Иван",
+                            work: "Back-end developer"
+                        },
+                    ],
+                    [
+                        {
+                            image: "5",
+                            name: "Галина",
+                            work: "Seo-оптимизатор"
+                        },
+                        {
+                            image: "6",
+                            name: "Владислав",
+                            work: "Front-end developer"
+                        },
+                        {
+                            image: "7",
+                            name: "Ольга",
+                            work: "Web-designer"
+                        },
+                        {
+                            image: "8",
+                            name: "Екатерина",
+                            work: "Таргетолог, SMM-специалист"
+                        },
+                    ],
+                    [
+                        {
+                            image: "9",
+                            name: "Ольга",
+                            work: "Специалист по контекстной рекламе"
+                        },
+                        {
+                            image: "10",
+                            name: "Алеся",
+                            work: "Специалист по контекстной рекламе"
+                        },
+                        {
+                            image: "11",
+                            name: "Анна",
+                            work: "Редактор, копирайтер"
+                        },
+                    ]
+                ]
+            each item in groups
+                each items in item
+                    .about-team__item.wow.experience
+                        .about-team__item-image
+                            picture
+                                source(srcset="static/img/about/team/"+items.image+".webp")
+                                img.lazyload(loading="lazy" data-src="static/img/about/team/"+items.image+".jpg" width=216 height=286)
+                        .about-team__item-name=items.name
+                        .about-team__item-spec=items.work

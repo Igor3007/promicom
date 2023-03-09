@@ -1,0 +1,34 @@
+section.service-banner.service-banner--fullwidth
+  .container
+      .service-banner__text
+        +breadcrumb([
+          {
+            link: "/",
+            text: "Главная",
+          },
+          {
+            link: "/",
+            text: "Разработка",
+          },
+          {
+            link: "/",
+            text: "1С-Битрикс",
+            isActive: true,
+          }
+        ], 'service-banner__breadcrumbs wow experience')
+        h1.service-banner__title.section-h1.wow.experience Разработка и тех.<br> поддержка сайтов<br> на «1С-Битрикс»
+        .service-banner__items
+          .service-banner__item.wow.experience
+            .service-banner__item-icon: img(src="static/img/bitrix/01.svg" width=48 height=48)
+            .service-banner__item-text Изучаем целевую аудиторию
+          .service-banner__item.wow.experience
+            .service-banner__item-icon: img(src="static/img/bitrix/02.svg" width=48 height=48)
+            .service-banner__item-text Разрабатываем правильную структуру
+          .service-banner__item.wow.experience
+            .service-banner__item-icon: img(src="static/img/bitrix/03.svg" width=48 height=48)
+            .service-banner__item-text Делаем<br> быстрый сайт
+        a(href="#callback").service-banner__btn.btn.btn-primary.wow.experience Оставить заявку
+      .service-banner__image
+        picture
+          source(srcset="static/img/bitrix/banner.webp" type="image/webp")
+          img.wow.fadeIn(src="static/img/bitrix/banner.png" width="640" height="440")

@@ -1,0 +1,121 @@
+.service-steps{
+  background: var(--color-item-bg);
+  padding: 32px 0 64px;
+
+  &::after,
+  &::before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: var(--color-accent);
+    width: 1572px / 1920px * 100%;
+  }
+
+  &::before{
+    top: 0;
+    left: 0;
+    margin-right: auto;
+  }
+
+  &::after{
+    bottom: 0;
+    right: 0;
+    margin-left: auto;
+  }
+
+  &__title{
+    margin-bottom: 12px;
+  }
+
+  &__caption{
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+
+  &__items{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+
+    &:not(:last-child){
+      margin-bottom: 32px;
+    }
+
+    &-name{
+      margin-bottom: 16px;    
+    }
+
+    &-list{
+      li{
+        position: relative;
+        padding-left: 34px;
+        font-size: 16px;
+        line-height: 150%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        &::before{
+          content: "";
+          position: absolute;
+          top: 20px;
+          left: 0;
+          transform: translateY(-50%);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 12px;
+          width: 12px;
+          height: 12px;
+          background-image: url(/static/img/svg/dot.svg);
+        }
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 831px) {
+    padding: 40px 0;
+
+    &__item{
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+
+      &-name{
+        max-width: 392px;
+      width: 392px / 1224px * 100%;
+      flex-grow: 1;
+      padding-right: 24px;
+      margin-right: auto;
+      }
+
+      &-list{
+        width: 808px / 1224px * 100%;
+      }
+
+    }
+    
+  }
+
+  @media screen and (min-width: 1025px){
+
+    &__caption{
+      margin-bottom: 64px;
+    }
+
+    &__item{
+      &:not(:last-child){
+        margin-bottom: 64px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1153px){
+    padding: 80px 0 100px;
+  }
+
+}

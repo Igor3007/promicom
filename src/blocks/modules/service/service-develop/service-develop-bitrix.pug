@@ -1,0 +1,78 @@
+section.service-develop
+  .container
+    .service-develop__heading
+      .section-h2.service-develop__heading-title.wow.experience Создадим сайт
+      .section-caption.service-develop__heading-caption.wow.experience Для любых ваших потребностей
+    .service-develop__description.wow.experience
+      | Promicom – команда разработчиков, использующих 
+      span современные 
+      | технологии для создания сайта. Вы получите полностью готовый к 
+      span эффективному 
+      | продвижению ресурс, соответствующий требованиям вашей компании.
+    .service-develop__items.splide.wow.experience
+      .splide__track
+        ul.splide__list
+          -
+            var list = [
+              {
+                name: "Корпоративный сайт",
+                price: "ОТ 180 000 ₽",
+                desc: [
+                  "Для представления вашей компании можно использовать сайт-визитку, корпоративный сайт, промо-страницу.",
+                  "Интернет-представительства содержат данные о вашей компании, ее товарах и услугах. В них важен привлекательный дизайн и удобство подачи информации."
+                ],
+                isSection: false,
+                link: "Оставить заявку"
+              },
+              {
+                name: "Интернет-магазин",
+                price: "ОТ 250 000 ₽",
+                desc: [
+                  "Интернет-магазин, витрина и другие e-commerce-инструменты помогают максимально выгодно презентовать ваши товары или услуги в интернете.",
+                  "Представляют собой функциональную платформу с каталогом товаров, дополнительными информационными страницами и расширенным функционалом в виде онлайн-оплаты, расчета доставки, геозависимого контента."
+                ],
+                isSection: false,
+                link: "Оставить заявку"
+              },
+              {
+                name: "Доработка сайтов",
+                price: "ОТ 1 800 ₽",
+                desc: [
+                  "Интернет-магазин «под ключ» на 1С-Битрикс за 10 дней. Первые продажи уже через 15 дней!"
+                ],
+                isSection: false,
+                link: "Оставить заявку"
+              },
+              {
+                name: "Шаблонное решение",
+                price: "От 65 000 ₽",
+                desc: [
+                  "Интернет-магазин «под ключ» на 1С-Битрикс за 10 дней. Первые продажи уже через 15 дней!"
+                ],
+                isSection: true,
+                link: "Перейти"
+              },
+              {
+                name: "Лицензии для сайтов",
+                price: "От 5 400 ₽",
+                desc: [
+                  "Лицензии «1С-Битрикc: Управление сайтом» Стандарт, Малый Бизнес, Бизнес и другие."
+                ],
+                isSection: true,
+                link: "Перейти"
+              },
+            ]
+
+          each item in list  
+            li.splide__slide.service-develop__item
+              .service-develop__item-name.section-h4=item.name 
+              .service-develop__item-price=item.price
+              .service-develop__item-buttons
+                if item.isSection
+                  a(href="#").btn.btn-secondary
+                    span=item.link
+                    include ../../../../img/svg/ic_arrow-right.svg
+                else
+                  a(href="#").btn.btn-primary=item.link
+              
+                

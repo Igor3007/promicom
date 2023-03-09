@@ -1,0 +1,12 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+
+@import "vendor/splide-core";
+
+@import "../blocks/modules/home/home-banner/home-banner";
+@import "../blocks/modules/home/home-services/home-services";
+@import "../blocks/modules/home/home-done/home-done";
+@import "../blocks/modules/home/home-tech/home-tech";
+@import "../blocks/modules/home/home-about/home-about";
+@import "../blocks/modules/home/home-form/home-form";
