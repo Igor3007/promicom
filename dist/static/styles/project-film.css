@@ -1,0 +1,462 @@
+/* colors */
+
+/* dimensions */
+
+/* media breakpoints */
+
+.projects-patrik-film__text {
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  align-self: stretch;
+}
+
+.projects-patrik-film__link-text {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6E81B8;
+  margin: 16px 0 4px;
+}
+
+.projects-patrik-film__link-box {
+  display: flex;
+  align-items: center;
+}
+
+.projects-patrik-film__link {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1F5AFF;
+}
+
+.projects-patrik-film__img-box {
+  margin: 36px 0;
+  width: 100%;
+}
+
+.projects-patrik-film__img-box-new {
+  width: 100%;
+  margin: 12px 0;
+}
+
+.projects-patrik-film__img-online-festival {
+  width: 100%;
+  object-fit: cover;
+}
+
+.projects-patrik-film__text-block h2 {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.projects-patrik-film__text-block p {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.mainpage-tech__title {
+  margin-bottom: 8px;
+}
+
+.mainpage-tech__caption {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.mainpage-tech__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -8px -8px 0;
+}
+
+.mainpage-tech__item {
+  width: calc(50% - 16px);
+  margin: 8px;
+}
+
+.mainpage-tech__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.other-projects__box-prev {
+  border-top: 1px solid #b7b7b7;
+  border-bottom: 1px solid #b7b7b7;
+}
+
+.other-projects__title {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #6E81B8;
+  padding: 8px 0 0;
+}
+
+.other-projects__name {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 32px;
+  color: #1F5AFF;
+  padding: 8px 0;
+}
+
+.other-projects__link-next .other-projects__title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.other-projects__link-next .other-projects__name {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.other-projects__sub-text {
+  display: none;
+}
+
+.mainpage-form {
+  padding: 32px 0;
+  background: var(--color-accent-dark);
+}
+
+.mainpage-form__title {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.mainpage-form__caption {
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.mainpage-form .form__caption {
+  color: #fff;
+  font-size: 20px;
+  line-height: 160%;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.mainpage-form .form__group {
+  margin-bottom: 12px;
+}
+
+.mainpage-form .form__group.services {
+  display: none;
+}
+
+.mainpage-form .form__group.submit {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainpage-form .form__group.submit .form__submit {
+  flex-basis: 235px;
+  max-width: 328px;
+  flex-grow: 1;
+  margin: 0 auto 24px;
+}
+
+.mainpage-form .form__field.hidden {
+  display: none;
+}
+
+.mainpage-form .form__field .radios {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -6px -6px 0;
+}
+
+.mainpage-form .form__field .radio {
+  margin: 6px;
+}
+
+.mainpage-form .form__field .radio input:checked ~ .radio__text {
+  color: #fff;
+}
+
+.mainpage-form .form__field .radio input:checked ~ .radio__text::after {
+  border-color: var(--color-accent);
+  background: var(--color-accent-dark-hover);
+}
+
+.mainpage-form .form__field .radio .radio__text {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  position: relative;
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.mainpage-form .form__field .radio .radio__text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--color-text-secondary);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.mainpage-form .form__field input:not([type=checkbox]):not([type=radio]),
+.mainpage-form .form__field textarea {
+  background-color: var(--color-accent-dark);
+  border-bottom: 2px solid #fff;
+  color: #fff;
+}
+
+.mainpage-form .form__field input:not([type=checkbox]):not([type=radio])::placeholder,
+.mainpage-form .form__field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mainpage-form .form__field input:not([type=checkbox]):not([type=radio]):focus,
+.mainpage-form .form__field textarea:focus {
+  background-color: var(--color-accent-dark-hover);
+}
+
+.mainpage-form .form__agreement {
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 641px) {
+  .mainpage-tech__item {
+    width: calc(100% / 3 - 16px);
+  }
+
+  .mainpage-form .form__group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .mainpage-form .form__caption {
+    width: calc(100% - 24px);
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .mainpage-form .form__field {
+    width: calc(50% - 24px);
+    margin: 12px;
+  }
+
+  .mainpage-form .form__field--fullwidth {
+    width: calc(100% - 24px);
+  }
+
+  .mainpage-form .form__group.submit {
+    flex-wrap: nowrap;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .mainpage-form .form__group.submit .form__submit {
+    max-width: 235px;
+    flex-shrink: 0;
+    margin-left: 0;
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+
+  .mainpage-form .form__agreement {
+    text-align: left;
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 831px) {
+  .mainpage-tech__items {
+    justify-content: center;
+  }
+
+  .mainpage-tech__item {
+    width: calc(100% / 4 - 16px);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .mainpage-tech {
+    padding: 50px 0;
+  }
+
+  .mainpage-tech__title {
+    margin-bottom: 24px;
+  }
+
+  .mainpage-tech__caption {
+    margin-bottom: 24px;
+  }
+
+  .mainpage-tech__items {
+    justify-content: center;
+    margin: -16px -16px 0;
+  }
+
+  .mainpage-tech__item {
+    width: calc(100% / 5 - 32px);
+    margin: 16px;
+  }
+
+  .mainpage-form .form__field {
+    width: calc(100% / 3 - 24px);
+  }
+
+  .mainpage-form .form__field.hidden {
+    display: block;
+  }
+
+  .mainpage-form .form__field--fullwidth {
+    width: calc(100% - 24px);
+  }
+
+  .mainpage-form .form__group {
+    margin-bottom: 28px;
+  }
+}
+
+@media (min-width: 1153px) {
+  .projects-patrik-film__text {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .projects-patrik-film__link {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .projects-patrik-film__link:hover {
+    color: #022fad;
+    transition: .8s ease;
+  }
+
+  .projects-patrik-film__text-block h2 {
+    font-size: 48px;
+    line-height: 56px;
+    margin: 64px 0 24px;
+  }
+
+  .projects-patrik-film__text-block p {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+
+  .other-projects {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid #D3D9EB;
+    padding: 0;
+  }
+
+  .other-projects__box-prev {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    padding: 32px 0;
+  }
+
+  .other-projects__box-prev:hover {
+    background: #eaeaea;
+    transition: .8s ease;
+  }
+
+  .other-projects__box-next {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: flex-start;
+    border-left: 1px solid #D3D9EB;
+    padding: 32px 0;
+  }
+
+  .other-projects__box-next:hover {
+    background: #eaeaea;
+    transition: .8s ease;
+  }
+
+  .other-projects__link-prev .other-projects__title {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .other-projects__link-next .other-projects__title {
+    justify-content: flex-start;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .other-projects__link-prev .other-projects__name {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .other-projects__link-next .other-projects__name {
+    justify-content: flex-start;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .other-projects__sub-text {
+    display: flex;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+}
+
+@media screen and (min-width: 1153px) {
+  .mainpage-form {
+    padding: 80px 0;
+  }
+
+  .mainpage-form .form__group.services {
+    display: flex;
+  }
+}
+/*# sourceMappingURL=maps/project-film.css.map */

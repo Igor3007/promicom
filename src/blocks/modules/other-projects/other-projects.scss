@@ -1,0 +1,104 @@
+.other-projects{
+  @media (min-width: 1153px) {
+   display: flex;
+    width: 100%;
+    border-top: 1px solid #D3D9EB;
+    padding: 0;
+  }
+  &__box-prev{
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #b7b7b7;
+    @media (min-width: 1153px) {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: flex-end;
+      border: none;
+      padding: 32px 0;
+      &:hover{
+        background: #eaeaea;
+        transition: .8s ease;
+      }
+    }
+  }
+  &__box-next{
+    @media (min-width: 1153px) {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: flex-start;
+      border-left: 1px solid #D3D9EB;
+      padding: 32px 0;
+      &:hover{
+        background: #eaeaea;
+        transition: .8s ease;
+      }
+    }
+  }
+  &__title{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #6E81B8;
+    padding: 8px 0 0;
+  }
+  &__name{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 32px;
+    color: #1F5AFF;
+    padding: 8px 0;
+  }
+  &__link-prev .other-projects__title{
+    @media (min-width: 1153px) {
+      display: flex;
+      justify-content: flex-end;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+  &__link-next .other-projects__title{
+    display: flex;
+    justify-content: flex-end;
+    @media (min-width: 1153px) {
+      justify-content: flex-start;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+  &__link-prev .other-projects__name{
+    @media (min-width: 1153px) {
+      display: flex;
+      justify-content: flex-end;
+      font-weight: 900;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  &__link-next .other-projects__name{
+    display: flex;
+    justify-content: flex-end;
+    @media (min-width: 1153px) {
+      justify-content: flex-start;
+      font-weight: 900;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  &__sub-text{
+    display: none;
+    @media (min-width: 1153px) {
+      display: flex;
+      font-family: 'Mulish';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #000000;
+    }
+  }
+}
