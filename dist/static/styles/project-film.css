@@ -98,45 +98,6 @@
   object-fit: contain;
 }
 
-.other-projects__box-prev {
-  border-top: 1px solid #b7b7b7;
-  border-bottom: 1px solid #b7b7b7;
-}
-
-.other-projects__title {
-  font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: #6E81B8;
-  padding: 8px 0 0;
-}
-
-.other-projects__name {
-  font-family: 'Mulish';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 32px;
-  color: #1F5AFF;
-  padding: 8px 0;
-}
-
-.other-projects__link-next .other-projects__title {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.other-projects__link-next .other-projects__name {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.other-projects__sub-text {
-  display: none;
-}
-
 .mainpage-form {
   padding: 32px 0;
   background: var(--color-accent-dark);
@@ -374,79 +335,6 @@
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 24px;
-  }
-
-  .other-projects {
-    display: flex;
-    width: 100%;
-    border-top: 1px solid #D3D9EB;
-    padding: 0;
-  }
-
-  .other-projects__box-prev {
-    flex: 1 1 50%;
-    display: flex;
-    justify-content: flex-end;
-    border: none;
-    padding: 32px 0;
-  }
-
-  .other-projects__box-prev:hover {
-    background: #eaeaea;
-    transition: .8s ease;
-  }
-
-  .other-projects__box-next {
-    flex: 1 1 50%;
-    display: flex;
-    justify-content: flex-start;
-    border-left: 1px solid #D3D9EB;
-    padding: 32px 0;
-  }
-
-  .other-projects__box-next:hover {
-    background: #eaeaea;
-    transition: .8s ease;
-  }
-
-  .other-projects__link-prev .other-projects__title {
-    display: flex;
-    justify-content: flex-end;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-  }
-
-  .other-projects__link-next .other-projects__title {
-    justify-content: flex-start;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-  }
-
-  .other-projects__link-prev .other-projects__name {
-    display: flex;
-    justify-content: flex-end;
-    font-weight: 900;
-    font-size: 28px;
-    line-height: 40px;
-  }
-
-  .other-projects__link-next .other-projects__name {
-    justify-content: flex-start;
-    font-weight: 900;
-    font-size: 28px;
-    line-height: 40px;
-  }
-
-  .other-projects__sub-text {
-    display: flex;
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
   }
 }
 
