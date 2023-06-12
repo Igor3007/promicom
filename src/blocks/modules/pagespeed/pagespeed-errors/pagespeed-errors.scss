@@ -1,0 +1,355 @@
+.section-pagespeed-errors {
+    background-color: #F0F2F7;
+    padding: 50px 0;
+}
+
+.pagespeed-errors {
+
+    &__title {
+        text-align: center;
+    }
+
+    &__desc {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -12px;
+
+    }
+
+    &__item {
+        padding: 12px;
+        width: 100%;
+
+        @media screen and (min-width: 992px) {
+            width: 50%;
+        }
+    }
+}
+
+.card-pagespeed {
+    background-color: #fff;
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    height: 100%;
+
+
+    &__main {
+        padding-left: 24px;
+    }
+
+    &__title {
+        padding-bottom: 15px;
+    }
+
+    &__subtitle {
+        padding-bottom: 10px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &--red {
+        & .state-icon {
+            &__bg {
+                background-color: var(--color-red);
+            }
+        }
+    }
+
+    &--green {
+        & .state-icon {
+            &__bg {
+                background-color: var(--color-green);
+            }
+        }
+    }
+
+    &--orange {
+        & .state-icon {
+            &__bg {
+                background-color: var(--color-orange);
+            }
+        }
+    }
+
+}
+
+.state-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+
+
+    &__bg {
+        background-color: #c0c0c0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 50%;
+        z-index: 1;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: butterfly 1.5s infinite;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEzLjcyMyA2Ljk5YS44MjkuODI5IDAgMDAtMS4xNDgtLjIzMSAyMC43ODQgMjAuNzg0IDAgMDAtOC40MDEgMTEuMzI0LjgyOC44MjggMCAxMDEuNTg1LjQ3NSAxOS4xMjIgMTkuMTIyIDAgMDE3LjczMi0xMC40Mi44MjguODI4IDAgMDAuMjMyLTEuMTQ4em0yLjAwMy0uMzdhLjgyOC44MjggMCAxMDAtMS42NTQuODI4LjgyOCAwIDAwMCAxLjY1NXoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMjQgMGEyNCAyNCAwIDEwMjQgMjRBMjQuMDI3IDI0LjAyNyAwIDAwMjQgMHptMCA0Ni4zNDVBMjIuMzQ1IDIyLjM0NSAwIDExNDYuMzQ1IDI0IDIyLjM3IDIyLjM3IDAgMDEyNCA0Ni4zNDV6IiBmaWxsPSIjZmZmIi8+PC9zdmc+);
+    }
+
+    &__svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@-webkit-keyframes butterfly {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -moz-transform: rotate(0deg);
+        /* Firefox */
+        -o-transform: rotate(0deg);
+        /* Opera */
+        -webkit-transform: rotate(0deg);
+        /* Safari */
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(13deg);
+        -ms-transform: rotate(13deg);
+        /* IE 9 */
+        -moz-transform: rotate(13deg);
+        /* Firefox */
+        -o-transform: rotate(13deg);
+        /* Opera */
+        -webkit-transform: rotate(13deg);
+        /* Safari */
+        transform: rotate(13deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        /* IE 9 */
+        -moz-transform: rotate(-10deg);
+        /* Firefox */
+        -o-transform: rotate(10deg);
+        /* Opera */
+        -webkit-transform: rotate(10deg);
+        /* Safari */
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -moz-transform: rotate(0deg);
+        /* Firefox */
+        -o-transform: rotate(0deg);
+        /* Opera */
+        -webkit-transform: rotate(0deg);
+        /* Safari */
+        transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes butterfly {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -moz-transform: rotate(0deg);
+        /* Firefox */
+        -o-transform: rotate(0deg);
+        /* Opera */
+        -webkit-transform: rotate(0deg);
+        /* Safari */
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(13deg);
+        -ms-transform: rotate(13deg);
+        /* IE 9 */
+        -moz-transform: rotate(13deg);
+        /* Firefox */
+        -o-transform: rotate(13deg);
+        /* Opera */
+        -webkit-transform: rotate(13deg);
+        /* Safari */
+        transform: rotate(13deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        /* IE 9 */
+        -moz-transform: rotate(-10deg);
+        /* Firefox */
+        -o-transform: rotate(10deg);
+        /* Opera */
+        -webkit-transform: rotate(10deg);
+        /* Safari */
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -moz-transform: rotate(0deg);
+        /* Firefox */
+        -o-transform: rotate(0deg);
+        /* Opera */
+        -webkit-transform: rotate(0deg);
+        /* Safari */
+        transform: rotate(0deg);
+    }
+}
+
+@-o-keyframes butterfly {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -moz-transform: rotate(0deg);
+        /* Firefox */
+        -o-transform: rotate(0deg);
+        /* Opera */
+        -webkit-transform: rotate(0deg);
+        /* Safari */
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(13deg);
+        -ms-transform: rotate(13deg);
+        /* IE 9 */
+        -moz-transform: rotate(13deg);
+        /* Firefox */
+        -o-transform: rotate(13deg);
+        /* Opera */
+        -webkit-transform: rotate(13deg);
+        /* Safari */
+        transform: rotate(13deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        /* IE 9 */
+        -moz-transform: rotate(-10deg);
+        /* Firefox */
+        -o-transform: rotate(10deg);
+        /* Opera */
+        -webkit-transform: rotate(10deg);
+        /* Safari */
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -moz-transform: rotate(0deg);
+        /* Firefox */
+        -o-transform: rotate(0deg);
+        /* Opera */
+        -webkit-transform: rotate(0deg);
+        /* Safari */
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes butterfly {
+    0% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -moz-transform: rotate(0deg);
+        /* Firefox */
+        -o-transform: rotate(0deg);
+        /* Opera */
+        -webkit-transform: rotate(0deg);
+        /* Safari */
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(13deg);
+        -ms-transform: rotate(13deg);
+        /* IE 9 */
+        -moz-transform: rotate(13deg);
+        /* Firefox */
+        -o-transform: rotate(13deg);
+        /* Opera */
+        -webkit-transform: rotate(13deg);
+        /* Safari */
+        transform: rotate(13deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        /* IE 9 */
+        -moz-transform: rotate(-10deg);
+        /* Firefox */
+        -o-transform: rotate(10deg);
+        /* Opera */
+        -webkit-transform: rotate(10deg);
+        /* Safari */
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        -moz-transform: rotate(0deg);
+        /* Firefox */
+        -o-transform: rotate(0deg);
+        /* Opera */
+        -webkit-transform: rotate(0deg);
+        /* Safari */
+        transform: rotate(0deg);
+    }
+}
+
+
+/* ============================================== */
+/* ============================================== */
+
+.section-pagespeed-call {
+    background-color: #F0F2F7;
+    padding: 30px 0;
+
+
+
+}
+
+.pagespeed-call {
+    display: flex;
+    margin: -12px;
+
+    &>div {
+        padding: 12px;
+
+
+        @media screen and (min-width: $w992) {
+            width: 50%;
+        }
+    }
+}

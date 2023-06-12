@@ -11,6 +11,9 @@
   --color-text-primary: #000;
   --color-text-secondary: #6E81B8;
   --color-border: #D3D9EB;
+  --color-orange: #FF871F;
+  --color-red: #FF1F1F;
+  --color-green: #27A327;
 }
 
 /* colors */
@@ -746,6 +749,51 @@ footer {
 
 .btn-secondary:hover {
   background: var(--color-border);
+}
+
+.btn-orange {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #fff;
+  border: 2px solid var(--color-orange);
+  background-color: var(--color-orange);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.btn-orange:hover {
+  background: var(--color-orange);
+  opacity: 0.9;
+}
+
+.btn-red {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #fff;
+  border: 2px solid var(--color-red);
+  background-color: var(--color-red);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.btn-red:hover {
+  background: var(--color-red);
+  opacity: 0.9;
+}
+
+.btn-green {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #fff;
+  border: 2px solid var(--color-green);
+  background-color: var(--color-green);
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.btn-green:hover {
+  background: var(--color-red);
+  opacity: 0.9;
 }
 
 .btn:disabled {

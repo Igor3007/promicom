@@ -1,0 +1,31 @@
+
+mixin cf(data)
+    .card-pagespeed__icon
+            .state-icon
+                .state-icon__bg
+                .state-icon__svg: +icons('#'+data.icon, 24)
+            
+    .card-pagespeed__main
+        .card-pagespeed__title
+            span.section-h5= data.title
+        .card-pagespeed__subtitle= data.subtitle
+        .card-pagespeed__text= data.text
+
+mixin card-pagespeed(data)
+    
+        case data.icon
+            when 'ic_ps-cross'
+                .card-pagespeed.card-pagespeed--red
+                    +cf(data)
+            when 'ic_ps-graph'
+                .card-pagespeed.card-pagespeed--orange
+                    +cf(data) 
+            when 'ic_ps-ok'
+                .card-pagespeed.card-pagespeed--green
+                    +cf(data)
+            default
+                .card-pagespeed
+                    +cf(data)
+
+        
+        

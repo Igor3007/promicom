@@ -55,7 +55,7 @@
     white-space: nowrap;
   }
 
-  h2 {
+  &__title {
     font-weight: 900;
     font-size: 64px;
     line-height: 72px;
@@ -63,6 +63,17 @@
     color: #FFFFFF;
     margin: 0 auto 24px;
     max-width: 1100px;
+  }
+
+  &__subtitle {
+    font-weight: 900;
+    font-size: 28px;
+    text-align: center;
+    color: #FFFFFF;
+
+    & a {
+      color: var(--color-accent);
+    }
   }
 
   &__sub-title {
@@ -129,9 +140,17 @@
     padding-bottom: 4px;
     border-bottom: 1px dashed #FFFFFF;
     margin: 32px auto 40px;
+    display: inline-flex;
+    align-items: center;
+
+    & svg {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
     display: flex;
     justify-content: center;
-    max-width: 260px;
   }
 
   &__img-rocket {
@@ -145,6 +164,12 @@
     top: 120px;
     right: 0;
   }
+
+  &__order {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 .why-important {
@@ -417,7 +442,9 @@
 }
 
 @media (max-width: 1380px) {
-  .optimize__img-rocket, .optimize__img-speed {
+
+  .optimize__img-rocket,
+  .optimize__img-speed {
     z-index: -1;
   }
 }
@@ -427,6 +454,7 @@
     flex-direction: column;
     width: 100%;
   }
+
   .other-service__wrapper {
     flex-direction: column;
     width: 100%;
@@ -438,6 +466,7 @@
   .why-important__body {
     flex-direction: column;
   }
+
   .optimize h2 {
     font-size: 48px;
     line-height: 56px;
@@ -445,22 +474,31 @@
 }
 
 @media (max-width: 576px) {
-  .optimize__field, .small-text__body, .how-understand__field {
+
+  .optimize__field,
+  .small-text__body,
+  .how-understand__field {
     flex-direction: column;
   }
+
   .optimize__field-inp {
     margin: 0 0 24px 0;
   }
+
   .why-important__wrapper {
     padding: 20px;
   }
+
   .why-important h2 {
     margin: 0 0 24px 0;
   }
-  .how-understand__field-inp-number, .how-understand__field-inp-name {
+
+  .how-understand__field-inp-number,
+  .how-understand__field-inp-name {
     margin: 0 0 12px 0;
     max-width: initial;
   }
+
   .small-text h3 {
     width: 100%;
   }
@@ -469,7 +507,12 @@
 
 
 @media (max-width: 992px) {
-  .optimize h2, .why-important h2, .optimize-slider h2, .what-make h2, .other-service h2 {
+
+  .optimize h2,
+  .why-important h2,
+  .optimize-slider h2,
+  .what-make h2,
+  .other-service h2 {
     font-size: 36px;
     line-height: 146.85714%;
   }
@@ -479,6 +522,7 @@
   .why-important {
     margin-bottom: 60px;
   }
+
   .optimize-slider .splide h3 {
     max-width: 60%;
   }
@@ -486,24 +530,35 @@
 }
 
 @media (max-width: 576px) {
-  .optimize__breadcrumbs-current, .optimize__breadcrumbs-current p {
+
+  .optimize__breadcrumbs-current,
+  .optimize__breadcrumbs-current p {
     overflow: auto;
   }
-  .optimize__text, .small-text p {
+
+  .optimize__text,
+  .small-text p {
     font-size: 18px;
     line-height: 26px;
   }
-  .optimize h2, .why-important h2, .optimize-slider h2, .what-make h2, .other-service h2 {
+
+  .optimize h2,
+  .why-important h2,
+  .optimize-slider h2,
+  .what-make h2,
+  .other-service h2 {
     font-size: 28px;
     line-height: 142.85714%;
   }
+
   .small-text h3 {
     margin-right: 0;
     width: 100%;
     font-size: 24px;
     line-height: 133.33333%;
   }
-  .optimize__field-btn{
+
+  .optimize__field-btn {
     width: 100%;
   }
 

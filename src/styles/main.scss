@@ -1,4 +1,4 @@
-:root{
+:root {
   --color-primary: #fff;
   --color-item-bg: #F0F2F7;
   --color-nav-bg: #EBEEF5;
@@ -11,6 +11,9 @@
   --color-text-primary: #000;
   --color-text-secondary: #6E81B8;
   --color-border: #D3D9EB;
+  --color-orange: #FF871F;
+  --color-red: #FF1F1F;
+  --color-green: #27A327;
 }
 
 @import "helpers/variables";
@@ -21,9 +24,10 @@
 @import "base/general";
 @import "../blocks/components/components";
 @import "../blocks/modules/modules";
-
 @import "../blocks/components/edit-content/edit-content.scss";
 
-.wow { visibility: hidden; }
+.wow {
+  visibility: hidden;
+}
 
 @import "vendor/animate.scss";

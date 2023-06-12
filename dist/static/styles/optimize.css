@@ -212,7 +212,7 @@
   white-space: nowrap;
 }
 
-.optimize h2 {
+.optimize__title {
   font-weight: 900;
   font-size: 64px;
   line-height: 72px;
@@ -220,6 +220,17 @@
   color: #FFFFFF;
   margin: 0 auto 24px;
   max-width: 1100px;
+}
+
+.optimize__subtitle {
+  font-weight: 900;
+  font-size: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.optimize__subtitle a {
+  color: var(--color-accent);
 }
 
 .optimize__sub-title {
@@ -285,9 +296,17 @@
   padding-bottom: 4px;
   border-bottom: 1px dashed #FFFFFF;
   margin: 32px auto 40px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.optimize__query svg {
+  margin-right: 10px;
+}
+
+.optimize__link {
   display: flex;
   justify-content: center;
-  max-width: 260px;
 }
 
 .optimize__img-rocket {
@@ -300,6 +319,11 @@
   position: absolute;
   top: 120px;
   right: 0;
+}
+
+.optimize__order {
+  display: flex;
+  justify-content: center;
 }
 
 .why-important {
