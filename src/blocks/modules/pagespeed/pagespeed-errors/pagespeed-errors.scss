@@ -59,6 +59,12 @@
                 background-color: var(--color-red);
             }
         }
+
+        & .card-pagespeed {
+            &__audit {
+                color: var(--color-red);
+            }
+        }
     }
 
     &--green {
@@ -67,12 +73,44 @@
                 background-color: var(--color-green);
             }
         }
+
+        & .card-pagespeed {
+            &__audit {
+                color: var(--color-green);
+            }
+        }
     }
 
     &--orange {
         & .state-icon {
             &__bg {
                 background-color: var(--color-orange);
+            }
+        }
+
+        & .card-pagespeed {
+            &__audit {
+                color: var(--color-orange);
+            }
+        }
+    }
+
+    &--vertical {
+        text-align: center;
+
+        & .card-pagespeed {
+            &__icon {
+                display: flex;
+                justify-content: center;
+            }
+
+            &__audit {
+                font-weight: bold;
+                padding-bottom: 20px;
+            }
+
+            &__icon {
+                padding-bottom: 15px;
             }
         }
     }

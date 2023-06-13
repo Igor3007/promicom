@@ -1,3 +1,93 @@
+mixin cf-vertical(data)
+    
+    .card-pagespeed__wrp
+        .card-pagespeed__title
+            span.section-h5= data.title
+        .card-pagespeed__audit= data.audit
+        .card-pagespeed__icon
+            .state-icon
+                .state-icon__bg
+                .state-icon__svg: +icons('#'+data.icon, 24)
+        .card-pagespeed__subtitle= data.subtitle
+        .card-pagespeed__text= data.text
+
+mixin card-pagespeed-vertical(data)
+    case data.icon
+        when 'ic_ps-cross'
+            .card-pagespeed.card-pagespeed--vertical.card-pagespeed--red
+                +cf-vertical(data)
+        when 'ic_ps-graph'
+            .card-pagespeed.card-pagespeed--vertical.card-pagespeed--orange
+                +cf-vertical(data) 
+        when 'ic_ps-ok'
+            .card-pagespeed.card-pagespeed--vertical.card-pagespeed--green
+                +cf-vertical(data)
+        default
+            .card-pagespeed.card-pagespeed--vertical
+                +cf-vertical(data)
+
+- 
+    const MOBILE = [
+        {
+            title: 'Кликабельные объекты',
+            icon: 'ic_ps-cross',
+            subtitle: 'Есть проблемы',
+            audit: 'Аудит не пройден',
+            text: 'Мобильные страницы лучше показываются в результатах поиска. Убедитесь, что интерактивные элементы, такие как кнопки и ссылки, не слишком маленькие и не расположены слишком близко друг к другу.',
+        },
+        {
+            title: 'Разборчивый размер шрифта',
+            icon: 'ic_ps-ok',
+            subtitle: 'Сайт радует глаза',
+            audit: 'Аудит пройден',
+            text: 'У посетителей могут возникнуть трудности с чтением мелкого текста, особенно на мобильных устройствах. Мы рекомендуем не менее 12px.',
+        },
+        {
+            title: 'Адаптивность',
+            icon: 'ic_ps-ok',
+            subtitle: 'Отлично адаптируется',
+            audit: 'Аудит пройден',
+            text: 'Адаптивный дизайн повышает позиции в поиске на мобильных устройствах.',
+        },
+       
+         
+    ]
+
+
 section.section-pagespeed-mobile
     .container
-        .pagespeed-mobile   pagespeed-mobile 
+        .pagespeed-mobile
+            .pagespeed-mobile__points
+                div.circle-points
+                    svg(class="lh-gauge" viewBox="0 0 120 120") 
+                        circle(class="lh-gauge-base" r="56" cx="60" cy="60" stroke-width="6") 
+                        circle(class="lh-gauge-arc" r="56" cx="60" cy="60" stroke-width="6" style="transform: rotate(-87.9537deg); stroke-dasharray: 208.154px, 351.858px;")
+                    span 75
+            .pagespeed-mobile__title: span.section-h2 Мобильные устройства
+            .pagespeed-mobile__desc Трафик с мобильных устройств быстро растет. Оптимизируйте свой веб-сайт для мобильных устройств, иначе вы упустите ценный трафик, потенциальных клиентов и доход.
+            .pagespeed-mobile__subtitle: span.section-h5 Время отображения контента на мобильных
+            .pagespeed-mobile__screenshots
+                ul
+                    li
+                        picture
+                        span 100mc
+                    li
+                        picture
+                        span 158mc
+                    li
+                        picture
+                        span 358mc
+                    li
+                        picture
+                        span 640mc
+                    each item in [1,1,1,1,1,1]
+                        li
+                            picture: img(src="/static/img/pagespeed/image2.jpg")
+                            span 323mc
+            .pagespeed-mobile__audits
+                .pagespeed-mobile__item
+                    .pagespeed-mobile-mobile__screenshots
+                        picture
+                            img(src="/static/img/pagespeed/image2.jpg" )
+                each item in MOBILE
+                    .pagespeed-mobile__item: +card-pagespeed-vertical(item)

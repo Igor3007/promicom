@@ -1,3 +1,50 @@
+mixin card-category(data)
+    .card-category 
+        .card-category__point
+            div.circle-points
+                svg(class="lh-gauge" viewBox="0 0 120 120") 
+                    circle(class="lh-gauge-base" r="56" cx="60" cy="60" stroke-width="6") 
+                    circle(class="lh-gauge-arc" r="56" cx="60" cy="60" stroke-width="6" style="transform: rotate(-87.9537deg); stroke-dasharray: 208.154px, 351.858px;")
+                span= data.percent
+
+        .card-category__title= data.title
+        .card-category__desc= data.desc          
+        .card-category__more
+            span Подробнее         
+
+- 
+    const category2 = [
+        {
+            title: 'Мобильные',
+            desc: 'Трафик с мобильных устройств быстро растет. Оптимизируйте свой веб-сайт для мобильных устройств, иначе вы упустите ценный трафик, потенциальных клиентов и доход.',
+            percent: '75',
+        },
+
+        {
+            title: 'Производительность',
+            desc: 'Оптимизация производительности вашего имеет решающее значение для увеличения трафика, повышения коэффициента конверсии, привлечения большего числа потенциальных клиентов и увеличения доходов.',
+            percent: '78',
+        },
+
+        {
+            title: 'Поиск (SEO)',
+            desc: 'Оптимизация контента вашего сайта для поиска поможет вам привлечь органический трафик на ваш сайт. Вы можете сделать это, предоставив отличный опыт как людям, так и поисковым роботам.',
+            percent: '55',
+        },
+
+        {
+            title: 'Безопасность',
+            desc: 'Безопасный веб-сайт, оснащенный SSL-сертификатом и свободный от уязвимостей, теперь является стандартом в Интернете. Люди и поисковые системы любят безопасные веб-сайты.',
+            percent: '100',
+        },
+    ];
+
 section.section-pagespeed-category
     .container
-        .pagespeed-category pagespeed-category
+        .pagespeed-category
+            .pagespeed-category__title
+                span.section-h2 Рейтинги сайта по категориям
+            .pagespeed-category__list
+                each item in category2
+                    .pagespeed-category__item: +card-category(item)
+                
