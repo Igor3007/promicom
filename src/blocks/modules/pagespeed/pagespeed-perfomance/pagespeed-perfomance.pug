@@ -1,3 +1,110 @@
-section.section-pagespeed-perfomance
+include ../pagespeed-errors/card-pagespeed.pug
+
+- 
+    const PERFOMANCE = [
+        {
+            title: 'Редиректы страниц',
+            audit: 'Аудит не пройден',
+            icon: 'ic_ps-cross',
+            subtitle: 'Тут не помешала бы настройка',
+            text: 'Множественные перенаправления могут замедлить загрузку вашего сайта. Стремитесь к не более чем одному перенаправлению.',
+        },
+        {
+            title: 'Минимизированный CSS',
+            audit: 'Аудит не пройден',
+            icon: 'ic_ps-cross',
+            subtitle: 'Ваше веб-кэшеривание не на мировом уровне',
+            text: 'Когда ваш CSS правильно сжат, ваш сайт работает намного быстрее.',
+        },
+        {
+            title: 'Запросы страниц',
+            audit: '40 запросов',
+            icon: 'ic_ps-graph',
+            subtitle: 'Слишком много запросов',
+            text: 'Чем больше HTTP-запросов делает ваш сайт, тем медленнее он становится. Попробуйте уменьшить количество файлов, загружаемых вашим сайтом.',
+        },
+        
+        {
+            title: 'Скорость страницы',
+            audit: '3.1 сек.',
+            icon: 'ic_ps-ok',
+            subtitle: 'Отличная скорость',
+            text: 'Лучшие в своем классе веб-страницы должны стать интерактивными в течение 5,3 секунды. Любое замедление — и посетители покинут ваш сайт, что приведет к снижению конверсии и продаж.',
+        },
+
+        
+      
+        {
+            title: 'Размер страницы',
+            audit: '577 КБ',
+            icon: 'ic_ps-ok',
+            subtitle: 'Всё отлично',
+            text: 'Чем тяжелее страница сайта, тем медленнее загружается. Для оптимальной производительности старайтесь, чтобы размер страницы не превышал 3 МБ.',
+        },
+
+        {
+            title: 'Кэширование браузера',
+            audit: 'Аудит пройден',
+            icon: 'ic_ps-ok',
+            subtitle: 'Ваше веб-кэшеривание на мировом уровне',
+            text: 'Кэширование браузера ускоряет ваш сайт, сохраняя часто используемый контент в локальной памяти.',
+        },
+
+        {
+            title: 'Размеры изображений',
+            audit: 'Аудит пройден',
+            icon: 'ic_ps-ok',
+            subtitle: 'Размеры настроены идеально!',
+            text: 'Изображения могут долго загружаться. Используйте адаптивные изображения или SVG, чтобы оптимизировать изображения для разных размеров экрана.',
+        },
+
+        {
+            title: 'Минимизированный JavaSctipt',
+            audit: 'Аудит пройден',
+            icon: 'ic_ps-ok',
+            subtitle: 'Сами настроили?',
+            text: 'Когда ваш JavaScript правильно сжат, ваш сайт работает намного быстрее.',
+        },
+      
+       
+         
+    ]
+ 
+
+section.section-pagespeed-perfomance(id="perfomance")
     .container
-        .pagespeed-perfomance  pagespeed-perfomance 
+        .pagespeed-perfomance
+            .pagespeed-perfomance__points
+                div.circle-points
+                    svg(class="lh-gauge" viewBox="0 0 120 120") 
+                        circle(class="lh-gauge-base" r="56" cx="60" cy="60" stroke-width="6") 
+                        circle(class="lh-gauge-arc" r="56" cx="60" cy="60" stroke-width="6" style="transform: rotate(-87.9537deg); ")
+                    span 78
+            .pagespeed-perfomance__title: span.section-h2 Производительность
+            .pagespeed-perfomance__desc Оптимизация производительности вашего веб-сайта имеет решающее значение для увеличения трафика, повышения коэффициента конверсии, привлечения большего числа потенциальных клиентов и увеличения доходов.
+            .pagespeed-perfomance__subtitle: span.section-h5 Время отображения контента на ПК
+            .pagespeed-perfomance__screenshots
+                ul
+                    li
+                        picture
+                        span 100mc
+                    li
+                        picture
+                        span 158mc
+                    li
+                        picture
+                        span 358mc
+                    li
+                        picture
+                        span 640mc
+                    each item in [1,1,1,1,1,1]
+                        li
+                            picture: img(src="/static/img/pagespeed/1.jpg")
+                            span 323mc
+            .pagespeed-perfomance__audits
+                each item in PERFOMANCE
+                    .pagespeed-perfomance__item: +card-pagespeed-vertical(item)
+
+ 
+
+

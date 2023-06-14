@@ -1,0 +1,38 @@
+.section-pagespeed-order {
+    padding: 60px 0;
+
+    @media screen and (min-width: $w1440) {
+        padding: 90px 0;
+    }
+}
+
+.pagespeed-order {
+    &__title {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    &__desc {
+        max-width: 810px;
+        padding-bottom: 30px;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 155%;
+
+        @media screen and (min-width: $w1440) {
+            font-size: 20px;
+        }
+    }
+
+    &__button {
+
+        display: flex;
+        justify-content: center;
+
+        & .btn {
+            @media screen and (min-width: $w1441) {
+                height: 64px;
+            }
+        }
+    }
+}

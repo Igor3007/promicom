@@ -45,17 +45,17 @@ section.section-pagespeed-errors
     .container
         .pagespeed-errors
             .pagespeed-errors__title.section-h2 <span>6</span> ошибок
-            .pagespeed-errors__desc Критические ошибки, которые нужно срочно исправить, отмечены <span class="pagespeed--red" >красным цветом</span>. Другие проблемы, требующие устанения для лучшей производительности и доступности сайта, отмечены <span class="pagespeed--red" >оранжевым цветом</span>.
+            .pagespeed-errors__desc Критические ошибки, которые нужно срочно исправить, отмечены <span class="pagespeed--red" >красным цветом</span>. Другие проблемы, требующие устанения для лучшей производительности и доступности сайта, отмечены <span class="pagespeed--orange" >оранжевым цветом</span>.
             .pagespeed-errors__list
                 each item in errors
-                    .pagespeed-errors__item
+                    .pagespeed-errors__item.wow.experience
                         +card-pagespeed(item)
 
 section.section-pagespeed-call
     .container
         .pagespeed-call
-            .pagespeed-text Свяжитесь с нами для бесплатной консультации и решения всех проблем оптимизации Вашего сайта:
-            .pagespeed-button
-                button.btn.btn-primary Оставить заявку
+            .pagespeed-call__text Свяжитесь с нами для бесплатной консультации <br> и решения всех проблем оптимизации Вашего сайта:
+            .pagespeed-call__button
+                button.btn.btn-primary Заказать консультацию
 
 

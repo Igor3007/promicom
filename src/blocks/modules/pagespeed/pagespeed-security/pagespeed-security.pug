@@ -1,3 +1,35 @@
-section.section-pagespeed-security
+include ../pagespeed-errors/card-pagespeed.pug
+
+- 
+    const security = [
+        {
+            title: 'HTTPS Защищено',
+            icon: 'ic_ps-ok',
+            subtitle: 'Защищено',
+            text: 'HTTPS защищает веб-сайты от атак и дает посетителям уверенность в подлинности и надежности вашего сайта.',
+        },
+ 
+        {
+            title: 'Библиотеки JS безопасны',
+            icon: 'ic_ps-ok',
+            subtitle: 'Защищено',
+            text: 'Злоумышленники могут использовать устаревшие библиотеки JavaScript. Использование последней версии каждой библиотеки и ее регулярное обновление помогут обеспечить вашу безопасность.',
+        },
+    ]
+ 
+
+section.section-pagespeed-security(id="security")
     .container
-        .pagespeed-security pagespeed-security
+        .pagespeed-security
+            .pagespeed-security__points
+                div.circle-points
+                    svg(class="lh-gauge" viewBox="0 0 120 120") 
+                        circle(class="lh-gauge-base" r="56" cx="60" cy="60" stroke-width="6") 
+                        circle(class="lh-gauge-arc" r="56" cx="60" cy="60" stroke-width="6" style="transform: rotate(-87.9537deg); ")
+                    span 100
+            .pagespeed-security__title: span.section-h2 Безопасность
+            .pagespeed-security__desc Безопасный веб-сайт, оснащенный SSL-сертификатом и свободный от уязвимостей, теперь является стандартом в Интернете. Люди и поисковые системы любят безопасные веб-сайты.
+             
+            .pagespeed-security__audits
+                each item in security
+                    .pagespeed-security__item: +card-pagespeed(item)

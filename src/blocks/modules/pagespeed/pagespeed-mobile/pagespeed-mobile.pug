@@ -1,30 +1,4 @@
-mixin cf-vertical(data)
-    
-    .card-pagespeed__wrp
-        .card-pagespeed__title
-            span.section-h5= data.title
-        .card-pagespeed__audit= data.audit
-        .card-pagespeed__icon
-            .state-icon
-                .state-icon__bg
-                .state-icon__svg: +icons('#'+data.icon, 24)
-        .card-pagespeed__subtitle= data.subtitle
-        .card-pagespeed__text= data.text
-
-mixin card-pagespeed-vertical(data)
-    case data.icon
-        when 'ic_ps-cross'
-            .card-pagespeed.card-pagespeed--vertical.card-pagespeed--red
-                +cf-vertical(data)
-        when 'ic_ps-graph'
-            .card-pagespeed.card-pagespeed--vertical.card-pagespeed--orange
-                +cf-vertical(data) 
-        when 'ic_ps-ok'
-            .card-pagespeed.card-pagespeed--vertical.card-pagespeed--green
-                +cf-vertical(data)
-        default
-            .card-pagespeed.card-pagespeed--vertical
-                +cf-vertical(data)
+include ../pagespeed-errors/card-pagespeed.pug
 
 - 
     const MOBILE = [
@@ -52,16 +26,16 @@ mixin card-pagespeed-vertical(data)
        
          
     ]
+ 
 
-
-section.section-pagespeed-mobile
+section.section-pagespeed-mobile(id="mobile")
     .container
         .pagespeed-mobile
             .pagespeed-mobile__points
                 div.circle-points
                     svg(class="lh-gauge" viewBox="0 0 120 120") 
                         circle(class="lh-gauge-base" r="56" cx="60" cy="60" stroke-width="6") 
-                        circle(class="lh-gauge-arc" r="56" cx="60" cy="60" stroke-width="6" style="transform: rotate(-87.9537deg); stroke-dasharray: 208.154px, 351.858px;")
+                        circle(class="lh-gauge-arc" r="56" cx="60" cy="60" stroke-width="6" style="transform: rotate(-87.9537deg); ")
                     span 75
             .pagespeed-mobile__title: span.section-h2 Мобильные устройства
             .pagespeed-mobile__desc Трафик с мобильных устройств быстро растет. Оптимизируйте свой веб-сайт для мобильных устройств, иначе вы упустите ценный трафик, потенциальных клиентов и доход.
@@ -86,7 +60,7 @@ section.section-pagespeed-mobile
                             span 323mc
             .pagespeed-mobile__audits
                 .pagespeed-mobile__item
-                    .pagespeed-mobile-mobile__screenshots
+                    .pagespeed-mobile__phone-screenshots
                         picture
                             img(src="/static/img/pagespeed/image2.jpg" )
                 each item in MOBILE

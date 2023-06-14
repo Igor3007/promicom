@@ -1,0 +1,49 @@
+.pagespeed-screenshot {
+
+    margin-top: -140px;
+    max-width: 804px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $w1441) {
+        margin-top: -262px;
+    }
+
+    &__panel {
+        height: 45px;
+        background-color: #1A284D;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 15px;
+
+        &>span {
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            background-color: #eee;
+            border-radius: 50%;
+            margin: 3px;
+
+            &.panel-dot--red {
+                background-color: #F2545B;
+            }
+
+            &.panel-dot--orange {
+                background-color: #F5C26B;
+            }
+
+            &.panel-dot--green {
+                background-color: #00BDA5;
+            }
+
+
+        }
+    }
+
+    &__image {
+        & img {
+            width: 100%;
+        }
+    }
+}

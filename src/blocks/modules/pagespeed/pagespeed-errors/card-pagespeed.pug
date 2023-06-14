@@ -27,5 +27,32 @@ mixin card-pagespeed(data)
                 .card-pagespeed
                     +cf(data)
 
-        
+
+mixin cf-vertical(data)
+    .card-pagespeed__wrp
+        .card-pagespeed__title
+            span.section-h5= data.title
+        .card-pagespeed__audit= data.audit
+        .card-pagespeed__icon
+            .state-icon
+                .state-icon__bg
+                .state-icon__svg: +icons('#'+data.icon, 24)
+        .card-pagespeed__subtitle= data.subtitle
+        .card-pagespeed__text= data.text
+
+mixin card-pagespeed-vertical(data)
+    case data.icon
+        when 'ic_ps-cross'
+            .card-pagespeed.card-pagespeed--vertical.card-pagespeed--red
+                +cf-vertical(data)
+        when 'ic_ps-graph'
+            .card-pagespeed.card-pagespeed--vertical.card-pagespeed--orange
+                +cf-vertical(data) 
+        when 'ic_ps-ok'
+            .card-pagespeed.card-pagespeed--vertical.card-pagespeed--green
+                +cf-vertical(data)
+        default
+            .card-pagespeed.card-pagespeed--vertical
+                +cf-vertical(data)
+
         

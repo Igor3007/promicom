@@ -1,3 +1,57 @@
-section.section-pagespeed-seo
+
+
+
+include ../pagespeed-errors/card-pagespeed.pug
+
+- 
+    const SEO = [
+        {
+            title: 'Мета-описание',
+            icon: 'ic_ps-cross',
+            subtitle: 'Нужно поработать!',
+            audit: 'Аудит не пройден',
+            text: 'Метаописания сообщают людям, о чем ваша страница в результатах поиска.'
+        },
+        {
+            title: 'Описательный текст ссылок',
+            icon: 'ic_ps-cross',
+            subtitle: 'Слишком обобщенно',
+            audit: 'Аудит не пройден',
+            text: 'Описательный текст ссылки помогает посетителям понять, что они увидят, если нажмут на ссылку. «Связаться с нами» не всегда подходит.',
+        },
+        {
+            title: 'Разрешение на индексирование',
+            icon: 'ic_ps-ok',
+            subtitle: 'Все настроено',
+            audit: 'Аудит пройден',
+            text: 'Чтобы страница отображалась в результатах поиска, поисковые системы должны иметь разрешение на сохранение ее в своем индексе.',
+        },
+        {
+            title: 'Плагины контента',
+            icon: 'ic_ps-ok',
+            subtitle: 'Вы молодец, на сайте все отлично',
+            audit: 'Аудит пройден',
+            text: 'Поисковые системы не всегда могут понять контент, основанный на плагинах браузера, таких как Flash.',
+        },
+       
+         
+    ]
+ 
+ 
+
+section.section-pagespeed-seo(id="seo")
     .container
-        .pagespeed-seo pagespeed-seo
+        .pagespeed-seo
+            .pagespeed-seo__points
+                div.circle-points
+                    svg(class="lh-gauge" viewBox="0 0 120 120") 
+                        circle(class="lh-gauge-base" r="56" cx="60" cy="60" stroke-width="6") 
+                        circle(class="lh-gauge-arc" r="56" cx="60" cy="60" stroke-width="6" style="transform: rotate(-87.9537deg); ")
+                    span 75
+            .pagespeed-seo__title: span.section-h2 Поисковая оптимизация (SEO)
+            .pagespeed-seo__desc Оптимизация контента вашего сайта для поиска поможет вам привлечь органический трафик на ваш сайт. Вы можете сделать это, предоставив отличный опыт как людям, так и поисковым роботам.
+             
+            .pagespeed-seo__audits
+                each item in SEO
+                    .pagespeed-seo__item: +card-pagespeed-vertical(item)
+

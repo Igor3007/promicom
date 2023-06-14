@@ -6,6 +6,10 @@
 
 .section-pagespeed-category {
     padding: 50px 0;
+
+    @media screen and (min-width: $w1441) {
+        padding: 92px 0;
+    }
 }
 
 
@@ -14,8 +18,8 @@
     width: 120px;
     height: 120px;
 
-    fill: #f00;
-    stroke: #f00;
+    fill: #bbb;
+    stroke: #bbb;
 }
 
 .lh-gauge-base {
@@ -25,34 +29,22 @@
 .lh-gauge-arc {
     fill: none;
     transform-origin: 50% 50%;
-    animation: load-gauge 1s ease both;
-    animation-delay: 250ms;
+    animation-delay: 0;
     transform: rotate(-87.9537deg);
-    stroke-dasharray: 250.154px, 352px;
+    stroke-dasharray: 0px, 352px;
 }
 
-.pagespeed-category {
-
-    &__title {
-        padding-bottom: 30px;
-        text-align: center;
-    }
-
-    &__list {
-        display: flex;
-        margin: -12px;
-    }
-
-    &__item {
-        padding: 12px;
-        flex-grow: 1;
-        flex-basis: 320px;
-    }
+.loaded .lh-gauge-arc {
+    animation: load-gauge 2s ease both;
 }
 
 div.circle-points {
     display: inline-flex;
     position: relative;
+
+    & * {
+        transition: 0.3s ease;
+    }
 
     & span {
         position: absolute;
@@ -63,10 +55,83 @@ div.circle-points {
         align-items: center;
         width: 100%;
         height: 100%;
-        font-size: 24px;
-        font-weight: 600;
+        font-size: 40px;
+        font-weight: 900;
+        color: #bbb;
+    }
+
+    &--red {
+        & .lh-gauge {
+            fill: var(--color-red);
+            stroke: var(--color-red);
+        }
+
+        & span {
+            color: var(--color-red)
+        }
+    }
+
+    &--orange {
+        & .lh-gauge {
+            fill: var(--color-orange);
+            stroke: var(--color-orange);
+        }
+
+        & span {
+            color: var(--color-orange)
+        }
+    }
+
+    &--green {
+        & .lh-gauge {
+            fill: var(--color-green);
+            stroke: var(--color-green);
+        }
+
+        & span {
+            color: var(--color-green)
+        }
     }
 }
+
+.pagespeed-category {
+
+    &__title {
+        padding-bottom: 30px;
+        text-align: center;
+
+        @media screen and (min-width: $w1441) {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        margin: -12px;
+        flex-wrap: wrap;
+
+
+    }
+
+    &__item {
+        padding: 12px;
+        flex-grow: 1;
+        flex-basis: 280px;
+
+        & .lh-gauge {
+            width: 80px;
+            height: 80px;
+        }
+
+        & .circle-points {
+            & span {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+
 
 .card-category {
 
@@ -80,21 +145,23 @@ div.circle-points {
 
         display: flex;
         justify-content: center;
-        padding-bottom: 25px;
+        padding-bottom: 22px;
 
 
     }
 
     &__desc {
         text-align: center;
-        padding-bottom: 20px;
+        padding-bottom: 26px;
+        font-size: 14px;
+        line-height: 143%;
     }
 
     &__title {
         font-size: 20px;
         font-weight: 900;
         text-align: center;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     &__more {
@@ -109,6 +176,14 @@ div.circle-points {
         margin: -24px;
         margin-top: auto;
         cursor: pointer;
+
+        & a {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
 
         & span {
 
