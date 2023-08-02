@@ -1,0 +1,105 @@
+.steps {
+  padding-bottom: 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #D3D9EB;
+    @media screen and (max-width: 1152px) {
+      flex-direction: column;
+    }
+  }
+
+  .item--prev {
+    margin-left: auto;
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-right: 1px solid #D3D9EB;
+    cursor: pointer;
+    @media screen and (max-width: 1152px) {
+      margin-left: initial;
+      margin-right: auto;
+      text-align: left;
+      border-right: 0;
+      padding-left: 25px;
+      border-bottom: 1px solid #D3D9EB;
+      width: 100%;
+    }
+    @media screen and (max-width: 480px) {
+      padding-left: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    &:hover {
+      transition: .3s ease;
+      opacity: .7;
+    }
+
+  }
+
+  .item--next {
+    text-align: left;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    cursor: pointer;
+    @media screen and (max-width: 1152px) {
+      margin-left: auto;
+      margin-right: initial;
+      text-align: right;
+      padding-right: 25px;
+      width: 100%;
+    }
+    @media screen and (max-width: 480px) {
+      padding-right: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    &:hover {
+      transition: .3s ease;
+      opacity: .7;
+    }
+  }
+
+  &__item-top {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 160%;
+    color: #6E81B8;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+    line-height: 170%;
+    margin-bottom: 4px;
+  }
+
+  &__item-title {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 142%;
+    color: #1F5AFF;
+    margin-bottom: 16px;
+    @media screen and (max-width: 480px) {
+      font-size: 20px;
+      line-height: 160%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-desc {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    color: #000;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+  }
+}
