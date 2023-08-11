@@ -38,19 +38,59 @@
   color: #1F5AFF;
 }
 
-.projects-patrik-film__img-box {
-  margin: 36px 0;
+.projects-patrik-film__wrapper {
+  background-repeat-y: no-repeat;
+  background-repeat-x: inherit;
   width: 100%;
+  display: none;
+}
+
+.projects-patrik-film__wrapper-adaptive {
+  display: none;
+}
+
+.projects-patrik-film__wrapper-colored {
+  background-color: #F7F7F7;
+  display: none;
+}
+
+.projects-patrik-film__img-box {
+  display: block;
 }
 
 .projects-patrik-film__img-box-new {
-  width: 100%;
-  margin: 12px 0;
+  margin: 32px 0;
 }
 
-.projects-patrik-film__img-online-festival {
+.projects-patrik-film__img-box-new img {
   width: 100%;
-  object-fit: cover;
+  margin: 0 auto;
+  border: 6px solid #2D2C40;
+  border-radius: 18px;
+}
+
+.projects-patrik-film .img-box-margined {
+  margin-top: -290px;
+}
+
+.projects-patrik-film .img-box-margined img {
+  border: none;
+  border-radius: 0;
+}
+
+.projects-patrik-film .img-box-resp {
+  margin-left: auto;
+  margin-top: -80px;
+}
+
+.projects-patrik-film .img-box-resp img {
+  border: none;
+  border-radius: 0;
+}
+
+.projects-patrik-film .img-box-full img {
+  border: none;
+  border-radius: 0;
 }
 
 .projects-patrik-film__text-block h2 {
@@ -72,30 +112,175 @@
   color: #000000;
 }
 
-.mainpage-tech__title {
+.projects-patrik-film .container-new {
+  max-width: 80%;
+  margin: auto;
+}
+
+.projects-patrik-film .container-adaptive {
+  max-width: 100%;
+}
+
+.projects-patrik-film .single-text {
+  padding-top: 20px;
+  margin-top: 60px;
+}
+
+.projects-patrik-film .single-text h2 {
+  color: #FFFFFF;
+}
+
+.projects-patrik-film .single-text p {
+  color: #FFFFFF;
+}
+
+.projects-patrik-film .no-single {
+  margin: 0;
+  max-width: 580px;
+}
+
+.projects-patrik-film .single-text-colored h2 {
+  color: #000;
+}
+
+.projects-patrik-film .single-text-colored span {
+  color: #535166;
+}
+
+.projects-patrik-film .single-text-colored p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #07163E;
+}
+
+.projects-patrik-film .single-text-sizing {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+}
+
+.projects-patrik-film__conclusions {
+  padding: 120px 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F7F7;
+}
+
+.projects-patrik-film__conclusions h4 {
+  width: auto;
+  margin: 0;
+}
+
+.projects-patrik-film__conclusions span {
+  min-width: 120px;
+  max-width: 120px;
+  width: 100%;
+  height: 122px;
+  display: block;
+  margin: 0 40px;
+}
+
+.scs {
+  display: none;
+}
+
+.no-sizing {
+  padding: 0;
+  margin-top: -40px;
+}
+
+.mainpage-tech-vogez__title {
   margin-bottom: 8px;
 }
 
-.mainpage-tech__caption {
+.mainpage-tech-vogez__title span {
+  color: #1F5AFF;
+}
+
+.mainpage-tech-vogez__caption {
   font-weight: 700;
   margin-bottom: 16px;
 }
 
-.mainpage-tech__items {
+.mainpage-tech-vogez__items {
   display: flex;
   flex-wrap: wrap;
   margin: -8px -8px 0;
 }
 
-.mainpage-tech__item {
+.mainpage-tech-vogez__item {
   width: calc(50% - 16px);
   margin: 8px;
 }
 
-.mainpage-tech__item img {
+.mainpage-tech-vogez__item img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.steps {
+  padding-bottom: 0;
+}
+
+.steps__wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #D3D9EB;
+}
+
+.steps .item--prev {
+  margin-left: auto;
+  text-align: right;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-right: 1px solid #D3D9EB;
+  cursor: pointer;
+}
+
+.steps .item--prev:hover {
+  transition: .3s ease;
+  opacity: .7;
+}
+
+.steps .item--next {
+  text-align: left;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  cursor: pointer;
+}
+
+.steps .item--next:hover {
+  transition: .3s ease;
+  opacity: .7;
+}
+
+.steps__item-top {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #6E81B8;
+  margin-bottom: 16px;
+}
+
+.steps__item-title {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 142%;
+  color: #1F5AFF;
+  margin-bottom: 16px;
+}
+
+.steps__item-desc {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  color: #000;
 }
 
 .mainpage-form {
@@ -211,7 +396,7 @@
 }
 
 @media screen and (min-width: 641px) {
-  .mainpage-tech__item {
+  .mainpage-tech-vogez__item {
     width: calc(100% / 3 - 16px);
   }
 
@@ -259,35 +444,57 @@
 }
 
 @media screen and (min-width: 831px) {
-  .mainpage-tech__items {
-    justify-content: center;
+  .mainpage-tech-vogez__items {
+    justify-content: flex-start;
   }
 
-  .mainpage-tech__item {
+  .mainpage-tech-vogez__item {
     width: calc(100% / 4 - 16px);
   }
 }
 
+@media screen and (min-width: 992px) {
+  .projects-patrik-film__wrapper {
+    display: block;
+  }
+
+  .projects-patrik-film__wrapper-adaptive {
+    display: block;
+  }
+
+  .projects-patrik-film__wrapper-colored {
+    display: block;
+  }
+
+  .projects-patrik-film__img-box {
+    display: none;
+  }
+
+  .scs {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 1025px) {
-  .mainpage-tech {
+  .mainpage-tech-vogez {
     padding: 50px 0;
   }
 
-  .mainpage-tech__title {
+  .mainpage-tech-vogez__title {
     margin-bottom: 24px;
   }
 
-  .mainpage-tech__caption {
+  .mainpage-tech-vogez__caption {
     margin-bottom: 24px;
   }
 
-  .mainpage-tech__items {
-    justify-content: center;
+  .mainpage-tech-vogez__items {
+    justify-content: flex-start;
     margin: -16px -16px 0;
   }
 
-  .mainpage-tech__item {
-    width: calc(100% / 5 - 32px);
+  .mainpage-tech-vogez__item {
+    width: calc(100% / 4 - 32px);
     margin: 16px;
   }
 
@@ -339,12 +546,102 @@
 }
 
 @media screen and (min-width: 1153px) {
+  .projects-patrik-film__img-box-new {
+    margin-top: 68px;
+  }
+
+  .projects-patrik-film .img-box-resp {
+    max-width: 95%;
+    margin-top: -120px;
+  }
+
   .mainpage-form {
     padding: 80px 0;
   }
 
   .mainpage-form .form__group.services {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .projects-patrik-film .container-adaptive {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .projects-patrik-film .single-text-sizing {
+    max-width: 580px;
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  .projects-patrik-film .img-box-margined {
+    margin-top: -390px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .projects-patrik-film .no-single {
+    max-width: 100%;
+  }
+
+  .projects-patrik-film .single-text-sizing {
+    max-width: 780px;
+  }
+}
+
+@media screen and (max-width: 1152px) {
+  .steps__wrapper {
+    flex-direction: column;
+  }
+
+  .steps .item--prev {
+    margin-left: initial;
+    margin-right: auto;
+    text-align: left;
+    border-right: 0;
+    padding-left: 25px;
+    border-bottom: 1px solid #D3D9EB;
+    width: 100%;
+  }
+
+  .steps .item--next {
+    margin-left: auto;
+    margin-right: initial;
+    text-align: right;
+    padding-right: 25px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .steps .item--prev {
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .steps .item--next {
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .steps {
+    font-size: 14px;
+    line-height: 170%;
+    margin-bottom: 4px;
+  }
+
+  .steps__item-title {
+    font-size: 20px;
+    line-height: 160%;
+    margin-bottom: 0;
+  }
+
+  .steps__item-desc {
+    display: none;
   }
 }
 /*# sourceMappingURL=maps/project-film.css.map */
