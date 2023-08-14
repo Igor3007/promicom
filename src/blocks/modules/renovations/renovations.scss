@@ -1,0 +1,274 @@
+.renovations {
+  &__text {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    align-self: stretch;
+    @media (min-width: 1153px) {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+
+  &__link-text {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6E81B8;
+    margin: 16px 0 4px;
+  }
+
+  &__link-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1F5AFF;
+    @media (min-width: 1153px) {
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 32px;
+      &:hover {
+        color: #022fad;
+        transition: .8s ease;
+      }
+    }
+  }
+
+  &__wrapper {
+    background-repeat-y: no-repeat;
+    background-repeat-x: inherit;
+    width: 100%;
+    display: none;
+    @media screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &__wrapper-adaptive {
+    display: none;
+    @media screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &__wrapper-colored {
+    background-color: #F7F7F7;
+    display: none;
+    @media screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &__img-box {
+    display: block;
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+
+    img {
+
+    }
+  }
+
+  &__img-box-new {
+    margin: 32px 0;
+    @media screen and (min-width: 1153px) {
+      margin-top: 68px;
+    }
+
+    img {
+      width: 100%;
+      margin: 0 auto;
+      border: 6px solid #95C227;
+      border-radius: 18px;
+    }
+  }
+
+  .img-box-margined {
+    margin-top: -240px;
+    @media screen and (min-width: 1480px) {
+      margin-top: -390px;
+
+
+    }
+
+    img {
+      border: none;
+      border-radius: 0;
+    }
+  }
+
+  .img-box-resp {
+    margin-left: auto;
+    margin-top: -80px;
+    @media screen and (min-width: 1153px) {
+      max-width: 95%;
+      margin-top: -120px;
+    }
+
+    img {
+      border: none;
+      border-radius: 0;
+    }
+
+  }
+
+  .img-box-full {
+    img {
+      border: none;
+      border-radius: 0;
+    }
+  }
+
+
+  &__text-block h2 {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 12px;
+    @media (min-width: 1153px) {
+      font-size: 48px;
+      line-height: 56px;
+      margin: 64px 0 24px;
+    }
+  }
+
+  &__text-block p {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    @media (min-width: 1153px) {
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+
+  .container-new {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .container-adaptive {
+    max-width: 100%;
+
+    @media screen and (min-width: 1240px) {
+      max-width: 90%;
+      margin: auto;
+    }
+  }
+
+
+  .single-text {
+    padding-top: 20px;
+    margin-top: 60px;
+
+    h2 {
+      color: #FFFFFF;
+    }
+
+    p {
+      color: #FFFFFF;
+    }
+  }
+
+  .no-single {
+    margin: 0;
+    max-width: 580px;
+
+    @media screen and (min-width: 1680px) {
+      max-width: 100%;
+    }
+
+    h2 {
+
+    }
+  }
+
+  .single-text-colored {
+    h2 {
+      color: #FFF;
+    }
+
+    span {
+      color: #93C226;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 160%;
+      color: #07163E;
+
+      span {
+        color: #fff;
+      }
+    }
+  }
+
+  .single-text-sizing {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    @media screen and (min-width: 1240px) {
+      max-width: 580px;
+    }
+    @media screen and (min-width: 1680px) {
+      max-width: 780px;
+    }
+  }
+
+  &__conclusions {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F7F7;
+
+    h4 {
+      width: auto;
+      margin-bottom: 32px;
+    }
+
+    span {
+      min-width: 120px;
+      max-width: 120px;
+      width: 100%;
+      height: 122px;
+      display: block;
+      margin: 0 40px;
+    }
+  }
+}
+
+.scs {
+  display: none;
+  @media screen and (min-width: 992px) {
+    display: block;
+  }
+}
+
+.no-sizing {
+  padding: 0;
+  margin-top: -72px;
+}

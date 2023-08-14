@@ -38,20 +38,62 @@
   color: #1F5AFF;
 }
 
-.vogez-main {
-  padding: 0;
-}
-
-.vogez-main__img-box {
-  margin-bottom: 36px;
-}
-
-.vogez-main__img {
+.page-vogez__wrapper {
+  background-repeat-y: no-repeat;
+  background-repeat-x: inherit;
   width: 100%;
-  object-fit: cover;
+  display: none;
 }
 
-.vogez-main__text-block h2 {
+.page-vogez__wrapper-adaptive {
+  display: none;
+}
+
+.page-vogez__wrapper-colored {
+  background-color: #F7F7F7;
+  display: none;
+}
+
+.page-vogez__img-box {
+  display: block;
+}
+
+.page-vogez__img-box-new {
+  margin: 32px 0;
+}
+
+.page-vogez__img-box-new img {
+  width: 100%;
+  margin: 0 auto;
+  border: 6px solid #05ACFE;
+  border-radius: 18px;
+}
+
+.page-vogez .img-box-margined {
+  margin-top: -240px;
+}
+
+.page-vogez .img-box-margined img {
+  border: none;
+  border-radius: 0;
+}
+
+.page-vogez .img-box-resp {
+  margin-left: auto;
+  margin-top: -80px;
+}
+
+.page-vogez .img-box-resp img {
+  border: none;
+  border-radius: 0;
+}
+
+.page-vogez .img-box-full img {
+  border: none;
+  border-radius: 0;
+}
+
+.page-vogez__text-block h2 {
   font-family: 'Mulish';
   font-style: normal;
   font-weight: 900;
@@ -61,17 +103,98 @@
   margin-bottom: 12px;
 }
 
-.vogez-main__text-block h2 span {
-  color: #0258AE;
-}
-
-.vogez-main__text-block p {
+.page-vogez__text-block p {
   font-family: 'Mulish';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+}
+
+.page-vogez .container-new {
+  max-width: 80%;
+  margin: auto;
+}
+
+.page-vogez .container-adaptive {
+  max-width: 100%;
+}
+
+.page-vogez .single-text {
+  padding-top: 20px;
+  margin-top: 60px;
+}
+
+.page-vogez .single-text h2 {
+  color: #FFFFFF;
+}
+
+.page-vogez .single-text p {
+  color: #FFFFFF;
+}
+
+.page-vogez .no-single {
+  margin: 0;
+  max-width: 580px;
+}
+
+.page-vogez .single-text-colored h2 {
+  color: #FFF;
+}
+
+.page-vogez .single-text-colored span {
+  color: #0258AE;
+}
+
+.page-vogez .single-text-colored p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #07163E;
+}
+
+.page-vogez .single-text-colored p span {
+  color: #fff;
+}
+
+.page-vogez .single-text-sizing {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+}
+
+.page-vogez__conclusions {
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F7F7;
+}
+
+.page-vogez__conclusions h4 {
+  width: auto;
+  margin-bottom: 32px;
+  color: #0258AE;
+  white-space: nowrap;
+}
+
+.page-vogez__conclusions span {
+  min-width: 120px;
+  max-width: 120px;
+  width: 100%;
+  height: 122px;
+  display: block;
+  margin: 0 40px;
+}
+
+.scs {
+  display: none;
+}
+
+.no-sizing {
+  padding: 0;
+  margin-top: -72px;
 }
 
 .mainpage-tech-vogez__title {
@@ -336,6 +459,28 @@
   }
 }
 
+@media screen and (min-width: 992px) {
+  .page-vogez__wrapper {
+    display: block;
+  }
+
+  .page-vogez__wrapper-adaptive {
+    display: block;
+  }
+
+  .page-vogez__wrapper-colored {
+    display: block;
+  }
+
+  .page-vogez__img-box {
+    display: none;
+  }
+
+  .scs {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   .mainpage-tech-vogez {
     padding: 50px 0;
@@ -392,23 +537,28 @@
     color: #022fad;
     transition: .8s ease;
   }
-}
 
-@media screen and (min-width: 1153px) {
-  .vogez-main__text-block h2 {
+  .page-vogez__text-block h2 {
     font-size: 48px;
     line-height: 56px;
     margin: 64px 0 24px;
   }
 
-  .vogez-main__text-block p {
+  .page-vogez__text-block p {
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 24px;
   }
+}
 
-  .vogez-main__text-block p:last-child {
-    margin-bottom: 40px;
+@media screen and (min-width: 1153px) {
+  .page-vogez__img-box-new {
+    margin-top: 68px;
+  }
+
+  .page-vogez .img-box-resp {
+    max-width: 95%;
+    margin-top: -120px;
   }
 
   .mainpage-form {
@@ -417,6 +567,33 @@
 
   .mainpage-form .form__group.services {
     display: flex;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .page-vogez .container-adaptive {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .page-vogez .single-text-sizing {
+    max-width: 580px;
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  .page-vogez .img-box-margined {
+    margin-top: -390px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .page-vogez .no-single {
+    max-width: 100%;
+  }
+
+  .page-vogez .single-text-sizing {
+    max-width: 780px;
   }
 }
 
