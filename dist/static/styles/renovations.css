@@ -237,6 +237,7 @@
 }
 
 .steps .item--prev {
+  flex: 0 0 50%;
   margin-left: auto;
   text-align: right;
   padding-right: 40px;
@@ -252,6 +253,7 @@
 }
 
 .steps .item--next {
+  flex: 0 0 50%;
   text-align: left;
   margin-right: auto;
   padding-left: 40px;
