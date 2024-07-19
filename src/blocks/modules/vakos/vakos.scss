@@ -1,11 +1,59 @@
+$maxWidth: 1320;
+
+
+._container {
+  max-width: $maxWidth + px;
+  padding: 0 15px;
+  margin: 0 auto;
+  @media screen and (min-width: 480px) {
+    max-width: 400px;
+  }
+
+  @media screen and (min-width: 575.98px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 767.98px) {
+    padding: 0 20px;
+    max-width: 705px;
+  }
+
+  @media screen and (min-width: 991.98px) {
+    padding: 0 30px;
+    max-width: 990px;
+  }
+
+  @media screen and (min-width: 1199.98px) {
+    padding: 0 30px;
+    max-width: 1100px;
+  }
+
+  @media screen and (min-width: 1439.98px) {
+    padding: 0 15px;
+    max-width: 1230px;
+  }
+  @media screen and (min-width: 1639.98px) {
+    max-width: 1438px;
+  }
+}
+
+
 .vakos {
   @media screen and (min-width: 1153px) {
     padding: 24px 0 60px;
+  }
+  @media screen and (min-width: 1639.98px) {
+    padding: 48px 0 60px;
   }
 
   &__title {
     font-size: 24px;
     line-height: 36px;
+
+    br {
+      display: none;
+    }
+
     @media screen and (min-width: 641px) {
       font-size: 40px;
       line-height: 132%
@@ -17,9 +65,15 @@
       font-size: 56px;
     }
     @media screen and (min-width: 1153px) {
-      font-size: 64px;
-      line-height: 84px;
-
+      font-size: 62px;
+      line-height: 80px;
+    }
+    @media screen and (min-width: 1639.98px) {
+      font-size: 68px;
+      margin-bottom: 48px;
+      br {
+        display: block;
+      }
     }
   }
 
@@ -63,6 +117,11 @@
     @media (min-width: 1153px) {
       font-size: 19px;
       line-height: 30px;
+    }
+    @media (min-width: 1639.98px) {
+      font-size: 20px;
+      line-height: 32px;
+      max-width: 800px;
     }
   }
 
@@ -145,6 +204,9 @@
     overflow: hidden;
     @media screen and (min-width: 1153px) {
       display: block;
+    }
+    @media screen and (min-width: 1639.98px) {
+      margin-top: 80px;
     }
 
     .vakos__img--top {
@@ -280,7 +342,7 @@
       font-weight: 400;
       line-height: 24px;
       color: #5C7899;
-      margin-bottom: 5px;
+      margin-bottom: 12px;
     }
 
     ul {
@@ -294,9 +356,10 @@
         font-size: 14px;
         font-weight: 700;
         line-height: 20px;
-        padding: 8px 12px;
+        padding: 6px 8px;
         background: #F2F6FA;
         @media screen and (min-width: 831px) {
+          padding: 8px 12px;
           font-size: 18px;
           line-height: 28px;
         }
@@ -312,7 +375,7 @@
       font-weight: 400;
       line-height: 24px;
       color: #5C7899;
-      margin-bottom: 5px;
+      margin-bottom: 12px;
     }
 
     ul {
@@ -327,17 +390,25 @@
         gap: 16px;
         padding: 8px 12px;
         background: #F2F6FA;
+        @media screen and (min-width: 1639.98px) {
+          padding: 12px 40px 12px 24px;
+        }
 
         .icon {
           display: block;
-          min-width: 44px;
-          width: 44px;
-          height: 44px;
+          min-width: 32px;
+          width: 32px;
+          height: 32px;
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center;
           transition: 0.3s ease;
           cursor: pointer;
+          @media screen and (min-width: 1639.98px) {
+            min-width: 48px;
+            width: 48px;
+            height: 48px;
+          }
         }
 
         .info {
@@ -349,6 +420,10 @@
             font-size: 18px;
             line-height: 28px;
           }
+          @media screen and (min-width: 1639.98px) {
+            font-size: 20px;
+            line-height: 32px;
+          }
         }
       }
     }
@@ -356,6 +431,7 @@
 }
 
 .vakos-tasks {
+  overflow: hidden;
   @media screen and (min-width: 1153px) {
     padding: 24px 0 60px;
   }
@@ -399,6 +475,7 @@
     gap: 16px;
     @media screen and (min-width: 1153px) {
       gap: 24px;
+      flex: 1 0 65%;
     }
 
     ul {
@@ -479,10 +556,15 @@
     gap: 20px;
     padding: 24px;
     background: #F2F6FA;
+    margin-right: -5%;
+    @media screen and (min-width: 480px) {
+      margin-right: 0;
+    }
     @media (min-width: 1153px) {
       flex-direction: row;
       gap: 30px;
       padding: 64px;
+      margin-right: -35%;
     }
   }
 
@@ -535,7 +617,11 @@
   }
 
   &__bottom-content {
-    flex: 0 0 70%;
+    flex: 0 0 80%;
+    @media (min-width: 1153px) {
+      padding-right: calc(20% + 40px);
+    }
+
 
     .vakos-tasks__text {
       margin-bottom: 0;
@@ -564,14 +650,18 @@
     span {
       background: #FFF;
       padding: 0 16px;
-      width: min-content;
       display: inline-block;
       @media screen and (min-width: 480px) {
-        display: initial;
         width: initial;
+      }
+      @media screen and (min-width: 767.98px) {
+        line-height: 44px;
       }
       @media screen and (min-width: 1153px) {
         padding: 0 48px;
+        br {
+          display: none;
+        }
       }
     }
 
@@ -624,6 +714,27 @@
     }
   }
 
+  &__title-3 {
+    font-size: 20px;
+    line-height: 32px;
+    @media screen and (min-width: 641px) {
+      font-size: 26px;
+    }
+    @media screen and (min-width: 831px) {
+      font-size: 28px;
+    }
+    @media screen and (min-width: 1025px) {
+      font-size: 30px;
+    }
+    @media screen and (min-width: 1153px) {
+      font-size: 40px;
+      line-height: 52px;
+    }
+    @media screen and (min-width: 1639.98px) {
+      margin-left: 5px;
+    }
+  }
+
   &__text {
     font-family: 'Mulish', sans-serif;
     font-style: normal;
@@ -641,6 +752,9 @@
     @media (min-width: 1153px) {
       font-size: 18px;
       line-height: 28px;
+    }
+    @media screen and (min-width: 1639.98px) {
+      margin-left: 5px;
     }
   }
 
@@ -732,10 +846,16 @@
         font-size: 20px;
         line-height: 32px;
       }
+      @media screen and (min-width: 1639.98px) {
+        margin-left: 5px;
+      }
     }
 
     .vakos-details__text {
       color: #FFF;
+      @media screen and (min-width: 1639.98px) {
+        margin-left: 5px;
+      }
     }
 
     .vakos-details__img-box {
@@ -778,6 +898,9 @@
           line-height: 24px;
           margin: 20px 0 40px;
         }
+        @media screen and (min-width: 1639.98px) {
+          margin-left: 5px;
+        }
       }
     }
   }
@@ -811,6 +934,9 @@
       .vakos-details__text {
         margin-top: -10px;
         margin-bottom: 10px;
+        @media screen and (min-width: 1639.98px) {
+          margin-left: 5px;
+        }
       }
     }
 
@@ -838,6 +964,9 @@
 
       .vakos-details__text {
         margin-top: 20px;
+        @media screen and (min-width: 1639.98px) {
+          margin-left: 5px;
+        }
       }
     }
   }
@@ -858,7 +987,10 @@
     background: #493A6C;
     padding-top: 5%;
     padding-bottom: calc(5% + 60px);
-    margin-top: 5%;
+    margin-top: 15%;
+    @media screen and (min-width: 767.98px) {
+      margin-top: 5%;
+    }
     @media screen and (min-width: 1153px) {
       padding: 5% 0;
     }
@@ -872,6 +1004,9 @@
           display: none;
         }
       }
+      @media screen and (min-width: 1639.98px) {
+        margin-left: 5px;
+      }
     }
 
     .vakos-details__text {
@@ -880,6 +1015,9 @@
         br {
           display: none;
         }
+      }
+      @media screen and (min-width: 1639.98px) {
+        margin-left: 5px;
       }
     }
 
@@ -1085,6 +1223,13 @@
     }
   }
 
+  &__title-5 {
+    font-size: 20px;
+    @media screen and (min-width: 1025px) {
+      font-size: 24px;
+    }
+  }
+
   &__item {
     display: grid;
     gap: 24px;
@@ -1093,11 +1238,12 @@
       gap: 48px;
     }
 
+
     .vakos-process__text {
       font-family: 'Mulish', sans-serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 20px;
       color: #000000;
       align-self: stretch;
@@ -1115,7 +1261,7 @@
         font-family: 'Mulish', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 20px;
         color: #000000;
         align-self: stretch;
@@ -1126,6 +1272,10 @@
           margin-bottom: 16px;
         }
 
+        @media (min-width: 768px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
         @media screen and (min-width: 1153px) {
           padding-left: 28px;
         }
@@ -1166,13 +1316,13 @@
         font-family: 'Mulish', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 20px;
         color: #000000;
         align-self: stretch;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
         padding: 12px 16px;
         background: #F2F6FA;
 
@@ -1202,6 +1352,9 @@
 
   &__img-box {
     max-width: 808px;
+    @media screen and (min-width: 1639.98px) {
+      margin-left: -5px;
+    }
 
     picture {
       position: relative;
@@ -1319,6 +1472,7 @@
       font-size: 40px;
       line-height: 52px;
     }
+
   }
 
   &__top {
@@ -1385,6 +1539,10 @@
   }
 
   &__bottom-lt {
+    margin-left: -5%;
+    @media screen and (min-width: 480px) {
+      margin-left: 0;
+    }
     @media (min-width: 1153px) {
       margin-right: -35%;
     }
@@ -1582,6 +1740,7 @@
     background: #0F5EB8;
     padding: 12px 48px;
     width: 100%;
+    text-transform: uppercase;
     transition: .1s ease-out;
     margin-top: 24px;
     @media screen and (min-width: 641px) {

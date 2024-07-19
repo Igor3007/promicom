@@ -74,13 +74,13 @@
     line-height: 160%;
     color: #6E81B8;
     margin-bottom: 16px;
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+      line-height: 170%;
+      margin-bottom: 4px;
+    }
   }
 
-  @media screen and (max-width: 480px) {
-    font-size: 14px;
-    line-height: 170%;
-    margin-bottom: 4px;
-  }
 
   &__item-title {
     font-size: 28px;

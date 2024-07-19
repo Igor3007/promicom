@@ -154,9 +154,19 @@
   display: none;
 }
 
+._container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 .vakos__title {
   font-size: 24px;
   line-height: 36px;
+}
+
+.vakos__title br {
+  display: none;
 }
 
 .vakos__caption {
@@ -350,7 +360,7 @@
   font-weight: 400;
   line-height: 24px;
   color: #5C7899;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
 }
 
 .vakos-about__middle ul {
@@ -365,7 +375,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
-  padding: 8px 12px;
+  padding: 6px 8px;
   background: #F2F6FA;
 }
 
@@ -376,7 +386,7 @@
   font-weight: 400;
   line-height: 24px;
   color: #5C7899;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
 }
 
 .vakos-about__bottom ul {
@@ -396,9 +406,9 @@
 
 .vakos-about__bottom ul li .icon {
   display: block;
-  min-width: 44px;
-  width: 44px;
-  height: 44px;
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -411,6 +421,10 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
+}
+
+.vakos-tasks {
+  overflow: hidden;
 }
 
 .vakos-tasks__title-2 {
@@ -475,6 +489,7 @@
   gap: 20px;
   padding: 24px;
   background: #F2F6FA;
+  margin-right: -5%;
 }
 
 .vakos-tasks__bottom-avatar {
@@ -517,7 +532,7 @@
 }
 
 .vakos-tasks__bottom-content {
-  flex: 0 0 70%;
+  flex: 0 0 80%;
 }
 
 .vakos-tasks__bottom-content .vakos-tasks__text {
@@ -537,7 +552,6 @@
 .vakos-details__title-2 span {
   background: #FFF;
   padding: 0 16px;
-  width: min-content;
   display: inline-block;
 }
 
@@ -565,6 +579,11 @@
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
+}
+
+.vakos-details__title-3 {
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .vakos-details__text {
@@ -717,7 +736,7 @@
   background: #493A6C;
   padding-top: 5%;
   padding-bottom: calc(5% + 60px);
-  margin-top: 5%;
+  margin-top: 15%;
 }
 
 .vakos-details__last-sc .vakos-details__title-3 {
@@ -856,6 +875,10 @@
   gap: 40px;
 }
 
+.vakos-process__title-5 {
+  font-size: 20px;
+}
+
 .vakos-process__item {
   display: grid;
   gap: 24px;
@@ -865,7 +888,7 @@
   font-family: 'Mulish', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
   color: #000000;
   align-self: stretch;
@@ -875,7 +898,7 @@
   font-family: 'Mulish', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
   color: #000000;
   align-self: stretch;
@@ -907,13 +930,13 @@
   font-family: 'Mulish', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
   color: #000000;
   align-self: stretch;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   padding: 12px 16px;
   background: #F2F6FA;
 }
@@ -1046,6 +1069,10 @@
   cursor: pointer;
 }
 
+.vakos-results__bottom-lt {
+  margin-left: -5%;
+}
+
 .vakos-results__bottom {
   display: flex;
   flex-direction: column;
@@ -1174,6 +1201,7 @@
   background: #0F5EB8;
   padding: 12px 48px;
   width: 100%;
+  text-transform: uppercase;
   transition: .1s ease-out;
   margin-top: 24px;
 }
@@ -1394,9 +1422,26 @@
 }
 
 @media screen and (min-width: 480px) {
+  ._container {
+    max-width: 400px;
+  }
+
+  .vakos-tasks__bottom {
+    margin-right: 0;
+  }
+
   .vakos-details__title-2 span {
-    display: initial;
     width: initial;
+  }
+
+  .vakos-results__bottom-lt {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 575.98px) {
+  ._container {
+    max-width: 480px;
   }
 }
 
@@ -1422,6 +1467,10 @@
 
   .vakos-details__title-2 {
     font-size: 32px;
+  }
+
+  .vakos-details__title-3 {
+    font-size: 26px;
   }
 
   .vakos-process__title-2 {
@@ -1495,6 +1544,21 @@
   }
 }
 
+@media screen and (min-width: 767.98px) {
+  ._container {
+    padding: 0 20px;
+    max-width: 705px;
+  }
+
+  .vakos-details__title-2 span {
+    line-height: 44px;
+  }
+
+  .vakos-details__last-sc {
+    margin-top: 5%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .vakos__caption {
     flex-direction: row;
@@ -1550,6 +1614,11 @@
     line-height: 24px;
   }
 
+  .vakos-process__item-middle ul li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .vakos-process__item-bottom ul li {
     font-size: 16px;
     line-height: 24px;
@@ -1572,6 +1641,7 @@
   }
 
   .vakos-about__middle ul li {
+    padding: 8px 12px;
     font-size: 18px;
     line-height: 28px;
   }
@@ -1588,6 +1658,10 @@
   .vakos-details__title-2 {
     font-size: 36px;
     margin-bottom: 40px;
+  }
+
+  .vakos-details__title-3 {
+    font-size: 28px;
   }
 
   .vakos-process__title-2 {
@@ -1626,6 +1700,13 @@
   }
 }
 
+@media screen and (min-width: 991.98px) {
+  ._container {
+    padding: 0 30px;
+    max-width: 990px;
+  }
+}
+
 @media screen and (min-width: 1025px) {
   .vakos__title {
     font-size: 56px;
@@ -1643,8 +1724,16 @@
     font-size: 42px;
   }
 
+  .vakos-details__title-3 {
+    font-size: 30px;
+  }
+
   .vakos-process__title-2 {
     font-size: 42px;
+  }
+
+  .vakos-process__title-5 {
+    font-size: 24px;
   }
 
   .vakos-results__title-2 {
@@ -1704,8 +1793,8 @@
   }
 
   .vakos__title {
-    font-size: 64px;
-    line-height: 84px;
+    font-size: 62px;
+    line-height: 80px;
   }
 
   .vakos__img-box--top-md {
@@ -1756,6 +1845,7 @@
 
   .vakos-tasks__text-box {
     gap: 24px;
+    flex: 1 0 65%;
   }
 
   .vakos-tasks__text-box ul li:before {
@@ -1770,6 +1860,10 @@
     padding: 0 48px;
   }
 
+  .vakos-details__title-2 span br {
+    display: none;
+  }
+
   .vakos-details__title-2:before {
     height: 4px;
   }
@@ -1782,6 +1876,11 @@
     font-size: 48px;
     line-height: 60px;
     margin-bottom: 60px;
+  }
+
+  .vakos-details__title-3 {
+    font-size: 40px;
+    line-height: 52px;
   }
 
   .vakos-details__first-sc {
@@ -2029,6 +2128,7 @@
     flex-direction: row;
     gap: 30px;
     padding: 64px;
+    margin-right: -35%;
   }
 
   .vakos-tasks__bottom-avatar {
@@ -2040,6 +2140,10 @@
     min-width: 80px;
     width: 80px;
     height: 80px;
+  }
+
+  .vakos-tasks__bottom-content {
+    padding-right: calc(20% + 40px);
   }
 
   .vakos-tasks__bottom-content .vakos-tasks__text {
@@ -2094,9 +2198,109 @@
   }
 }
 
+@media screen and (min-width: 1199.98px) {
+  ._container {
+    padding: 0 30px;
+    max-width: 1100px;
+  }
+}
+
 @media screen and (min-width: 1324px) {
   .vakos-details__third-sc-item:last-child {
     margin-top: -10%;
+  }
+}
+
+@media screen and (min-width: 1439.98px) {
+  ._container {
+    padding: 0 15px;
+    max-width: 1230px;
+  }
+}
+
+@media screen and (min-width: 1639.98px) {
+  ._container {
+    max-width: 1438px;
+  }
+
+  .vakos {
+    padding: 48px 0 60px;
+  }
+
+  .vakos__title {
+    font-size: 68px;
+    margin-bottom: 48px;
+  }
+
+  .vakos__title br {
+    display: block;
+  }
+
+  .vakos__img-box--top {
+    margin-top: 80px;
+  }
+
+  .vakos-about__bottom ul li {
+    padding: 12px 40px 12px 24px;
+  }
+
+  .vakos-about__bottom ul li .icon {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .vakos-about__bottom ul li .info {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .vakos-details__title-3 {
+    margin-left: 5px;
+  }
+
+  .vakos-details__text {
+    margin-left: 5px;
+  }
+
+  .vakos-details__second-sc-item .vakos-details__title-3 {
+    margin-left: 5px;
+  }
+
+  .vakos-details__second-sc-item .vakos-details__text {
+    margin-left: 5px;
+  }
+
+  .vakos-details__second-sc-item:last-child .vakos-details__text {
+    margin-left: 5px;
+  }
+
+  .vakos-details__third-sc-item:first-child .vakos-details__text {
+    margin-left: 5px;
+  }
+
+  .vakos-details__third-sc-item:last-child .vakos-details__text {
+    margin-left: 5px;
+  }
+
+  .vakos-details__last-sc .vakos-details__title-3 {
+    margin-left: 5px;
+  }
+
+  .vakos-details__last-sc .vakos-details__text {
+    margin-left: 5px;
+  }
+
+  .vakos-process__img-box {
+    margin-left: -5px;
+  }
+}
+
+@media (min-width: 1639.98px) {
+  .vakos__text {
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 800px;
   }
 }
 
@@ -2157,7 +2361,7 @@
     padding-bottom: 16px;
   }
 
-  .steps {
+  .steps__item-top {
     font-size: 14px;
     line-height: 170%;
     margin-bottom: 4px;
