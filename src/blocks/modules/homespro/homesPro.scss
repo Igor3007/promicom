@@ -75,7 +75,7 @@ body {
 }
 
 
-.vakos {
+.cmn-temp {
   padding: 24px 0 16px;
 
   @media screen and (min-width: 991.98px) {
@@ -112,7 +112,7 @@ body {
     }
 
 
-    .vakos__text-box {
+    .cmn-temp__text-box {
       margin: 0;
 
       br {
@@ -123,7 +123,7 @@ body {
       }
     }
 
-    .vakos__link-box {
+    .cmn-temp__link-box {
       width: 100%;
       display: flex;
       align-items: center;
@@ -143,7 +143,7 @@ body {
             background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMC4zMzMzIDJDOS43ODEwNSAyIDkuMzMzMzMgMS41NTIyOCA5LjMzMzMzIDFDOS4zMzMzMyAwLjQ0NzcxNSA5Ljc4MTA1IDAgMTAuMzMzMyAwSDE1QzE1LjU1MjMgMCAxNiAwLjQ0NzcxNSAxNiAxVjUuNjY2NjdDMTYgNi4yMTg5NSAxNS41NTIzIDYuNjY2NjcgMTUgNi42NjY2N0MxNC40NDc3IDYuNjY2NjcgMTQgNi4yMTg5NSAxNCA1LjY2NjY3VjMuNDE0MjFMNy4xNTE1NSAxMC4yNjI3QzYuNzYxMDMgMTAuNjUzMiA2LjEyNzg2IDEwLjY1MzIgNS43MzczNCAxMC4yNjI3QzUuMzQ2ODEgOS44NzIxNCA1LjM0NjgxIDkuMjM4OTcgNS43MzczNCA4Ljg0ODQ1TDEyLjU4NTggMkgxMC4zMzMzWk0yLjU1NTU2IDQuMzMzMzNDMi40MDgyMSA0LjMzMzMzIDIuMjY2OTEgNC4zOTE4NiAyLjE2MjcyIDQuNDk2MDVDMi4wNTg1MyA0LjYwMDI0IDIgNC43NDE1NSAyIDQuODg4ODlWMTMuNDQ0NEMyIDEzLjU5MTggMi4wNTg1MyAxMy43MzMxIDIuMTYyNzIgMTMuODM3M0MyLjI2NjkxIDEzLjk0MTUgMi40MDgyMSAxNCAyLjU1NTU2IDE0SDExLjExMTFDMTEuMjU4NSAxNCAxMS4zOTk4IDEzLjk0MTUgMTEuNTAzOSAxMy44MzczQzExLjYwODEgMTMuNzMzMSAxMS42NjY3IDEzLjU5MTggMTEuNjY2NyAxMy40NDQ0VjkuNzc3NzhDMTEuNjY2NyA5LjIyNTQ5IDEyLjExNDQgOC43Nzc3OCAxMi42NjY3IDguNzc3NzhDMTMuMjE5IDguNzc3NzggMTMuNjY2NyA5LjIyNTQ5IDEzLjY2NjcgOS43Nzc3OFYxMy40NDQ0QzEzLjY2NjcgMTQuMTIyMiAxMy4zOTc0IDE0Ljc3MjIgMTIuOTE4MiAxNS4yNTE1QzEyLjQzODkgMTUuNzMwOCAxMS43ODg5IDE2IDExLjExMTEgMTZIMi41NTU1NkMxLjg3Nzc4IDE2IDEuMjI3NzYgMTUuNzMwOCAwLjc0ODUwNSAxNS4yNTE1QzAuMjY5MjQ1IDE0Ljc3MjIgMCAxNC4xMjIyIDAgMTMuNDQ0NFY0Ljg4ODg5QzAgNC4yMTExMSAwLjI2OTI0NSAzLjU2MTEgMC43NDg1MDUgMy4wODE4NEMxLjIyNzc2IDIuNjAyNTggMS44Nzc3OCAyLjMzMzMzIDIuNTU1NTYgMi4zMzMzM0g2LjIyMjIyQzYuNzc0NTEgMi4zMzMzMyA3LjIyMjIyIDIuNzgxMDUgNy4yMjIyMiAzLjMzMzMzQzcuMjIyMjIgMy44ODU2MiA2Ljc3NDUxIDQuMzMzMzMgNi4yMjIyMiA0LjMzMzMzSDIuNTU1NTZaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K) !important;
           }
 
-          .vakos__link {
+          .cmn-temp__link {
             color: #FFF;
           }
         }
@@ -162,15 +162,16 @@ body {
         cursor: pointer;
       }
 
-      .vakos__link {
+      .cmn-temp__link {
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
         color: #0070E0;
+        margin-bottom: -2px;
       }
 
       @media screen and (min-width: 576px) {
-        max-width: 120px;
+        max-width: 160px;
       }
     }
   }
@@ -188,10 +189,11 @@ body {
     }
   }
 
-  &__img-box--top-md {
-    margin-top: 32px;
-    @media screen and (min-width: 991.98px) {
-      display: none;
+
+  &__img-box {
+    margin-top: 24px;
+    @media screen and (min-width: 1153px) {
+      margin-top: 64px;
     }
 
     picture {
@@ -213,82 +215,9 @@ body {
     }
   }
 
-  &__img-box--top {
-    margin-top: 40px;
-    display: none;
-    background: #2D2149;
-    position: relative;
-    overflow: hidden;
-    @media screen and (min-width: 991.98px) {
-      display: block;
-    }
-    @media screen and (min-width: 1639.98px) {
-      margin-top: 80px;
-    }
-
-    .vakos__img--top {
-      padding: 6% 18%;
-
-      picture {
-        position: relative;
-        display: block;
-        padding-bottom: 68%;
-        height: 0;
-        overflow: hidden;
-
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-          object-fit: cover;
-          border-radius: 20px;
-        }
-      }
-    }
-
-    span {
-      display: block;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: transform 0.3s linear;
-      //will-change: transform;
-      cursor: pointer;
-      position: absolute;
-      z-index: 1;
-
-
-      &.par-c {
-        width: 15%;
-        height: 50%;
-        left: 0;
-        top: 50%;
-        transform: translate(0, -50%);
-      }
-
-      &.par-hl {
-        width: 10%;
-        height: 30%;
-        right: calc(15% + 40px);
-        bottom: 0;
-      }
-
-      &.par-hr {
-        width: 15%;
-        height: 20%;
-        right: 0;
-        top: 50%;
-        transform: translate(0, -50%);
-      }
-    }
-  }
-
 }
 
-.vakos-about {
+.cmn-temp-about {
   padding: 24px 0 16px;
 
   @media screen and (min-width: 991.98px) {
@@ -324,6 +253,12 @@ body {
       display: flex;
       align-items: flex-start;
       gap: 40px;
+    }
+  }
+
+  &__text-box {
+    @media screen and (min-width: 991.98px) {
+      flex: 1 0 65%;
     }
   }
 
@@ -409,9 +344,6 @@ body {
       gap: 8px;
       overflow-x: auto;
       scrollbar-width: thin;
-      @media screen and (min-width: 991.98px) {
-        flex-wrap: wrap;
-      }
 
 
       li {
@@ -453,7 +385,8 @@ body {
   }
 }
 
-.vakos-tasks {
+
+.cmn-temp-tasks {
   overflow: hidden;
   padding: 24px 0 16px;
 
@@ -498,7 +431,7 @@ body {
       flex: 1 0 65%;
     }
 
-    .vakos__text {
+    .cmn-temp-tasks__text {
       margin: 0;
     }
 
@@ -528,7 +461,7 @@ body {
             width: 12px;
             height: 12px;
 
-            top: 5px;
+            top: 8px;
           }
         }
 
@@ -538,7 +471,7 @@ body {
         }
 
         @media (min-width: 991.98px) {
-          font-size: 18px;
+          font-size: 16px;
           line-height: 28px;
         }
 
@@ -592,9 +525,10 @@ body {
       align-items: flex-start;
     }
 
-    .vakos-tasks__bottom-avatar-wr {
+    .cmn-temp-tasks__bottom-avatar-wr {
       display: flex;
       flex-direction: column;
+      gap: 4px;
     }
 
     .icon {
@@ -615,9 +549,9 @@ body {
     }
 
     .name {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 700;
-      line-height: 32px;
+      line-height: 24px;
       color: #000;
       @media screen and (min-width: 991.98px) {
         font-size: 20px;
@@ -628,7 +562,7 @@ body {
     .desc {
       font-size: 14px;
       font-weight: 400;
-      line-height: 24px;
+      line-height: 20px;
       color: #5C7899;
     }
   }
@@ -640,13 +574,14 @@ body {
     }
 
 
-    .vakos-tasks__text {
+    .cmn-temp-tasks__text {
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
       color: #000;
       margin-bottom: 0;
-      @media screen and (min-width: 991.98px) {
+
+      @media (min-width: 991.98px) {
         font-size: 18px;
         line-height: 28px;
       }
@@ -662,7 +597,7 @@ body {
   }
 }
 
-.vakos-details {
+.cmn-temp-details {
   padding: 24px 0 16px;
 
   @media screen and (min-width: 991.98px) {
@@ -738,6 +673,24 @@ body {
       font-size: 48px;
       line-height: 60px;
       margin-bottom: 60px;
+    }
+  }
+
+  &__text-box--top {
+    @media screen and (min-width: 991.98px) {
+      margin-left: 15%;
+    }
+
+    .cmn-temp-details__text {
+      @media screen and (min-width: 991.98px) {
+        font-size: 18px !important;
+        line-height: 28px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+
+      }
     }
   }
 
@@ -790,7 +743,7 @@ body {
 
   &__first-sc-top {
     @media screen and (min-width: 991.98px) {
-      margin-left: 25%;
+      margin-right: 25%;
     }
   }
 
@@ -800,53 +753,38 @@ body {
     gap: 10px;
     margin-top: 5%;
     @media screen and (min-width: 991.98px) {
-      gap: 20px;
+      gap: 80px;
     }
   }
 
   &__img-box {
     &:first-child {
-      flex: 1 0 60%;
+      flex: 0 0 25%;
     }
 
     &:last-child {
-      flex: 0 0 30%;
-
-      picture {
-        img {
-          border-bottom: none;
-          border-radius: 8px 8px 0 0;
-        }
-      }
+      flex: 1 0 60%;
     }
 
     picture {
       display: block;
-      border-radius: 8px;
-      background: #785FB4;
-      @media screen and (min-width: 991.98px) {
-        border-radius: 16px;
-      }
 
       img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 8px;
-        border: 4px solid #785FB4;
-        @media screen and (min-width: 991.98px) {
-          border-radius: 20px;
-          border: 8px solid #785FB4;
-        }
       }
     }
 
   }
 
   &__second-sc {
-    background: #493A6C;
-    padding: 5% 0;
+    background: #262626;
+    padding: 10% 0 5%;
+    @media screen and (min-width: 575.98px) {
+      padding: 5% 0;
+    }
   }
 
   &__second-sc-wr {
@@ -856,75 +794,98 @@ body {
     gap: 20px;
     @media screen and (min-width: 991.98px) {
       flex-direction: row;
-      gap: 64px;
+      gap: 80px;
+    }
+  }
+
+  .cmn-temp-details__text {
+    @media screen and (min-width: 991.98px) {
+      font-family: 'Inter';
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1639.98px) {
+      margin-left: 5px;
     }
   }
 
   &__second-sc-item {
-    .vakos-details__title-3 {
+    .cmn-temp-details__title-3 {
       color: #FFF;
       font-size: 20px;
       line-height: 32px;
+
+      br {
+        display: none;
+      }
+
       @media screen and (min-width: 991.98px) {
         font-size: 32px;
         line-height: 44px;
+        br {
+          display: block;
+        }
       }
+
       @media screen and (min-width: 1639.98px) {
         margin-left: 5px;
       }
     }
 
-    .vakos-details__text {
-      color: #FFF;
-      @media screen and (min-width: 1639.98px) {
-        margin-left: 5px;
-      }
-    }
-
-    .vakos-details__img-box {
-      picture {
-        background: none;
-
-        img {
-          border: none;
-          border-radius: 8px;
-          @media screen and (min-width: 991.98px) {
-            border-radius: 20px;
-          }
-        }
-      }
-    }
-
-    &:first-child {
-      flex: 0 0 40%;
-
-      .vakos-details__img-box {
-        margin-top: 5%;
-      }
-    }
-
-    &:last-child {
-      flex: 1 0 50%;
-
-      .vakos-details__img-box {
-        picture {
-          background: #FFF;
-        }
-      }
-
-      .vakos-details__text {
-        font-size: 14px;
-        line-height: 20px;
-        margin: 10px 0 20px;
+    .cmn-temp-details__text-box {
+      p {
+        margin: 12px 0 24px;
         @media screen and (min-width: 991.98px) {
-          font-size: 16px;
-          line-height: 24px;
-          margin: 20px 0 40px;
+          margin: 24px 0 64px;
         }
         @media screen and (min-width: 1639.98px) {
           margin-left: 5px;
         }
       }
+    }
+
+    .cmn-temp-details__text {
+      color: #FFF;
+    }
+
+
+    &:first-child {
+      flex: 1 0 45%;
+    }
+
+    &:last-child {
+      flex: 1 0 45%;
+
+      .cmn-temp-details__text {
+        font-family: 'Inter';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 10px 0 20px;
+        @media screen and (min-width: 991.98px) {
+          font-size: 16px;
+          line-height: 24px;
+          margin: 20px 0 64px;
+        }
+        @media screen and (min-width: 1639.98px) {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .nw-md-block {
+    display: none;
+    @media screen and (max-width: 575.98px) {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 24px 0;
+    }
+  }
+
+  .cmn-temp-details__second-sc-item--nw {
+    @media screen and (max-width: 575.98px) {
+      display: none;
     }
   }
 
@@ -939,7 +900,7 @@ body {
     gap: 20px;
     @media screen and (min-width: 991.98px) {
       flex-direction: row;
-      gap: 64px;
+      gap: 80px;
     }
   }
 
@@ -950,11 +911,11 @@ body {
       gap: 20px;
       margin-top: 20px;
       @media screen and (min-width: 991.98px) {
-        gap: 40px;
-        margin-top: 40px;
+        gap: 65px;
+        margin-top: 34px;
       }
 
-      .vakos-details__text {
+      .cmn-temp-details__text {
         margin-top: -10px;
         margin-bottom: 10px;
         @media screen and (min-width: 1639.98px) {
@@ -964,32 +925,36 @@ body {
     }
 
     &:last-child {
-      flex: 0 0 25%;
+      flex: 0 0 30%;
       @media screen and (min-width: 991.98px) {
-        max-width: 330px;
+        max-width: 335px;
       }
-      @media screen and (min-width: 1439.98px) {
+      @media screen and (min-width: 1639.98px) {
         margin-top: -10%;
       }
 
-      .vakos-details__img-box {
-        picture {
-          img {
-            border: 4px solid #785FB4;
-            border-radius: 8px;
-            @media screen and (min-width: 991.98px) {
-              border-radius: 20px;
-              border: 8px solid #785FB4;
-            }
+
+      .cmn-temp-details__text {
+        margin-top: 20px;
+
+        br {
+          display: none;
+        }
+
+        @media screen and (min-width: 1439.98px) {
+          br {
+            display: block;
           }
         }
-      }
-
-      .vakos-details__text {
-        margin-top: 20px;
         @media screen and (min-width: 1639.98px) {
           margin-left: 5px;
         }
+      }
+    }
+
+    .cmn-temp-details__text-box--mt-nw {
+      @media screen and (min-width: 991.98px) {
+        margin-top: -28px;
       }
     }
   }
@@ -1002,15 +967,18 @@ body {
     @media screen and (min-width: 991.98px) {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 80px;
     }
   }
 
   &__last-sc {
-    background: #493A6C;
-    padding-top: 5%;
-    padding-bottom: calc(5% + 60px);
+    background: #2E2E2E;
+    padding-top: 10%;
+    padding-bottom: calc(10% + 60px);
     margin-top: 15%;
+    @media screen and (min-width: 575.98px) {
+      padding-top: 5%;
+    }
     @media screen and (min-width: 767.98px) {
       margin-top: 5%;
     }
@@ -1018,7 +986,7 @@ body {
       padding: 5% 0;
     }
 
-    .vakos-details__title-3 {
+    .cmn-temp-details__title-3 {
       color: #FFF;
       font-size: 20px;
       line-height: 32px;
@@ -1039,13 +1007,19 @@ body {
       }
     }
 
-    .vakos-details__text {
+    .cmn-temp-details__text {
       color: #FFF;
-      @media screen and (max-width: 575.98px) {
+
+      br {
+        display: none;
+      }
+
+      @media screen and (min-width: 991.98px) {
         br {
-          display: none;
+          display: block;
         }
       }
+
       @media screen and (min-width: 1639.98px) {
         margin-left: 5px;
       }
@@ -1081,7 +1055,7 @@ body {
 
     .splide__arrows {
       position: absolute;
-      right: 0;
+      right: 10px;
       bottom: -65px;
 
       .splide__arrow {
@@ -1132,51 +1106,26 @@ body {
   &__last-sc-item {
     &:first-child {
       flex: 1 0 60%;
-
-      .vakos-details__img-box {
-        picture {
-          background: #493A6C;
-
-          img {
-            border-radius: 8px;
-            border: none;
-            @media screen and (min-width: 991.98px) {
-              border-radius: 20px;
-            }
-          }
-        }
-      }
     }
 
     &:last-child {
-      flex: 0 0 25%;
+      flex: 0 0 30%;
       display: none;
       @media screen and (min-width: 991.98px) {
         display: block;
-        margin-top: calc(-25% + 10px);
+        max-width: 335px;
       }
-
-      .vakos-details__img-box {
-        picture {
-          img {
-            border-radius: 8px;
-            border: none;
-            @media screen and (min-width: 991.98px) {
-              border-radius: 20px;
-            }
-          }
-        }
+      @media screen and (min-width: 1439.98px) {
+        margin-top: calc(-10% - 55px);
       }
     }
   }
 
 }
 
-.vakos-process {
-  padding: 24px 0 16px;
-
+.cmn-temp-process {
   @media screen and (min-width: 991.98px) {
-    padding: 32px 0 64px;
+    padding: 24px 0 60px;
   }
 
   &__title-2 {
@@ -1187,18 +1136,8 @@ body {
     span {
       background: #FFF;
       padding: 0 16px;
-      display: inline-block;
-      @media screen and (min-width: 480px) {
-        width: initial;
-      }
-      @media screen and (min-width: 767.98px) {
-        line-height: 44px;
-      }
       @media screen and (min-width: 991.98px) {
         padding: 0 48px;
-        br {
-          display: none;
-        }
       }
     }
 
@@ -1213,7 +1152,7 @@ body {
       left: -100%;
       top: 50%;
       transform: translate(0, -50%);
-      @media screen and (min-width: 1153px) {
+      @media screen and (min-width: 991.98px) {
         height: 4px;
       }
     }
@@ -1229,22 +1168,12 @@ body {
       right: 0;
       top: 50%;
       transform: translate(0, -50%);
-      @media screen and (min-width: 1153px) {
+      @media screen and (min-width: 991.98px) {
         height: 4px;
       }
     }
 
-    @media screen and (min-width: 641px) {
-      font-size: 32px;
-    }
-    @media screen and (min-width: 831px) {
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
-    @media screen and (min-width: 1025px) {
-      font-size: 42px;
-    }
-    @media screen and (min-width: 1153px) {
+    @media screen and (min-width: 991.98px) {
       font-size: 48px;
       line-height: 60px;
       margin-bottom: 60px;
@@ -1281,13 +1210,15 @@ body {
     }
 
 
-    .vakos-process__text {
+    .cmn-temp-process__text {
+      font-family: 'Inter';
+      font-style: normal;
       font-weight: 700;
       font-size: 14px;
       line-height: 20px;
       color: #000000;
 
-      @media (min-width: 768px) {
+      @media (min-width: 991.98px) {
         font-size: 16px;
         line-height: 24px;
       }
@@ -1311,8 +1242,6 @@ body {
         }
 
         @media screen and (min-width: 991.98px) {
-          font-size: 16px;
-          line-height: 24px;
           padding-left: 28px;
         }
 
@@ -1337,6 +1266,11 @@ body {
             height: 14px;
           }
         }
+
+        @media (min-width: 991.98px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
     }
   }
@@ -1344,11 +1278,12 @@ body {
   &__item-bottom {
     ul {
       li {
+        font-family: 'Inter';
+        font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;
-        color: #000000;
-        align-self: stretch;
+        color: #000;
         display: flex;
         align-items: center;
         gap: 20px;
@@ -1387,41 +1322,23 @@ body {
     }
 
     picture {
-      position: relative;
       display: block;
-      padding-bottom: 60%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #785FB4;
-      @media screen and (min-width: 991.98px) {
-        border-radius: 16px;
-      }
 
       img {
-        position: absolute;
-        top: 0;
-        left: 0;
+        display: block;
         width: 100%;
         height: 100%;
-        z-index: 1;
         object-fit: cover;
-        border-radius: 8px;
-        border: 4px solid #785FB4;
-        @media screen and (min-width: 991.98px) {
-          border-radius: 20px;
-          border: 8px solid #785FB4;
-        }
       }
     }
   }
 
 }
 
-.vakos-results {
+.cmn-temp-results {
   overflow: hidden;
 
-  @media screen and (min-width: 1153px) {
+  @media screen and (min-width: 991.98px) {
     padding: 24px 0 60px;
   }
 
@@ -1497,6 +1414,7 @@ body {
     }
     @media screen and (min-width: 991.98px) {
       grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
     }
   }
 
@@ -1505,7 +1423,7 @@ body {
     align-items: flex-start;
     gap: 20px;
 
-    .vakos-results__text {
+    .cmn-temp-results__text {
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
@@ -1563,7 +1481,7 @@ body {
     background: #F2F6FA;
     @media (min-width: 991.98px) {
       flex-direction: row;
-      gap: 30px;
+      gap: 40px;
       padding: 64px;
     }
   }
@@ -1577,16 +1495,16 @@ body {
       gap: 20px;
     }
 
-    .vakos-results__bottom-avatar-wr {
+    .cmn-temp-results__bottom-avatar-wr {
       display: flex;
       flex-direction: column;
     }
 
     .icon {
       display: block;
-      min-width: 108px;
-      width: 108px;
-      height: 40px;
+      min-width: 188px;
+      width: 188px;
+      height: 24px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -1617,26 +1535,27 @@ body {
       padding-right: calc(20% + 50px);
     }
 
-    .vakos-results__text {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
-      color: #000;
+    .cmn-temp-results__text {
       margin-bottom: 0;
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+
       @media screen and (min-width: 991.98px) {
         font-size: 18px;
         line-height: 28px;
-
       }
 
       &:not(:last-child) {
         margin-bottom: 24px;
       }
     }
+
   }
 }
 
-.vakos-team {
+.cmn-temp-team {
   @media screen and (min-width: 991.98px) {
     padding: 24px 0 60px;
   }
@@ -1709,6 +1628,7 @@ body {
   }
 
   &__content-item-name {
+
     font-size: 18px;
     font-weight: 700;
     line-height: 28px;
@@ -1762,4 +1682,5 @@ body {
 
     }
   }
+
 }

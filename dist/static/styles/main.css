@@ -621,9 +621,9 @@ footer {
 
 .breadcrumb__item::after {
   content: "";
-  width: 12px;
+  width: 8px;
   height: 2px;
-  background-color: var(--color-border);
+  background-color: #D3DFEB;
   display: inline-block;
   position: relative;
   margin: 0 12px;
@@ -639,23 +639,20 @@ footer {
 
 .breadcrumb__link {
   display: block;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 153.84615%;
-  padding: 10px 16px;
-  border: 2px solid var(--color-border);
-  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #D3DFEB;
   transition: all 0.5s ease;
-  background: #fff;
-}
-
-.breadcrumb__link:hover {
-  border-color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 153.84615%;
+  text-align: left;
+  color: #5C7B99;
 }
 
 .breadcrumb__link_active {
-  background: var(--color-item-bg);
-  border-color: var(--color-item-bg);
+  border-color: #EBF0F5;
+  background: #EBF0F5;
 }
 
 .page-breadcrumbs {
