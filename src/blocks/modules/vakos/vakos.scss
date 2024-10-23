@@ -268,7 +268,6 @@ body {
         top: 50%;
         transform: translate(0, -50%);
       }
-      
       &.par-hr {
         width: 15%;
         height: 20%;
@@ -284,6 +283,7 @@ body {
       background-repeat: no-repeat;
       background-position: center;
       transition: transform 0.3s linear;
+      //will-change: transform;
       cursor: pointer;
       position: absolute;
       z-index: 1;
