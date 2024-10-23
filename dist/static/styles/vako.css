@@ -331,19 +331,30 @@ body {
   transform: translate(0, -50%);
 }
 
-.vakos__img-box--top span.par-hl {
-  width: 10%;
-  height: 30%;
-  right: calc(15% + 40px);
-  bottom: 0;
-}
-
 .vakos__img-box--top span.par-hr {
   width: 15%;
   height: 20%;
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
+}
+
+.vakos__img-box--top i {
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s linear;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+
+.vakos__img-box--top i.par-hl {
+  width: 10%;
+  height: 30%;
+  right: calc(15% + 40px);
+  bottom: 0;
 }
 
 .vakos-about {
