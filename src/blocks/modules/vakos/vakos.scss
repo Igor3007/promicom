@@ -269,19 +269,30 @@ body {
         transform: translate(0, -50%);
       }
 
-      &.par-hl {
-        width: 10%;
-        height: 30%;
-        right: calc(15% + 40px);
-        bottom: 0;
-      }
-
       &.par-hr {
         width: 15%;
         height: 20%;
         right: 0;
         top: 50%;
         transform: translate(0, -50%);
+      }
+    }
+
+    i {
+      display: block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.3s linear;
+      cursor: pointer;
+      position: absolute;
+      z-index: 1;
+
+      &.par-hl {
+        width: 10%;
+        height: 30%;
+        right: calc(15% + 40px);
+        bottom: 0;
       }
     }
   }
