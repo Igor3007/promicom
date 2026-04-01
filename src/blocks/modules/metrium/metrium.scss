@@ -314,13 +314,13 @@ body {
       }
     }
 
-    .ul {
+    ul {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 8px;
 
-      .li {
+      li {
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
@@ -336,9 +336,7 @@ body {
           font-size: 16px;
           font-weight: 500;
           line-height: 24px;
-          &:hover{
-            background: #ebf0f6;;
-          }
+
         }
       }
     }
@@ -357,9 +355,11 @@ body {
       line-height: 24px;
       color: #000;
       margin-bottom: 12px;
+      padding: 0 16px;
       @media screen and (min-width: 991.98px) {
         font-size: 18px;
         line-height: 28px;
+        padding: 0;
       }
     }
 
@@ -532,11 +532,22 @@ body {
     justify-content: space-between;
     gap: 16px;
     padding: 24px;
-    border-radius: 16px 0 0 16px;
     background: #F2F6FA;
+    border-radius: 16px 0 0 16px;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      background: #F2F6FA;
+      height: 100%;
+      width: 99%;
+      left: 99%;
+      top: 0;
+    }
     @media (min-width: 991.98px) {
       gap: 34px;
       padding: 64px;
+      padding-right: 5px;
     }
 
   }
@@ -822,6 +833,7 @@ body {
 
   &__second-sc {
     background: #262626;
+    background-size: cover;
     padding: 10% 0 5%;
     @media screen and (min-width: 575.98px) {
       padding: 5% 0;
@@ -1049,6 +1061,7 @@ body {
     padding-top: 10%;
     padding-bottom: calc(10% + 60px);
     margin-top: 15%;
+    background-size: cover;
     @media screen and (min-width: 575.98px) {
       padding-top: 5%;
     }
@@ -1189,7 +1202,7 @@ body {
         max-width: 335px;
       }
       @media screen and (min-width: 1439.98px) {
-        margin-top: calc(-10% - 55px);
+        margin-top: calc(-10% - 20px);
       }
     }
   }
@@ -1548,12 +1561,15 @@ body {
   }
 
   &__bottom-lt {
-    margin-left: -5%;
+    //margin-left: -5%;
+
+    //margin-right: -5%;
+    //overflow: hidden;
     @media screen and (min-width: 480px) {
-      margin-left: 0;
+      //margin-right: -30%;
     }
-    @media (min-width: 991.98px) {
-      margin-right: -35%;
+    @media (min-width: 767px) {
+      //margin-right: -35%;
     }
   }
 
@@ -1565,10 +1581,22 @@ body {
     gap: 20px;
     padding: 24px;
     background: #F2F6FA;
+    border-radius: 16px 0 0 16px;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      background: #F2F6FA;
+      height: 100%;
+      width: 99%;
+      left: 99%;
+      top: 0;
+    }
     @media (min-width: 991.98px) {
       flex-direction: row;
       gap: 40px;
       padding: 64px;
+      padding-right: 5px;
     }
   }
 
@@ -1600,9 +1628,9 @@ body {
 
     .name {
       font-family: 'Mulish', sans-serif;
-      font-size: 20px;
-      font-weight: 800;
-      line-height: 32px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
       color: #000000;
     }
 
@@ -1617,9 +1645,9 @@ body {
 
   &__bottom-content {
     flex: 0 0 75%;
-    @media screen and (min-width: 991.98px) {
-      padding-right: calc(20% + 50px);
-    }
+    //@media screen and (min-width: 991.98px) {
+    //  padding-right: calc(20% + 50px);
+    //}
 
     .cmn-temp-results__text {
       margin-bottom: 0;
@@ -1780,8 +1808,8 @@ body {
   }
 
   &__title-2 {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 32px;
     position: relative;
     display: flex;
     align-items: center;
@@ -1839,23 +1867,23 @@ body {
       height: 428px;
       border-radius: 16px;
       padding: 32px;
+      background-position: center;
+      background-size: cover;
       @media screen and (max-width: 768px) {
         width: 100%;
         height: 232px;
         padding: 22px;
-        background-position: center;
       }
       &-name{
         font-size: 16px;
         line-height: 24px;
         font-weight: 700;
         color: #FFFFFF;
-
+        display: inline-block;
         @media screen and (min-width: 767px) {
           font-size: 24px;
           line-height: 36px;
           padding-bottom: 12px;
-
         }
       }
       &-tabs{
