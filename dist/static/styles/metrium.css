@@ -201,8 +201,9 @@ body {
 }
 
 .cmn-temp__title {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: .4px;
   margin-bottom: 16px;
 }
 
@@ -327,14 +328,14 @@ body {
   margin-bottom: 12px;
 }
 
-.cmn-temp-about__middle ul {
+.cmn-temp-about__middle .ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
 }
 
-.cmn-temp-about__middle ul li {
+.cmn-temp-about__middle .ul .li {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -342,6 +343,7 @@ body {
   padding: 6px 12px;
   border-radius: 6px;
   border: 1px solid #D3DFEB;
+  transition: all 0.2s ease-in;
 }
 
 .cmn-temp-about__bottom .name {
@@ -351,7 +353,6 @@ body {
   line-height: 24px;
   color: #000;
   margin-bottom: 12px;
-  padding: 0 16px;
 }
 
 .cmn-temp-about__bottom ul {
@@ -587,7 +588,6 @@ body {
 
 .cmn-temp-details__first-sc-top-wr {
   display: flex;
-  align-items: flex-end;
   gap: 10px;
   margin-top: 5%;
 }
@@ -603,6 +603,10 @@ body {
 
 .cmn-temp-details__img-box:last-child {
   flex: 0 0 25%;
+}
+
+.cmn-temp-details__img-box:last-child picture {
+  height: 100%;
 }
 
 .cmn-temp-details__img-box:first-child {
@@ -691,7 +695,7 @@ body {
   flex: 1 0 60%;
   display: grid;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .cmn-temp-details__third-sc-item:first-child .cmn-temp-details__text {
@@ -701,6 +705,7 @@ body {
 
 .cmn-temp-details__third-sc-item:last-child {
   flex: 0 0 30%;
+  margin-top: 24px;
 }
 
 .cmn-temp-details__third-sc-item:last-child .cmn-temp-details__text {
@@ -1176,7 +1181,7 @@ body {
 
 .cmn-temp-team__btn span {
   font-family: 'Inter';
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   color: #FFF;
@@ -1197,7 +1202,7 @@ body {
 
 .cmn-project__btn {
   width: 150px;
-  height: 48px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1211,8 +1216,8 @@ body {
 
 .cmn-project__btn span {
   color: #0070E0;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .cmn-project__content {
@@ -1530,6 +1535,10 @@ body {
     justify-content: space-between;
     gap: 40px;
   }
+
+  .cmn-project__content_item-tabs a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 }
 
 @media screen and (min-width: 831px) {
@@ -1614,12 +1623,16 @@ body {
     line-height: 28px;
   }
 
-  .cmn-temp-about__middle ul li {
+  .cmn-temp-about__middle .ul .li {
     padding: 12px 20px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+  }
+
+  .cmn-temp-about__middle .ul .li:hover {
+    background: #ebf0f6;
   }
 
   .cmn-temp-about__bottom .name {
@@ -1775,11 +1788,12 @@ body {
 
   .cmn-temp-details__third-sc-item:first-child {
     gap: 65px;
-    margin-top: 34px;
+    margin-top: 54px;
   }
 
   .cmn-temp-details__third-sc-item:last-child {
     max-width: 335px;
+    margin-top: 54px;
   }
 
   .cmn-temp-details__third-sc-item .cmn-temp-details__text-box--mt-nw {
@@ -1969,6 +1983,15 @@ body {
     padding-bottom: 10px;
   }
 
+  .cmn-project__btn {
+    height: 48px;
+  }
+
+  .cmn-project__btn span {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
   .cmn-project__btn:hover {
     background: #0070E0;
     border-color: #0070E0;
@@ -1991,7 +2014,7 @@ body {
   }
 
   .cmn-temp-tasks__text-box ul li {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 28px;
   }
 
@@ -2249,6 +2272,39 @@ body {
 
   .cmn-project__content_item-tabs {
     display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cmn-temp-details__second-sc-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cmn-temp-details__second-sc-item > .cmn-temp-details__title-3 {
+    order: 1;
+  }
+
+  .cmn-temp-details__second-sc-item > .cmn-temp-details__text-box {
+    order: 2;
+  }
+
+  .cmn-temp-details__second-sc-item > .nw-md-block {
+    order: 4;
+  }
+
+  .cmn-temp-details__second-sc-item > .cmn-temp-details__img-box {
+    order: 3;
+  }
+}
+
+@media (max-width: 767px) {
+  .cmn-temp-process__item-top .section-h3 {
+    font-size: 20px;
+  }
+
+  .cmn-temp-process__item-bottom .section-h5 {
+    font-size: 18px;
   }
 }
 

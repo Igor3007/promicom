@@ -83,8 +83,9 @@ body {
   }
 
   &__title {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: .4px;
     margin-bottom: 16px;
 
     @media screen and (min-width: 991.98px) {
@@ -313,29 +314,31 @@ body {
       }
     }
 
-    ul {
+    .ul {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 8px;
 
-      li {
+      .li {
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
         color: #5C7B99;
-
         padding: 6px 12px;
         border-radius: 6px;
         border: 1px solid #D3DFEB;
+        transition: all 0.2s ease-in;
 
         @media screen and (min-width: 991.98px) {
           padding: 12px 20px;
           border-radius: 8px;
-
           font-size: 16px;
           font-weight: 500;
           line-height: 24px;
+          &:hover{
+            background: #ebf0f6;;
+          }
         }
       }
     }
@@ -354,7 +357,6 @@ body {
       line-height: 24px;
       color: #000;
       margin-bottom: 12px;
-      padding: 0 16px;
       @media screen and (min-width: 991.98px) {
         font-size: 18px;
         line-height: 28px;
@@ -500,7 +502,7 @@ body {
         }
 
         @media (min-width: 991.98px) {
-          font-size: 16px;
+          font-size: 18px;
           line-height: 28px;
         }
 
@@ -769,7 +771,6 @@ body {
 
   &__first-sc-top-wr {
     display: flex;
-    align-items: flex-end;
     gap: 10px;
     margin-top: 5%;
     .cmn-temp-details__img-box picture {
@@ -793,6 +794,9 @@ body {
     }
     &:last-child {
       flex: 0 0 25%;
+      picture{
+        height: 100%;
+      }
     }
 
     &:first-child {
@@ -846,6 +850,22 @@ body {
   }
 
   &__second-sc-item {
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      & > .cmn-temp-details__title-3{
+        order: 1;
+      }
+      & > .cmn-temp-details__text-box{
+        order: 2;
+      }
+      & > .nw-md-block{
+        order: 4;
+      }
+      & > .cmn-temp-details__img-box{
+        order: 3;
+      }
+    }
     .cmn-temp-details__title-3 {
       color: #FFF;
       font-size: 20px;
@@ -962,10 +982,10 @@ body {
       flex: 1 0 60%;
       display: grid;
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 24px;
       @media screen and (min-width: 991.98px) {
         gap: 65px;
-        margin-top: 34px;
+        margin-top: 54px;
       }
 
       .cmn-temp-details__text {
@@ -979,8 +999,10 @@ body {
 
     &:last-child {
       flex: 0 0 30%;
+      margin-top: 24px;
       @media screen and (min-width: 991.98px) {
         max-width: 335px;
+        margin-top: 54px;
       }
 
 
@@ -1276,6 +1298,14 @@ body {
     }
   }
 
+  &__item-top{
+    @media (max-width: 767px) {
+      .section-h3{
+        font-size: 20px;
+      }
+    }
+  }
+
   &__item-middle {
     ul {
       li {
@@ -1327,6 +1357,11 @@ body {
   }
 
   &__item-bottom {
+    @media (max-width: 767px) {
+      .section-h5{
+        font-size: 18px;
+      }
+    }
     ul {
       li {
         font-family: 'Inter';
@@ -1726,7 +1761,7 @@ body {
 
     span {
       font-family: 'Inter';
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
       line-height: 20px;
       color: #FFF;
@@ -1762,7 +1797,7 @@ body {
 
   &__btn{
     width: 150px;
-    height: 48px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1775,10 +1810,16 @@ body {
 
     span {
       color: #0070E0;
-      font-size: 16px;
-      font-weight: 400;
+      font-size: 14px;
+      font-weight: 500;
     }
+
     @media screen and (min-width: 991.98px) {
+      height: 48px;
+      span {
+        font-size: 16px;
+        font-weight: 400;
+      }
       &:hover {
         background: #0070E0;
         border-color: #0070E0;
@@ -1839,6 +1880,11 @@ body {
           color: #FFF;
           font-size: 14px;
           font-weight: 400;
+          @media screen and (min-width: 768px) {
+           &:hover{
+             background: rgba(255, 255, 255, 0.2);
+           }
+          }
         }
       }
     }
