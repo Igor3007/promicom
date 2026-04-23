@@ -1263,7 +1263,10 @@ body {
   line-height: 24px;
   font-weight: 700;
   color: #FFFFFF;
-  display: inline-block;
+  display: inline;
+  transition: .2s ease-in;
+  padding: 2px 0;
+  border-bottom: 1px solid transparent;
 }
 
 .cmn-project__content_item-tabs {
@@ -1544,8 +1547,15 @@ body {
 @media screen and (min-width: 767px) {
   .cmn-project__content_item-name {
     font-size: 24px;
-    line-height: 36px;
-    padding-bottom: 12px;
+    line-height: 32px;
+  }
+
+  .cmn-project__content_item-name:hover {
+    border-bottom: 1px solid #fff;
+  }
+
+  .cmn-project__content_item-tabs {
+    padding-top: 12px;
   }
 }
 

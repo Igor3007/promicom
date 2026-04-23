@@ -1879,11 +1879,16 @@ body {
         line-height: 24px;
         font-weight: 700;
         color: #FFFFFF;
-        display: inline-block;
+        display: inline;
+        transition: .2s ease-in;
+        padding: 2px 0;
+        border-bottom: 1px solid transparent;
         @media screen and (min-width: 767px) {
+          &:hover{
+            border-bottom: 1px solid #fff;
+          }
           font-size: 24px;
-          line-height: 36px;
-          padding-bottom: 12px;
+          line-height: 32px;
         }
       }
       &-tabs{
@@ -1892,6 +1897,9 @@ body {
         justify-content: flex-start;
         flex-wrap: wrap;
         gap: 8px;
+        @media screen and (min-width: 767px) {
+          padding-top: 12px;
+        }
         @media screen and (max-width: 768px) {
           display: none;
         }
