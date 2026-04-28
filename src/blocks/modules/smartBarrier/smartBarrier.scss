@@ -688,6 +688,14 @@ body {
 
 .cmn-temp-details {
   overflow: hidden;
+
+  .splide__track{
+    border-radius: 8px;
+    overflow: hidden;
+    @media screen and (min-width: 991.98px) {
+      border-radius: 18px;
+    }
+  }
   .blockGrey{
     background: #F2F6FA;
   }
@@ -1347,6 +1355,8 @@ body {
       }
       @media screen and (min-width: 1439.98px) {
         margin-top: calc(-10% - 20px);
+        position: relative;
+        top: -42px;
       }
     }
   }
@@ -1641,8 +1651,10 @@ body {
     font-size: 20px;
     line-height: 32px;
     @media screen and (min-width: 991.98px) {
-      font-size: 32px;
+      font-size: 40px;
       line-height: 44px;
+      padding-top: 12px;
+      margin-bottom: 32px;
     }
 
   }
@@ -1738,7 +1750,7 @@ body {
     }
     @media (min-width: 991.98px) {
       flex-direction: row;
-      gap: 40px;
+      gap: 30px;
       padding: 64px;
       padding-right: 5px;
     }
@@ -1776,6 +1788,10 @@ body {
       font-weight: 700;
       line-height: 24px;
       color: #000000;
+      @media (min-width: 991.98px) {
+        font-size: 20px;
+        line-height: 26px;
+      }
     }
 
     .desc {
