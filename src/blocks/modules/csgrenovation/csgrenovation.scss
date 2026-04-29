@@ -214,6 +214,20 @@ body {
     margin-top: 24px;
     @media screen and (min-width: 1153px) {
       margin-top: 64px;
+
+      picture {
+        padding-bottom: inherit;
+        height: auto;
+        img{
+          position: relative;
+          top: 0;
+          left: 50%;
+          width: auto;
+          height: auto;
+          max-width: inherit;
+          transform: translateX(-50%);
+        }
+      }
     }
 
     picture {
@@ -343,10 +357,15 @@ body {
   }
 
   &__bottom {
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 767px) {
       overflow: hidden;
       margin-left: -16px;
       margin-right: -16px;
+    }
+    @media screen and (max-width: 991px) {
+      overflow: hidden;
+      margin-left: calc((-100vw + 665px) / 2);
+      margin-right: calc((-100vw + 665px) / 2);
     }
     .name {
       display: block;
@@ -355,7 +374,14 @@ body {
       line-height: 24px;
       color: #000;
       margin-bottom: 12px;
-      padding: 0 16px;
+
+      @media screen and (max-width: 767px) {
+        padding: 0 16px;
+      }
+      @media screen and (max-width: 991px) {
+        padding-left: calc((100vw - 665px) / 2);
+        padding-right: calc((100vw - 665px) / 2);
+      }
       @media screen and (min-width: 991.98px) {
         font-size: 18px;
         line-height: 28px;
@@ -633,6 +659,14 @@ body {
 .cmn-temp-details {
   padding: 24px 0 16px;
 
+  .splide__track{
+    border-radius: 8px;
+    overflow: hidden;
+    @media screen and (min-width: 991.98px) {
+      border-radius: 18px;
+    }
+  }
+
   @media screen and (min-width: 991.98px) {
     padding: 32px 0 64px;
   }
@@ -730,7 +764,7 @@ body {
   &__title-3 {
     font-size: 20px;
     line-height: 32px;
-
+    margin-bottom: 12px;
     br {
       display: none;
     }
@@ -738,6 +772,7 @@ body {
     @media screen and (min-width: 991.98px) {
       font-size: 32px;
       line-height: 44px;
+      margin-bottom: 24px;
       br {
         display: block;
       }
@@ -806,8 +841,10 @@ body {
     }
     &:last-child {
       flex: 0 0 25%;
+      display: flex;
+      align-items: flex-end;
       picture{
-        height: 100%;
+        //height: 100%;
       }
     }
 
@@ -903,7 +940,7 @@ body {
 
     .cmn-temp-details__text-box {
       p {
-        margin: 12px 0 12px!important;
+        margin: 0 0 12px!important;
         @media screen and (min-width: 991.98px) {
           margin: -12px 0 0!important;
         }
@@ -985,6 +1022,11 @@ body {
 
   &__third-sc {
     padding-top: 5%;
+    .cmn-temp-details__third-sc-top .cmn-temp-details__text-box{
+      @media screen and (max-width: 575.98px) {
+        padding-bottom: 12px;
+      }
+    }
   }
 
   &__third-sc-wr {
@@ -1078,7 +1120,7 @@ body {
   &__last-sc {
     background: #2E2E2E;
     padding-top: 10%;
-    padding-bottom: calc(10% + 60px);
+    padding-bottom: 32px;
     margin-top: 15%;
     background-size: cover;
     @media screen and (min-width: 575.98px) {
@@ -1223,6 +1265,8 @@ body {
       }
       @media screen and (min-width: 1439.98px) {
         margin-top: calc(-10% - 20px);
+        position: relative;
+        top: -22px;
       }
     }
   }
@@ -1517,8 +1561,10 @@ body {
     font-size: 20px;
     line-height: 32px;
     @media screen and (min-width: 991.98px) {
-      font-size: 32px;
+      font-size: 40px;
       line-height: 44px;
+      padding-top: 12px;
+      margin-bottom: 32px;
     }
 
   }
@@ -1626,7 +1672,7 @@ body {
     align-items: flex-start;
     gap: 10px;
     @media (min-width: 991.98px) {
-      gap: 20px;
+      gap: 24px;
     }
 
     .cmn-temp-results__bottom-avatar-wr {
@@ -1644,6 +1690,10 @@ body {
       background-position: center;
       transition: 0.3s ease;
       cursor: pointer;
+      @media (min-width: 991.98px) {
+        min-width: 320px;
+        width: 320px;
+      }
     }
 
     .name {
@@ -1652,6 +1702,11 @@ body {
       font-weight: 700;
       line-height: 24px;
       color: #000000;
+
+      @media (min-width: 991.98px) {
+        font-size: 20px;
+        line-height: 26px;
+      }
     }
 
     .desc {

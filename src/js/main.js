@@ -123,17 +123,17 @@ function handleNavScroll() {
 }
 
 function scrollTop() {
-    if (window.pageYOffset > 0) {
+    const currentPageYOffset = window.pageYOffset;
+    if (currentPageYOffset > 0) {
         this.document.querySelector(".scroll-top").classList.add("scroll-top_active");
     } else {
         this.document.querySelector(".scroll-top").classList.remove("scroll-top_active");
     }
 
-    if(window.innerHeight + window.pageYOffset >= document.body.offsetHeight){
+    if (window.innerHeight + currentPageYOffset >= document.body.offsetHeight) {
         this.document.querySelector(".scroll-top").classList.add("at-bottom");
-    }
-    else{
-        this.document.querySelector(".scroll-top").classList.remove("at-bottom"); 
+    } else {
+        this.document.querySelector(".scroll-top").classList.remove("at-bottom");
     }
 
 }
