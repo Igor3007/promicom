@@ -958,6 +958,9 @@ body {
         li{
           color: #FFF;
           padding: 2px 0;
+          @media screen and (max-width: 767.98px) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -1258,6 +1261,9 @@ body {
     &:last-child {
       flex: 0 0 30%;
       padding-top: 64px;
+      .cmn-temp-details__text{
+        padding-top: 18px;
+      }
       @media screen and (min-width: 991.98px) {
         display: block;
         max-width: 335px;

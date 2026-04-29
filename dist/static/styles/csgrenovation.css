@@ -850,6 +850,10 @@ body {
   padding-top: 64px;
 }
 
+.cmn-temp-details__last-sc-item:last-child .cmn-temp-details__text {
+  padding-top: 18px;
+}
+
 .cmn-temp-process__title-2 {
   font-size: 24px;
   line-height: 36px;
@@ -2390,6 +2394,12 @@ body {
 
   .cmn-temp-details__second-sc-item > .cmn-temp-details__img-box {
     order: 3;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .cmn-temp-details__second-sc-item .cmn-temp-details__text-box ul li {
+    font-size: 14px;
   }
 }
 
