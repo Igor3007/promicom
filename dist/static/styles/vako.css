@@ -593,6 +593,11 @@ body {
   padding: 24px 0 16px;
 }
 
+.vakos-details .splide__track {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 .vakos-details__title-2 {
   font-size: 24px;
   line-height: 36px;
@@ -1773,6 +1778,10 @@ body {
 
   .vakos-tasks__bottom-content .vakos-tasks__text:not(:last-child) {
     margin-bottom: 24px;
+  }
+
+  .vakos-details .splide__track {
+    border-radius: 18px;
   }
 
   .vakos-details {

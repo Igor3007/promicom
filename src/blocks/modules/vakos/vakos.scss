@@ -675,6 +675,13 @@ body {
 
 .vakos-details {
   padding: 24px 0 16px;
+  .splide__track{
+    border-radius: 8px;
+    overflow: hidden;
+    @media screen and (min-width: 991.98px) {
+      border-radius: 18px;
+    }
+  }
 
   @media screen and (min-width: 991.98px) {
     padding: 32px 0 64px;
