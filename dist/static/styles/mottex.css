@@ -532,6 +532,11 @@ body {
   padding: 24px 0 16px;
 }
 
+.cmn-temp-details .splide__track {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 .cmn-temp-details .blockGrey {
   background: #F2F6FA;
 }
@@ -773,7 +778,7 @@ body {
 .cmn-temp-details__last-sc {
   background: #2E2E2E;
   padding-top: 10%;
-  padding-bottom: calc(10% + 60px);
+  padding-bottom: calc(30px);
   margin-top: 15%;
   background-size: cover;
 }
@@ -866,6 +871,10 @@ body {
 .cmn-temp-details__last-sc-item:last-child {
   flex: 0 0 30%;
   padding-top: 64px;
+}
+
+.cmn-temp-details__last-sc-item:last-child .cmn-temp-details__text {
+  padding-top: 18px;
 }
 
 .cmn-temp-process__title-2 {
@@ -1488,6 +1497,7 @@ body {
   }
 
   .cmn-temp-details__last-sc {
+    padding-bottom: calc(10% + 60px);
     padding-top: 5%;
   }
 
@@ -1750,6 +1760,10 @@ body {
 
   .cmn-temp-tasks__bottom-content .cmn-temp-tasks__text:not(:last-child) {
     margin-bottom: 16px;
+  }
+
+  .cmn-temp-details .splide__track {
+    border-radius: 18px;
   }
 
   .cmn-temp-details .blockBlue ._container:after {

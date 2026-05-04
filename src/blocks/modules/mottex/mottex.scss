@@ -647,6 +647,13 @@ body {
 
 .cmn-temp-details {
   overflow: hidden;
+  .splide__track{
+    border-radius: 8px;
+    overflow: hidden;
+    @media screen and (min-width: 991.98px) {
+      border-radius: 18px;
+    }
+  }
   .blockGrey{
     background: #F2F6FA;
   }
@@ -1158,10 +1165,11 @@ body {
   &__last-sc {
     background: #2E2E2E;
     padding-top: 10%;
-    padding-bottom: calc(10% + 60px);
+    padding-bottom: calc(30px);
     margin-top: 15%;
     background-size: cover;
     @media screen and (min-width: 575.98px) {
+      padding-bottom: calc(10% + 60px);
       padding-top: 5%;
     }
     @media screen and (min-width: 767.98px) {
@@ -1296,6 +1304,9 @@ body {
     &:last-child {
       flex: 0 0 30%;
       padding-top: 64px;
+      .cmn-temp-details__text{
+        padding-top: 18px;
+      }
       @media screen and (min-width: 991.98px) {
         display: block;
         max-width: 335px;
